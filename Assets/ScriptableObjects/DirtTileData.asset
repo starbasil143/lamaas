@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DirtTileData
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: e6cace87b87cd6f4cbf61c23dc8b805b, type: 2}
+  - {fileID: 11400000, guid: 641ea3f228ced944e8e78c5b2dda4c87, type: 2}
   materialTypes:
   - Dirt
   - Ground
