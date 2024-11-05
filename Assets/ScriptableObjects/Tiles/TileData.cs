@@ -6,5 +6,9 @@ public class TileData : ScriptableObject
 {
     public TileBase[] tiles;
 
-    public string[] materialTypes; 
+    public MaterialData superMaterial;
+    public MaterialData subMaterial;
+
+
+
 }

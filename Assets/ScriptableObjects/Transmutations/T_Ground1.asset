@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f535886429a1d504cab1c25f0d94a990, type: 3}
-  m_Name: GrassTileData
+  m_Script: {fileID: 11500000, guid: 874755d73a0ea30499a0c905cccc4784, type: 3}
+  m_Name: T_Ground1
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: 673ec02590022be4d88936a09f5e6725, type: 2}
-  materialTypes:
-  - Grass
-  - Ground
+  projectile: {fileID: 4837636442170556296, guid: 297d73dffe7c4fd41a33b3c5caced3ea, type: 3}

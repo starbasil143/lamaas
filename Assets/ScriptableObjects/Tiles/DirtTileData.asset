@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 11400000, guid: 641ea3f228ced944e8e78c5b2dda4c87, type: 2}
-  materialTypes:
-  - Dirt
-  - Ground
+  superMaterial: {fileID: 11400000, guid: 32aa5c93e60037f4a8b5df9220cf3f56, type: 2}
+  subMaterial: {fileID: 11400000, guid: 545a8be1cf33cca47a77935002d27aed, type: 2}

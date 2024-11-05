@@ -6,12 +6,14 @@ public class Player : MonoBehaviour
     
     [SerializeField] private Camera _camera;
     [SerializeField] private Transform _player;
-    private MapManager _mapManager;
     private Animator _animator;
     private Rigidbody2D _rigidbody;
     public float maxHealthAmount = 100f;
     public float healthAmount = 100f;
     public bool isPaused;
+    public int currentSlot = 0;
+
+    public PlayerCasting _playerCasting;
 
 
 
@@ -20,21 +22,32 @@ public class Player : MonoBehaviour
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
-        _mapManager = GetComponent<MapManager>();
     }
 
 
     private void Update()
     {
-        if (InputManager.Cast)
+        if (InputManager.Slot1) // R - Broad Attack
         {
-            
-            TileData currentTileData = _mapManager.GetCurrentTile();
-            
-            string[] tileMaterials = currentTileData.materialTypes;
-
-            Debug.Log(string.Join(", ", tileMaterials));
+            currentSlot = 1;
         }
+        if (InputManager.Slot2) // F - Specific Attack
+        {
+            currentSlot = 2;
+        }
+        if (InputManager.Slot3) // T - Special 1
+        {
+            currentSlot = 3;
+        }
+        if (InputManager.Slot4) // G - Special 2
+        {
+            currentSlot = 4;
+        }
+        if (InputManager.NoSlot)
+        {
+            currentSlot = 0;
+        }
+
     }
 
 
