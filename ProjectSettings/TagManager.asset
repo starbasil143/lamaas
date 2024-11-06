@@ -75,5 +75,8 @@ TagManager:
   - name: AtopCoversPlayer2
     uniqueID: 904560291
     locked: 0
+  - name: UI
+    uniqueID: 1827629689
+    locked: 0
   m_RenderingLayers:
   - Default

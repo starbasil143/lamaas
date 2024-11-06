@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PlayerCasting : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class PlayerCasting : MonoBehaviour
     private Dictionary<TileBase, TileData> dataFromTiles;
     [SerializeField] private List<MaterialData> materialDatas;
     private Dictionary<MaterialData, bool[]> unlocksPerMaterial;
+
+    public GameObject SlotOneImage;
+    public GameObject SlotTwoImage;
+    public GameObject SlotThreeImage;
+    public GameObject SlotFourImage;
 
     private TileData currentTile;
 
@@ -41,17 +47,16 @@ public class PlayerCasting : MonoBehaviour
         Vector3Int currentTilePosition = map.WorldToCell(transform.position);
         TileBase currentTile = map.GetTile(currentTilePosition);
 
-        MaterialData tileSuperMaterial = dataFromTiles[currentTile].superMaterial;
-        MaterialData tileSubMaterial = dataFromTiles[currentTile].subMaterial;
-
-
         return dataFromTiles[currentTile];
     }
 
 
     void Update()
     {
-        currentTile = GetCurrentTile();
+        if (GetCurrentTile() != currentTile)
+        {
+            SwitchTile();
+        }
         MaterialData tileSuperMaterial = currentTile.superMaterial;
         MaterialData tileSubMaterial = currentTile.subMaterial;
         //bool unlocked1 = unlocksPerMaterial[tileSuperMaterial][0];
@@ -84,7 +89,8 @@ public class PlayerCasting : MonoBehaviour
         {
             if (cooldown4 <= 0 && unlocksPerMaterial[tileSubMaterial][3])
             {
-                
+                unlocksPerMaterial[tileSubMaterial][3] = !unlocksPerMaterial[tileSubMaterial][3];
+                Debug.Log(unlocksPerMaterial[tileSubMaterial][3]);
             }
         }
 
@@ -97,5 +103,21 @@ public class PlayerCasting : MonoBehaviour
             cooldown3 -= Time.deltaTime;
         if (cooldown4 > 0)
             cooldown4 -= Time.deltaTime;
+    }
+
+    private void SwitchTile()
+    {
+        currentTile = GetCurrentTile();
+        
+        MaterialData tileSuperMaterial = currentTile.superMaterial;
+        MaterialData tileSubMaterial = currentTile.subMaterial;
+
+
+        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][3]);
+
+        
+        
+        
+        Debug.Log("Switching to " + currentTile);
     }
 }
