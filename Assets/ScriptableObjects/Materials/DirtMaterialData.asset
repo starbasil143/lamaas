@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: DirtMaterialData
   m_EditorClassIdentifier: 
   slot1Exists: 0
-  slot2Exists: 1
+  slot2Exists: 0
   slot3Exists: 1
   slot4Exists: 1
-  unlocked1: 0
-  unlocked2: 0
-  unlocked3: 0
-  unlocked4: 0
+  transmutation1: {fileID: 0}
+  transmutation2: {fileID: 0}
+  transmutation3: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
+  transmutation4: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}

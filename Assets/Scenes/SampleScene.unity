@@ -10202,6 +10202,7 @@ GameObject:
   - component: {fileID: 1361971685}
   - component: {fileID: 1361971687}
   - component: {fileID: 1361971686}
+  - component: {fileID: 1361971688}
   m_Layer: 5
   m_Name: Slot Three
   m_TagString: Untagged
@@ -10266,6 +10267,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361971684}
   m_CullTransparentMesh: 1
+--- !u!95 &1361971688
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361971684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 406e5c5304da6ef45ae617512ce56683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1365679441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4296096674222999358, guid: fc47ce53304c15d488ab9fd8825cf36a, type: 3}
@@ -10478,6 +10501,7 @@ GameObject:
   - component: {fileID: 1423787905}
   - component: {fileID: 1423787907}
   - component: {fileID: 1423787906}
+  - component: {fileID: 1423787908}
   m_Layer: 5
   m_Name: Slot Two
   m_TagString: Untagged
@@ -10542,6 +10566,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423787904}
   m_CullTransparentMesh: 1
+--- !u!95 &1423787908
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423787904}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 406e5c5304da6ef45ae617512ce56683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1427625394 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4296096674222999358, guid: fc47ce53304c15d488ab9fd8825cf36a, type: 3}
@@ -43091,6 +43137,7 @@ GameObject:
   - component: {fileID: 1521872394}
   - component: {fileID: 1521872396}
   - component: {fileID: 1521872395}
+  - component: {fileID: 1521872397}
   m_Layer: 5
   m_Name: Slot One
   m_TagString: Untagged
@@ -43155,6 +43202,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521872393}
   m_CullTransparentMesh: 1
+--- !u!95 &1521872397
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521872393}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 406e5c5304da6ef45ae617512ce56683, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1527420952 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4296096674222999358, guid: fc47ce53304c15d488ab9fd8825cf36a, type: 3}

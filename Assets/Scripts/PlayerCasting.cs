@@ -42,6 +42,14 @@ public class PlayerCasting : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile().superMaterial][0]);
+        SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile().subMaterial][1]);
+        SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile().subMaterial][2]);
+        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile().subMaterial][3]);
+    }
+
     public TileData GetCurrentTile()
     {
         Vector3Int currentTilePosition = map.WorldToCell(transform.position);
@@ -66,31 +74,32 @@ public class PlayerCasting : MonoBehaviour
 
         if (InputManager.Slot1) // R - SuperMaterial Attack
         {
-            if (cooldown1 <= 0 && tileSuperMaterial.slot1Exists && unlocksPerMaterial[tileSuperMaterial][0])
+            if (cooldown1 <= 0 && tileSuperMaterial.slot1Exists && unlocksPerMaterial[tileSuperMaterial][0] && tileSuperMaterial.slot1Exists)
             {
                 tileSuperMaterial.transmutation1.PerformTransmutation(gameObject);
+                // unlocksPerMaterial[tileSubMaterial][3] = !unlocksPerMaterial[tileSubMaterial][3];  debug stuff
+                // Debug.Log(unlocksPerMaterial[tileSubMaterial][3]);
             }
         }
         if (InputManager.Slot2) // F - SubMaterial Attack
         {
-            if (cooldown2 <= 0 && unlocksPerMaterial[tileSubMaterial][1])
+            if (cooldown2 <= 0 && unlocksPerMaterial[tileSubMaterial][1] && tileSubMaterial.slot2Exists)
             {
-                
+                tileSubMaterial.transmutation2.PerformTransmutation(gameObject);
             }
         }
         if (InputManager.Slot3) // T - SubMaterial Special 1
         {
-            if (cooldown3 <= 0 && unlocksPerMaterial[tileSubMaterial][2])
+            if (cooldown3 <= 0 && unlocksPerMaterial[tileSubMaterial][2] && tileSubMaterial.slot3Exists)
             {
-                
+                tileSubMaterial.transmutation3.PerformTransmutation(gameObject);
             }
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2
         {
-            if (cooldown4 <= 0 && unlocksPerMaterial[tileSubMaterial][3])
+            if (cooldown4 <= 0 && unlocksPerMaterial[tileSubMaterial][3] && tileSubMaterial.slot4Exists)
             {
-                unlocksPerMaterial[tileSubMaterial][3] = !unlocksPerMaterial[tileSubMaterial][3];
-                Debug.Log(unlocksPerMaterial[tileSubMaterial][3]);
+                tileSubMaterial.transmutation4.PerformTransmutation(gameObject);
             }
         }
 
@@ -113,7 +122,10 @@ public class PlayerCasting : MonoBehaviour
         MaterialData tileSubMaterial = currentTile.subMaterial;
 
 
-        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][3]);
+        SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSuperMaterial][0] && tileSuperMaterial.slot1Exists);
+        SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][1] && tileSubMaterial.slot2Exists);
+        SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][2] && tileSubMaterial.slot3Exists);
+        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][3] && tileSubMaterial.slot4Exists);
 
         
         
