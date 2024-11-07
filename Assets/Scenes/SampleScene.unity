@@ -1392,7 +1392,7 @@ MonoBehaviour:
   SlotOneImage: {fileID: 1521872393}
   SlotTwoImage: {fileID: 1423787904}
   SlotThreeImage: {fileID: 1361971684}
-  SlotFourImage: {fileID: 0}
+  SlotFourImage: {fileID: 1950828197}
 --- !u!4 &200704331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4296096674222999358, guid: fc47ce53304c15d488ab9fd8825cf36a, type: 3}
