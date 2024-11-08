@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -8,10 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _player;
     private Animator _animator;
     private Rigidbody2D _rigidbody;
-    public float maxHealthAmount = 100f;
-    public float healthAmount = 100f;
+    public float maxHealthAmount = 10f;
+    public float healthAmount = 10f;
     public bool isPaused;
     public int currentSlot = 0;
+
+    public GameObject HealthBarFillImage;
 
     public PlayerCasting _playerCasting;
 
@@ -54,10 +57,11 @@ public class Player : MonoBehaviour
 
 
 
-    private void Damage(float damage, bool silent = false)
+    public void Damage(float damage, bool silent = false)
     {
+        Debug.Log(healthAmount);
         healthAmount -= damage;
-        //healthBar.fillAmount = healthAmount / maxHealthAmount;
+        HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f;
         if (!silent)
         {
             //_animator.Play("Damage", -1, 0f);

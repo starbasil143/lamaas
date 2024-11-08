@@ -93,6 +93,7 @@ public class PlayerCasting : MonoBehaviour
             if (cooldown3 <= 0 && unlocksPerMaterial[tileSubMaterial][2] && tileSubMaterial.slot3Exists)
             {
                 tileSubMaterial.transmutation3.PerformTransmutation(gameObject);
+                _player.Damage(1);
             }
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2

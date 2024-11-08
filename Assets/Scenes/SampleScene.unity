@@ -1363,10 +1363,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
   _player: {fileID: 0}
-  maxHealthAmount: 100
-  healthAmount: 100
+  maxHealthAmount: 10
+  healthAmount: 10
   isPaused: 0
   currentSlot: 0
+  HealthBarFillImage: {fileID: 211888883}
   _playerCasting: {fileID: 198791198}
 --- !u!114 &198791198
 MonoBehaviour:
