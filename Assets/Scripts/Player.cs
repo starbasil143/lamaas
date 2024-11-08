@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             currentSlot = 4;
         }
-        if (InputManager.NoSlot)
+        if (InputManager.NoSlot) // does nothing
         {
             currentSlot = 0;
         }
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     {
         Debug.Log(healthAmount);
         healthAmount -= damage;
-        HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f;
+        HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f; // Visually update health bar
         if (!silent)
         {
             //_animator.Play("Damage", -1, 0f);

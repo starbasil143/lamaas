@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class PlayerCasting : MonoBehaviour
 {
     public Player _player;
-    [SerializeField] private Tilemap map;
-    [SerializeField] private List<TileData> tileDatas;
-    private Dictionary<TileBase, TileData> dataFromTiles;
-    [SerializeField] private List<MaterialData> materialDatas;
-    private Dictionary<MaterialData, bool[]> unlocksPerMaterial;
+    [SerializeField] private Tilemap map; // reference to the Ground tilemap
+    [SerializeField] private List<TileData> tileDatas; // list of all tile types
+    private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
+    [SerializeField] private List<MaterialData> materialDatas; // list of all material types
+    private Dictionary<MaterialData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
 
+    // transmutation slot ui images
     public GameObject SlotOneImage;
     public GameObject SlotTwoImage;
     public GameObject SlotThreeImage;
@@ -26,9 +27,12 @@ public class PlayerCasting : MonoBehaviour
 
     private void Awake()
     {
-        _player = gameObject.GetComponent<Player>();
+        _player = gameObject.GetComponent<Player>(); // get reference to Player.cs script
+
+        // fill the dataFromTiles dictionary and the unlocksPerMaterial dictionary
+
         dataFromTiles = new Dictionary<TileBase, TileData>();
-        foreach (var tileData in tileDatas)
+        foreach (var tileData in tileDatas) 
         {
             foreach (var tile in tileData.tiles)
             {
@@ -52,9 +56,9 @@ public class PlayerCasting : MonoBehaviour
 
     public TileData GetCurrentTile()
     {
+        // Get current position, find its tile, and return its tile type.
         Vector3Int currentTilePosition = map.WorldToCell(transform.position);
         TileBase currentTile = map.GetTile(currentTilePosition);
-
         return dataFromTiles[currentTile];
     }
 
@@ -65,20 +69,15 @@ public class PlayerCasting : MonoBehaviour
         {
             SwitchTile();
         }
+        
         MaterialData tileSuperMaterial = currentTile.superMaterial;
         MaterialData tileSubMaterial = currentTile.subMaterial;
-        //bool unlocked1 = unlocksPerMaterial[tileSuperMaterial][0];
-        //bool unlocked2 = unlocksPerMaterial[tileSubMaterial][1];
-        //bool unlocked3 = unlocksPerMaterial[tileSubMaterial][2];
-        //bool unlocked4 = unlocksPerMaterial[tileSubMaterial][3];
 
         if (InputManager.Slot1) // R - SuperMaterial Attack
         {
             if (cooldown1 <= 0 && tileSuperMaterial.slot1Exists && unlocksPerMaterial[tileSuperMaterial][0] && tileSuperMaterial.slot1Exists)
             {
                 tileSuperMaterial.transmutation1.PerformTransmutation(gameObject);
-                // unlocksPerMaterial[tileSubMaterial][3] = !unlocksPerMaterial[tileSubMaterial][3];  debug stuff
-                // Debug.Log(unlocksPerMaterial[tileSubMaterial][3]);
             }
         }
         if (InputManager.Slot2) // F - SubMaterial Attack
@@ -93,7 +92,6 @@ public class PlayerCasting : MonoBehaviour
             if (cooldown3 <= 0 && unlocksPerMaterial[tileSubMaterial][2] && tileSubMaterial.slot3Exists)
             {
                 tileSubMaterial.transmutation3.PerformTransmutation(gameObject);
-                _player.Damage(1);
             }
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2
@@ -117,12 +115,12 @@ public class PlayerCasting : MonoBehaviour
 
     private void SwitchTile()
     {
-        currentTile = GetCurrentTile();
+        currentTile = GetCurrentTile(); // Switch current tile
         
         MaterialData tileSuperMaterial = currentTile.superMaterial;
         MaterialData tileSubMaterial = currentTile.subMaterial;
 
-
+        // Update transmutation icons based off of currently available transmutations
         SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSuperMaterial][0] && tileSuperMaterial.slot1Exists);
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][1] && tileSubMaterial.slot2Exists);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[tileSubMaterial][2] && tileSubMaterial.slot3Exists);
