@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: e8660eb8899a615438c271c14fda661d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8604157446231262082
+    second: grasstuftsheet_0
+  - first:
+      213: -6818338859036038586
+    second: grasstuftsheet_1
+  - first:
+      213: -7134255397991103142
+    second: grasstuftsheet_2
+  - first:
+      213: -7678360545039253565
+    second: grasstuftsheet_3
+  - first:
+      213: -1827053239893980566
+    second: grasstuftsheet_4
+  - first:
+      213: -8829987421803743402
+    second: grasstuftsheet_5
+  - first:
+      213: 3484527485660357572
+    second: grasstuftsheet_6
+  - first:
+      213: -2827677048419291592
+    second: grasstuftsheet_7
+  - first:
+      213: -2744941208418339086
+    second: grasstuftsheet_8
+  - first:
+      213: 1612227582654051423
+    second: grasstuftsheet_9
+  - first:
+      213: -2707009231198677546
+    second: grasstuftsheet_10
+  - first:
+      213: -3092058777258135174
+    second: grasstuftsheet_11
+  - first:
+      213: -7525693154740439448
+    second: grasstuftsheet_12
+  - first:
+      213: 717922778038120287
+    second: grasstuftsheet_13
+  - first:
+      213: 1876925001417485999
+    second: grasstuftsheet_14
+  - first:
+      213: -8485958566480241166
+    second: grasstuftsheet_15
+  - first:
+      213: -6346476506576991113
+    second: grasstuftsheet_16
+  - first:
+      213: 2367816751590157696
+    second: grasstuftsheet_17
+  - first:
+      213: 2147685470240237246
+    second: grasstuftsheet_18
+  - first:
+      213: 2984013955754459539
+    second: grasstuftsheet_19
+  - first:
+      213: 6700023656125583231
+    second: grasstuftsheet_20
+  - first:
+      213: -1718295519936540188
+    second: grasstuftsheet_21
+  - first:
+      213: -3656631191653808915
+    second: grasstuftsheet_22
+  - first:
+      213: 6654743697327107574
+    second: grasstuftsheet_23
+  - first:
+      213: 9219098343668461199
+    second: grasstuftsheet_24
+  - first:
+      213: -5952680233856216174
+    second: grasstuftsheet_25
+  - first:
+      213: 875296593480753896
+    second: grasstuftsheet_26
+  - first:
+      213: 1720850255033097377
+    second: grasstuftsheet_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: grasstuftsheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c7ad1b364e79880800000000000000
+      internalID: -8604157446231262082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstuftsheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a2aeccee46061a0800000000000000
+      internalID: -6818338859036038586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstuftsheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55c3d1b3880efc90800000000000000
+      internalID: -7134255397991103142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstuftsheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf7f8714cbf07590800000000000000
+      internalID: -7678360545039253565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstuftsheet_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a846a22c005a6e0800000000000000
+      internalID: -1827053239893980566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grasstuftsheet_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65778302935957580800000000000000
+      internalID: -8829987421803743402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 553a2066fdfe2074fb1113e131f30925
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      grasstuftsheet_0: -8604157446231262082
+      grasstuftsheet_1: -6818338859036038586
+      grasstuftsheet_2: -7134255397991103142
+      grasstuftsheet_3: -7678360545039253565
+      grasstuftsheet_4: -1827053239893980566
+      grasstuftsheet_5: -8829987421803743402
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
