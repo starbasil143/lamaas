@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float healthAmount = 10f;
     public bool isPaused;
     public int currentSlot = 0;
+    public GameObject _exclamationIcon;
 
     public GameObject HealthBarFillImage;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _exclamationIcon = gameObject.transform.Find("Exclamation").gameObject;
         _rigidbody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
     }
@@ -93,5 +95,14 @@ public class Player : MonoBehaviour
         isPaused = true;
         gameObject.SetActive(false);
         //_deathCanvas.SetActive(true);
+    }
+
+    public void NotifyOn()
+    {
+        _exclamationIcon.SetActive(true);
+    }
+    public void NotifyOff()
+    {
+        _exclamationIcon.SetActive(false);
     }
 }

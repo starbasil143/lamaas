@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -28,7 +30,7 @@ public class PlayerCasting : MonoBehaviour
     private void Awake()
     {
         _player = gameObject.GetComponent<Player>(); // get reference to Player.cs script
-
+        
         // fill the dataFromTiles dictionary and the unlocksPerMaterial dictionary
 
         dataFromTiles = new Dictionary<TileBase, TileData>();
@@ -44,6 +46,21 @@ public class PlayerCasting : MonoBehaviour
         {
             unlocksPerMaterial.Add(materialData, new bool[] {true, true, true, true});
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoad;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoad;
+    }
+
+    private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        map = GameObject.FindGameObjectWithTag("Grid").transform.Find("Ground").GetComponent<Tilemap>();
     }
 
     void Start()
