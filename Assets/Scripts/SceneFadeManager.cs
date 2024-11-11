@@ -47,12 +47,14 @@ public class SceneFadeManager : MonoBehaviour
             else
             {
                 isFadingIn = false;
+                InputManager.EnableInput();
             }
         }
     }
 
     public void StartFadeOut()
     {
+        InputManager.DisableInput();
         isFadingOut = true;
         _fadeOutImage.fillOrigin = 0;
         _fadeOutImage.fillAmount = 0f;

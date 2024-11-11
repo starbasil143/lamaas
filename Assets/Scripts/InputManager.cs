@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     public static bool Slot4;
     public static bool NoSlot;
 
-    private PlayerInput _playerInput;
+    public static PlayerInput _playerInput;
     private InputAction _moveAction;
     private InputAction _dashAction;
     private InputAction _castAction;
@@ -52,4 +52,14 @@ public class InputManager : MonoBehaviour
         Slot4 = _slot4Action.WasPressedThisFrame();
         NoSlot = _noSlotAction.WasPressedThisFrame();
     }
+
+    public static void DisableInput()
+    {
+        _playerInput.currentActionMap.Disable();
+    }
+    public static void EnableInput()
+    {
+        _playerInput.currentActionMap.Enable();
+    }
 }
+
