@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: da19f79083b43744f9eccec75cdeeb47
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1584925087682210792
+    second: tallcollisions_0
+  - first:
+      213: 2592557555241951778
+    second: tallcollisions_1
+  - first:
+      213: -7519180431919713633
+    second: tallcollisions_2
+  - first:
+      213: -1321289575238127543
+    second: tallcollisions_3
+  - first:
+      213: -1783925082061206286
+    second: tallcollisions_4
+  - first:
+      213: 8148800974468030307
+    second: tallcollisions_5
+  - first:
+      213: 8216165401215520766
+    second: tallcollisions_6
+  - first:
+      213: -8939087083476309303
+    second: tallcollisions_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tallcollisions_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: 5, y: 7}
+        - {x: 6, y: 6}
+        - {x: 6, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 1}
+        - {x: 15, y: 3}
+        - {x: 15, y: 10}
+        - {x: 9, y: 16}
+        - {x: 6, y: 16}
+        - {x: 4, y: 15}
+        - {x: 3, y: 16}
+        - {x: -3, y: 16}
+        - {x: -5, y: 14}
+        - {x: -7, y: 15}
+        - {x: -10, y: 15}
+        - {x: -15, y: 10}
+        - {x: -15, y: 3}
+        - {x: -16, y: 2}
+        - {x: -16, y: -16}
+        - {x: -6, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 814d811b707310ae0800000000000000
+      internalID: -1584925087682210792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: 11, y: 16}
+        - {x: 9, y: 14}
+        - {x: 7, y: 16}
+        - {x: -1, y: 16}
+        - {x: -6, y: 15}
+        - {x: -9, y: 15}
+        - {x: -14, y: 10}
+        - {x: -14, y: 6}
+        - {x: -16, y: 2}
+        - {x: -16, y: -16}
+        - {x: -7, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 222a3fb4c5d9af320800000000000000
+      internalID: 2592557555241951778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 2, y: 16}
+        - {x: 0, y: 15}
+        - {x: -1, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f927b594c3186a790800000000000000
+      internalID: -7519180431919713633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 2}
+        - {x: 15, y: 3}
+        - {x: 15, y: 10}
+        - {x: 9, y: 16}
+        - {x: 6, y: 16}
+        - {x: 2, y: 15}
+        - {x: 0, y: 14}
+        - {x: -3, y: 16}
+        - {x: -7, y: 16}
+        - {x: -9, y: 14}
+        - {x: -11, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 7, y: 8}
+        - {x: 7, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 940318eb126d9ade0800000000000000
+      internalID: -1321289575238127543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 12}
+        - {x: -7, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 10}
+        - {x: -9, y: 10}
+      - - {x: 16, y: 16}
+        - {x: 7, y: 16}
+        - {x: 7, y: 12}
+        - {x: 9, y: 10}
+        - {x: 16, y: 10}
+      - - {x: -7, y: -10}
+        - {x: -9, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -7, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 9, y: -8}
+        - {x: 7, y: -10}
+        - {x: 7, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2fc05d9e6993e37e0800000000000000
+      internalID: -1783925082061206286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -6, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -6, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 6, y: 16}
+        - {x: 6, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 36f1684ef4b561170800000000000000
+      internalID: 8148800974468030307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -7, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -7, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: eff4e4bb6eea50270800000000000000
+      internalID: 8216165401215520766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 7, y: 16}
+        - {x: 7, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9caac1da8abf1f380800000000000000
+      internalID: -8939087083476309303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 6, y: 16}
+        - {x: 6, y: -5}
+        - {x: -6, y: -5}
+        - {x: -6, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 23e06eb98c88d2145ae63b024c9aba81
+      internalID: -751877193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -7}
+        - {x: -7, y: -7}
+        - {x: -7, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ae504b24c1ffc9c4abd5b537cce4efba
+      internalID: 1861947488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -7}
+        - {x: -16, y: -7}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1d530da3ac5ba4e44aac531cbdc7624d
+      internalID: -1702846248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 7, y: 16}
+        - {x: 7, y: -7}
+        - {x: -16, y: -7}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f06f694988df05d41a16fb210875ff76
+      internalID: -391518698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 8}
+        - {x: 15, y: 9}
+        - {x: 15, y: 10}
+        - {x: 9, y: 16}
+        - {x: 6, y: 16}
+        - {x: 4, y: 15}
+        - {x: 3, y: 16}
+        - {x: -3, y: 16}
+        - {x: -5, y: 14}
+        - {x: -7, y: 15}
+        - {x: -10, y: 15}
+        - {x: -15, y: 10}
+        - {x: -15, y: 7}
+        - {x: -16, y: 6}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -8, y: -7}
+        - {x: -8, y: 7}
+        - {x: 8, y: 7}
+        - {x: 8, y: -6}
+        - {x: 2, y: -6}
+        - {x: 1, y: -7}
+      tessellationDetail: 1
+      bones: []
+      spriteID: dba506544ee35a24786e52f5ccd8efad
+      internalID: 208714378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -7}
+        - {x: -5, y: -7}
+        - {x: -5, y: 6}
+        - {x: -3, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: 11, y: 16}
+        - {x: 9, y: 14}
+        - {x: 7, y: 16}
+        - {x: 3, y: 16}
+        - {x: 1, y: 14}
+        - {x: -6, y: 14}
+        - {x: -14, y: 6}
+        - {x: -14, y: 4}
+        - {x: -16, y: 2}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8dcd51f948f03bc429ab32eab276cb7a
+      internalID: -756973459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 7, y: 15}
+        - {x: 6, y: 16}
+        - {x: 2, y: 16}
+        - {x: 0, y: 15}
+        - {x: -1, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -7}
+        - {x: -16, y: -7}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b3d3b4b3941ccee478ab35a8c147cd2f
+      internalID: 685771385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tallcollisions_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 5}
+        - {x: 15, y: 8}
+        - {x: 12, y: 10}
+        - {x: 12, y: 11}
+        - {x: 8, y: 15}
+        - {x: 3, y: 15}
+        - {x: 2, y: 14}
+        - {x: -1, y: 14}
+        - {x: -3, y: 16}
+        - {x: -7, y: 16}
+        - {x: -9, y: 14}
+        - {x: -11, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 3, y: 8}
+        - {x: 5, y: 6}
+        - {x: 8, y: 6}
+        - {x: 8, y: -7}
+        - {x: -16, y: -7}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 486858f5dfe2cd74ebf02275e27bdb1b
+      internalID: -1324081503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a0406850e369f8d4383b3b8c4497cc39
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tallcollisions_0: -1584925087682210792
+      tallcollisions_1: 2592557555241951778
+      tallcollisions_10: -1702846248
+      tallcollisions_11: -391518698
+      tallcollisions_12: 208714378
+      tallcollisions_13: -756973459
+      tallcollisions_14: 685771385
+      tallcollisions_15: -1324081503
+      tallcollisions_2: -7519180431919713633
+      tallcollisions_3: -1321289575238127543
+      tallcollisions_4: -1783925082061206286
+      tallcollisions_5: 8148800974468030307
+      tallcollisions_6: 8216165401215520766
+      tallcollisions_7: -8939087083476309303
+      tallcollisions_8: -751877193
+      tallcollisions_9: 1861947488
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

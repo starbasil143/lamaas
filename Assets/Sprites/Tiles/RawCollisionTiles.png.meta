@@ -1,0 +1,1673 @@
+fileFormatVersion: 2
+guid: c4afd0f70375476419b39caa083409ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1631266801096233737
+    second: RawCollisionTiles_0
+  - first:
+      213: 1702556749600702476
+    second: RawCollisionTiles_1
+  - first:
+      213: 3908077113246442496
+    second: RawCollisionTiles_2
+  - first:
+      213: -6206906732727475016
+    second: RawCollisionTiles_3
+  - first:
+      213: 2813427632428395567
+    second: RawCollisionTiles_4
+  - first:
+      213: -2207750521424307432
+    second: RawCollisionTiles_5
+  - first:
+      213: 7849311065210219771
+    second: RawCollisionTiles_6
+  - first:
+      213: 5634150491161655477
+    second: RawCollisionTiles_7
+  - first:
+      213: 2534097803809864810
+    second: RawCollisionTiles_8
+  - first:
+      213: 8643045068842917122
+    second: RawCollisionTiles_9
+  - first:
+      213: 8809648899856718451
+    second: RawCollisionTiles_10
+  - first:
+      213: 5095636783024314116
+    second: RawCollisionTiles_11
+  - first:
+      213: 6993786207633588441
+    second: RawCollisionTiles_12
+  - first:
+      213: -4753883170732327858
+    second: RawCollisionTiles_13
+  - first:
+      213: 7704462001739580778
+    second: RawCollisionTiles_14
+  - first:
+      213: -8336992072712019297
+    second: RawCollisionTiles_15
+  - first:
+      213: 1742055639834211578
+    second: RawCollisionTiles_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RawCollisionTiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: 9, y: 8}
+        - {x: 9, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 15}
+        - {x: 15, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7fc65cabc739c59e0800000000000000
+      internalID: -1631266801096233737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: c00c4edd752b0a710800000000000000
+      internalID: 1702556749600702476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 00463e9bd674c3630800000000000000
+      internalID: 3908077113246442496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 14}
+        - {x: 14, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8b46cc15633acd9a0800000000000000
+      internalID: -6206906732727475016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f2ca928868d4b0720800000000000000
+      internalID: 2813427632428395567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 81b12d1199e7c51e0800000000000000
+      internalID: -2207750521424307432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: bfce56d83da5eec60800000000000000
+      internalID: 7849311065210219771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5b878cc4506803e40800000000000000
+      internalID: 5634150491161655477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a6c3f2eb68cea2320800000000000000
+      internalID: 2534097803809864810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 20dd21282b342f770800000000000000
+      internalID: 8643045068842917122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 37aded7bff8224a70800000000000000
+      internalID: 8809648899856718451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 14}
+        - {x: 14, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 407149408a657b640800000000000000
+      internalID: 5095636783024314116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 9, y: 16}
+        - {x: 9, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9d0c60d408bee0160800000000000000
+      internalID: 6993786207633588441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: e4cbac08170d60eb0800000000000000
+      internalID: -4753883170732327858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a65ce2fde5fbbea60800000000000000
+      internalID: 7704462001739580778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f92a0c291ed0d4c80800000000000000
+      internalID: -8336992072712019297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: af4b847ef560d2810800000000000000
+      internalID: 1742055639834211578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b6c5ead29edafbb439d65c1ffc6ca7f2
+      internalID: 674064502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: d3be8671e5a47024cb21a73d4da07551
+      internalID: 893239215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 174a8d89a0027e543b566ce15fc546a2
+      internalID: 505936237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8e858f90de41ec941bba950a4e9c2694
+      internalID: -381960076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2498923b2a625f6488aaab2cc387d17a
+      internalID: -1935140884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_22
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 48afedc8997293846b57f183837f35a3
+      internalID: -543457077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 9, y: 16}
+        - {x: 9, y: -9}
+        - {x: -8, y: -9}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -15}
+        - {x: -15, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8491e2d2810b8cd41b114fae42f30578
+      internalID: -1474524439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -14}
+        - {x: -14, y: -16}
+        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: bbede2a9b8f111d458d7fc6c2737e9a3
+      internalID: -287070433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4090d867edfc07d4c90dcd57c1f71943
+      internalID: 359954042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -14}
+        - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 14, y: -16}
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5409c30783e62674ca64db262cbfce74
+      internalID: -1302257289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 81e7a2ce4c1ae7a4e8b0f039d01f065b
+      internalID: 1672731735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: e1830eb01f5aa794084a525e49dca939
+      internalID: -1675592293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8e6633aae8b5c0941bc4f58d4eee4ade
+      internalID: -226436777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_30
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: d2ec5133d6fce2945a65f26b20a11ac4
+      internalID: 443057087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_31
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1ab5073c93635a5409f475849087f753
+      internalID: 698055437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2bef5f222f570004e9cee61400648933
+      internalID: -1213781426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_33
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 6f7bf1a0cd0f36948bbb88b948b760b5
+      internalID: 1118300702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 14, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -14}
+        - {x: -14, y: -16}
+        - {x: 14, y: -16}
+      - - {x: -7, y: -7}
+        - {x: -7, y: 7}
+        - {x: 7, y: 7}
+        - {x: 7, y: -7}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 344ad6bc3631f5046ae60596ec17da34
+      internalID: -493978588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: -14, y: 16}
+        - {x: -16, y: 14}
+        - {x: -16, y: -14}
+        - {x: -14, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7c6c1a4d8de009b46835e5c47a768f55
+      internalID: 1046086090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: dc697e4afc66f2944a6bd2e64dba27f2
+      internalID: -1655031786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_37
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -14}
+        - {x: 16, y: 14}
+        - {x: 14, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 14, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 047aee78afec26a4191dfd4e71c49353
+      internalID: 2130854160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f8b5d8230edd55447b983c7a9678a20b
+      internalID: -1707355815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2c088d7f5acea3f46b2f4ea09bc6ed7f
+      internalID: -1064008264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 53966bdcf61119f47a09a7d0504efb26
+      internalID: 2105511272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_41
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -10, y: 8}
+      - - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: 10}
+        - {x: 10, y: 8}
+        - {x: 16, y: 8}
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9fa882adda3420f4095af4ca39516599
+      internalID: -1850345589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: -8, y: -8}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -14}
+        - {x: -14, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5d69ea50e4a41254ea4d71e5d853e4b3
+      internalID: -1442054508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_43
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8c7acb6f43eea6f429daf86cec99c468
+      internalID: 1937430824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -10}
+        - {x: -10, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      - - {x: 16, y: -8}
+        - {x: 10, y: -8}
+        - {x: 8, y: -10}
+        - {x: 8, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1bd9e0449b33e2941a18f15bb42d370e
+      internalID: -1434385510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RawCollisionTiles_45
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -14}
+        - {x: 16, y: 16}
+        - {x: 8, y: 16}
+        - {x: 8, y: -8}
+        - {x: -16, y: -8}
+        - {x: -16, y: -16}
+        - {x: 14, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4815fba0f0481624bad018000431a085
+      internalID: 1025142276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b8bbbd0bf6d27bf4393a655f3a4245cf
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RawCollisionTiles_0: -1631266801096233737
+      RawCollisionTiles_1: 1702556749600702476
+      RawCollisionTiles_10: 8809648899856718451
+      RawCollisionTiles_11: 5095636783024314116
+      RawCollisionTiles_12: 6993786207633588441
+      RawCollisionTiles_13: -4753883170732327858
+      RawCollisionTiles_14: 7704462001739580778
+      RawCollisionTiles_15: -8336992072712019297
+      RawCollisionTiles_16: 1742055639834211578
+      RawCollisionTiles_17: 674064502
+      RawCollisionTiles_18: 893239215
+      RawCollisionTiles_19: 505936237
+      RawCollisionTiles_2: 3908077113246442496
+      RawCollisionTiles_20: -381960076
+      RawCollisionTiles_21: -1935140884
+      RawCollisionTiles_22: -543457077
+      RawCollisionTiles_23: -1474524439
+      RawCollisionTiles_24: -287070433
+      RawCollisionTiles_25: 359954042
+      RawCollisionTiles_26: -1302257289
+      RawCollisionTiles_27: 1672731735
+      RawCollisionTiles_28: -1675592293
+      RawCollisionTiles_29: -226436777
+      RawCollisionTiles_3: -6206906732727475016
+      RawCollisionTiles_30: 443057087
+      RawCollisionTiles_31: 698055437
+      RawCollisionTiles_32: -1213781426
+      RawCollisionTiles_33: 1118300702
+      RawCollisionTiles_34: -493978588
+      RawCollisionTiles_35: 1046086090
+      RawCollisionTiles_36: -1655031786
+      RawCollisionTiles_37: 2130854160
+      RawCollisionTiles_38: -1707355815
+      RawCollisionTiles_39: -1064008264
+      RawCollisionTiles_4: 2813427632428395567
+      RawCollisionTiles_40: 2105511272
+      RawCollisionTiles_41: -1850345589
+      RawCollisionTiles_42: -1442054508
+      RawCollisionTiles_43: 1937430824
+      RawCollisionTiles_44: -1434385510
+      RawCollisionTiles_45: 1025142276
+      RawCollisionTiles_5: -2207750521424307432
+      RawCollisionTiles_6: 7849311065210219771
+      RawCollisionTiles_7: 5634150491161655477
+      RawCollisionTiles_8: 2534097803809864810
+      RawCollisionTiles_9: 8643045068842917122
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
