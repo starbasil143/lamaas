@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiles:
   - {fileID: 11400000, guid: 641ea3f228ced944e8e78c5b2dda4c87, type: 2}
-  superMaterial: {fileID: 11400000, guid: 32aa5c93e60037f4a8b5df9220cf3f56, type: 2}
-  subMaterial: {fileID: 11400000, guid: 545a8be1cf33cca47a77935002d27aed, type: 2}
+  slot1Exists: 1
+  slot2Exists: 0
+  slot3Exists: 1
+  slot4Exists: 0
+  transmutation1: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
+  transmutation2: {fileID: 0}
+  transmutation3: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
+  transmutation4: {fileID: 0}
