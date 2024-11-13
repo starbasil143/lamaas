@@ -75,8 +75,9 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Heal(float health)
+    public void Heal(float health)
     {
+        
         if (healthAmount + health <= maxHealthAmount)
         {
             healthAmount += health;
@@ -85,8 +86,7 @@ public class Player : MonoBehaviour
         {
             healthAmount = maxHealthAmount;
         }
-        
-        //healthBar.fillAmount = healthAmount / maxHealthAmount;
+        HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f;
         //HealSoundSource.Play();
     }
 

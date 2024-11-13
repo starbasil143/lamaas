@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class PlayerCasting : MonoBehaviour
     public Player _player;
     [SerializeField] private Tilemap map; // reference to the Ground tilemap
     [SerializeField] private List<TileData> tileDatas; // list of all tile types
+    [SerializeField] private List<string> objectNames;
     private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
     private Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
     private Dictionary<string, bool> unlocksPerObject;
@@ -21,6 +23,8 @@ public class PlayerCasting : MonoBehaviour
     public GameObject SlotFourImage;
 
     private TileData currentTile;
+    public GameObject currentObject;
+    public List<GameObject> objectsInRangeList;
 
     private float cooldown1 = 0f;
     private float cooldown2 = 0f;
@@ -30,6 +34,7 @@ public class PlayerCasting : MonoBehaviour
     private void Awake()
     {
         _player = gameObject.GetComponent<Player>(); // get reference to Player.cs script
+        objectsInRangeList = new List<GameObject>();
         
         // fill the dataFromTiles dictionary and the unlocksPerMaterial dictionary
 
@@ -45,6 +50,11 @@ public class PlayerCasting : MonoBehaviour
         foreach (TileData tileData in tileDatas)
         {
             unlocksPerMaterial.Add(tileData, new bool[] {true, true, true, true});
+        }
+        unlocksPerObject = new Dictionary<string, bool>();
+        foreach (string objectName in objectNames)
+        {
+            unlocksPerObject.Add(objectName, true);
         }
     }
 
@@ -68,7 +78,7 @@ public class PlayerCasting : MonoBehaviour
         SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][0]);
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][1]);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][2]);
-        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][3]);
+        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",!(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().name]);
     }
 
     public TileData GetCurrentTile()
@@ -86,7 +96,21 @@ public class PlayerCasting : MonoBehaviour
         {
             SwitchTile();
         }
-        
+        if (objectsInRangeList.Count > 0)
+        {
+            if (objectsInRangeList.Count > 1)
+            {
+                SwitchObject(FindClosestObject());
+            }
+            else
+            {
+                SwitchObject(objectsInRangeList[0]);
+            }
+        }
+        else
+        {
+            SwitchObject(null);
+        }
 
         if (InputManager.Slot1) // R - SuperMaterial Attack
         {
@@ -111,11 +135,11 @@ public class PlayerCasting : MonoBehaviour
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2
         {
-            /*
-            if (cooldown4 <= 0 && unlocksPerObject[currentObject] && currentObject.slot4Exists)
+            
+            if (cooldown4 <= 0 && !(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName])
             {
-                currentObject.PerformTransmutation(gameObject);
-            }*/
+                currentObject.GetComponent<TransmutationObject>().PerformTransmutation();
+            }
         }
 
 
@@ -139,13 +163,45 @@ public class PlayerCasting : MonoBehaviour
         SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists);
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists);
-        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][3] && currentTile.slot4Exists);
-
-        
         
         
         Debug.Log("Switching to " + currentTile);
     }
 
+    public void SwitchObject(GameObject newObject)
+    {
+        currentObject = newObject;
+        SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",!(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName]);
+    }
+
+    public bool hasObjectUnlocked(string objectToCheck)
+    {
+        return unlocksPerObject[objectToCheck];
+    }
+
+    public void addObjectToInRangeList(GameObject objectToAdd)
+    {
+        objectsInRangeList.Add(objectToAdd);
+    }
+
+    public void removeObjectFromInRangeList(GameObject objectToRemove)
+    {
+        objectsInRangeList.Remove(objectToRemove);
+    }
+
+    private GameObject FindClosestObject()
+    {
+        GameObject closestObject = null;
+        float closestMagnitude = 143143143;
+        foreach (GameObject availableObject in objectsInRangeList)
+        {
+            if (Mathf.Abs((availableObject.transform.position - gameObject.transform.position).sqrMagnitude) < closestMagnitude)
+            {
+                closestObject = availableObject;
+                closestMagnitude = Mathf.Abs((availableObject.transform.position - gameObject.transform.position).sqrMagnitude);
+            }
+        }
+        return closestObject;
+    }
 
 }
