@@ -12,6 +12,7 @@ public class PlayerCasting : MonoBehaviour
     [SerializeField] private List<TileData> tileDatas; // list of all tile types
     private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
     private Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
+    private Dictionary<string, bool> unlocksPerObject;
 
     // transmutation slot ui images
     public GameObject SlotOneImage;
@@ -110,10 +111,11 @@ public class PlayerCasting : MonoBehaviour
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2
         {
-            if (cooldown4 <= 0 && unlocksPerMaterial[currentTile][3] && currentTile.slot4Exists)
+            /*
+            if (cooldown4 <= 0 && unlocksPerObject[currentObject] && currentObject.slot4Exists)
             {
-                currentTile.transmutation4.PerformTransmutation(gameObject);
-            }
+                currentObject.PerformTransmutation(gameObject);
+            }*/
         }
 
 
@@ -144,4 +146,6 @@ public class PlayerCasting : MonoBehaviour
         
         Debug.Log("Switching to " + currentTile);
     }
+
+
 }
