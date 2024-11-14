@@ -21,6 +21,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Move to next dialogue box when 
         if (Input.GetMouseButtonDown(0))
         {
             if (textComponent.text == lines[index])
