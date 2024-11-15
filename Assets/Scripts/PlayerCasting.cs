@@ -114,14 +114,14 @@ public class PlayerCasting : MonoBehaviour
 
         if (InputManager.Slot1) // R - SuperMaterial Attack
         {
-            if (cooldown1 <= 0 && currentTile.slot1Exists && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
+            if (cooldown1 <= 0 && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
             {
                 currentTile.transmutation1.PerformTransmutation(gameObject);
             }
         }
-        if (InputManager.Slot2) // F - SubMaterial Attack
+        if (InputManager.Slot2) // F - SubMaterial Attack (water)
         {
-            if (cooldown2 <= 0 && unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists)
+            if (cooldown2 <= 0 && !(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName] && currentTile.slot2Exists)
             {
                 currentTile.transmutation2.PerformTransmutation(gameObject);
             }
