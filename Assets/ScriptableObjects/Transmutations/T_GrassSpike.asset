@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebfd3507ec4b0634499725f7935d84dc, type: 3}
+  m_Name: T_GrassSpike
+  m_EditorClassIdentifier: 
+  theSpikes: {fileID: 6332215113201615137, guid: f6f1a6845544ef846bc5d9c6a8e00340, type: 3}

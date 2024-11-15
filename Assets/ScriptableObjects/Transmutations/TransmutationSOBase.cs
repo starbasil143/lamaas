@@ -4,6 +4,5 @@ using UnityEngine;
 public class TransmutationSOBase : ScriptableObject
 {
     public virtual void PerformTransmutation(GameObject player) { }
-    
 
 }
