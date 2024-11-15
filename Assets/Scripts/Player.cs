@@ -53,6 +53,7 @@ public class Player : MonoBehaviour
             currentSlot = 0;
         }
 
+
     }
 
 
@@ -89,6 +90,15 @@ public class Player : MonoBehaviour
         HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f;
         //HealSoundSource.Play();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Harm") && collision.gameObject.GetComponent<HarmfulObjectScript>().canDamagePlayer)
+        {
+            Damage(collision.gameObject.GetComponent<HarmfulObjectScript>().damageAmount);
+        }
+    }
+
 
     private void Die()
     {
