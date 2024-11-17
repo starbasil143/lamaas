@@ -369,8 +369,8 @@ GameObject:
   - component: {fileID: 6039303920562887245}
   - component: {fileID: 5944200767883967261}
   - component: {fileID: 7451144209983791805}
-  - component: {fileID: 8993148276346819362}
-  m_Layer: 0
+  - component: {fileID: 3997154288715738027}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -386,8 +386,8 @@ Transform:
   m_GameObject: {fileID: 1258275349538517363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0996289, y: -5.1049366, z: 0.07208101}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
+  m_LocalPosition: {x: 3, y: -16, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8421620399887064600}
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1541214691
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 07f7690d5c31e4b45a053783f5377fcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -483,6 +483,7 @@ MonoBehaviour:
   healthAmount: 10
   isPaused: 0
   currentSlot: 0
+  immunityTime: 1
   _exclamationIcon: {fileID: 0}
   HealthBarFillImage: {fileID: 445544933602325983}
   _playerCasting: {fileID: 6039303920562887245}
@@ -552,11 +553,11 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 1
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &8993148276346819362
-CapsuleCollider2D:
+--- !u!61 &3997154288715738027
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -589,9 +590,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0013639331, y: 0.20961025}
-  m_Size: {x: 0.3842796, y: 0.39737362}
-  m_Direction: 0
+  m_Offset: {x: 0.017147064, y: 0.25136262}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.65019226, y: 0.39298153}
+  m_EdgeRadius: 0
 --- !u!1 &1449810639893721965
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +629,7 @@ Transform:
   m_GameObject: {fileID: 1449810639893721965}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0996289, y: -4.6049366, z: -9.927919}
+  m_LocalPosition: {x: 3.0000005, y: -15.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1275,7 +1285,7 @@ Transform:
   m_GameObject: {fileID: 3267914054440020257}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0996289, y: -4.6049366, z: -9.927919}
+  m_LocalPosition: {x: 3.0000005, y: -15.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

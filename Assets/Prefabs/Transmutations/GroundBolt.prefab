@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8994981952721810659}
   - component: {fileID: 2647719780956568117}
   - component: {fileID: 648245386114684206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundBolt
-  m_TagString: Untagged
+  m_TagString: Harm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1541214691
-  m_SortingLayer: 6
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1285f4fca4d869949992ff9a88ebce27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,15 +102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f793f5a0a6289488392e1a0f62624a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 20
+  damageAmount: 2
   isBlockable: 0
-  destroyOnContact: 0
+  destroyOnContact: 1
   canDamagePlayer: 0
   canDamageEnemy: 1
   thwartedByWalls: 1
   Source: {fileID: 0}
   ImpactObject: {fileID: 0}
-  existenceTime: 10
+  existenceTime: 6
 --- !u!50 &2647719780956568117
 Rigidbody2D:
   serializedVersion: 5
@@ -133,7 +133,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

@@ -13,6 +13,9 @@ public class Player : MonoBehaviour
     public float healthAmount = 10f;
     public bool isPaused;
     public int currentSlot = 0;
+    public float immunityTime = 1f;
+    private float immunityTimer = 0f;
+    
     public GameObject _exclamationIcon;
 
     public GameObject HealthBarFillImage;
@@ -32,19 +35,19 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (InputManager.Slot1) // R - Broad Attack
+        if (InputManager.Slot1) // R - Regular Attack
         {
             currentSlot = 1;
         }
-        if (InputManager.Slot2) // F - Specific Attack
+        if (InputManager.Slot2) // F - Secondary Attack
         {
             currentSlot = 2;
         }
-        if (InputManager.Slot3) // T - Special 1
+        if (InputManager.Slot3) // T - Special 
         {
             currentSlot = 3;
         }
-        if (InputManager.Slot4) // G - Special 2
+        if (InputManager.Slot4) // G - Object Transmutation
         {
             currentSlot = 4;
         }
@@ -53,7 +56,10 @@ public class Player : MonoBehaviour
             currentSlot = 0;
         }
 
-
+        if (immunityTimer < immunityTime)
+        {
+            immunityTimer += Time.deltaTime;
+        }
     }
 
 
@@ -91,11 +97,12 @@ public class Player : MonoBehaviour
         //HealSoundSource.Play();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Harm") && collision.gameObject.GetComponent<HarmfulObjectScript>().canDamagePlayer)
+        if (collision.gameObject.CompareTag("Harm") && collision.gameObject.GetComponent<HarmfulObjectScript>().canDamagePlayer && immunityTimer >= immunityTime)
         {
             Damage(collision.gameObject.GetComponent<HarmfulObjectScript>().damageAmount);
+            immunityTimer = 0f;
         }
     }
 
@@ -115,4 +122,6 @@ public class Player : MonoBehaviour
     {
         _exclamationIcon.SetActive(false);
     }
+
+    
 }
