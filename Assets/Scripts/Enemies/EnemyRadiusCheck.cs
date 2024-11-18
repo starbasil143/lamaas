@@ -19,13 +19,13 @@ public class EnemyRadiusCheck : MonoBehaviour
             switch (radiusType)
             {
                 case "Hostile":
-                    _enemy.HostileRadiusTrigger();
+                    _enemy.HostileRadiusEntryTrigger();
                 break;
                 case "Attack":
 
                 break;
                 default:
-                Debug.LogWarning("You Broke It,,,... (invalid radius type)");
+                Debug.LogWarning("You Broke It,,,... (invalid entry radius type)");
                 break;
             }
         }
@@ -35,7 +35,18 @@ public class EnemyRadiusCheck : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            switch (radiusType)
+            {
+                case "Hostile":
+                    _enemy.HostileRadiusExitTrigger();
+                break;
+                case "Attack":
 
+                break;
+                default:
+                Debug.LogWarning("You Broke It,,,... (invalid exit radius type)");
+                break;
+            }
         }
     }
 }

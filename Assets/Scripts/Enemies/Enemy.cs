@@ -15,14 +15,18 @@ public class Enemy : MonoBehaviour
     private EnemyState currentState;
     public Transform _player;
     private Transform _transform;
-    public float speed = 5f;
+    public float hostileSpeed = 5f;
+    public float idleSpeed = 1f;
+    private float currentSpeed;
     public float waypointAccuracy = 1f;
     private Path path;
     private int currentWaypoint;
+    public float idleMoveRange = 10f;
     bool reachedEndOfPath = false;
     private Seeker _seeker;
     private Rigidbody2D _rigidbody;
     private Animator _animator;
+    private bool hostileTriggerStatus;
     
 
 
@@ -83,7 +87,7 @@ public class Enemy : MonoBehaviour
             }
 
             Vector2 directionToMove = ((Vector2)path.vectorPath[currentWaypoint] - _rigidbody.position).normalized;  
-            Vector2 force = directionToMove * speed;
+            Vector2 force = directionToMove * currentSpeed;
             
 
             _rigidbody.AddForce(force);
@@ -122,11 +126,15 @@ public class Enemy : MonoBehaviour
     public void BecomeIdle()
     {
         currentState = EnemyState.Idle;
-        
+        currentSpeed = idleSpeed;
     }
     private void IdleUpdate()
     {
-        
+        if (hostileTriggerStatus == true)
+        {
+            IdleExitLogic();
+            BecomeHostile();
+        }
     }
     private void IdleFixedUpdate()
     {
@@ -134,7 +142,16 @@ public class Enemy : MonoBehaviour
     }
     private void IdlePath()
     {
-        
+        if (reachedEndOfPath || path == null)
+        {
+            Vector2 randomPoint = _rigidbody.position + Random.insideUnitCircle * idleMoveRange;
+            _seeker.StartPath(_rigidbody.position, randomPoint, OnPathLoaded);
+        }
+
+    }
+    private void IdleExitLogic()
+    {
+
     }
     #endregion
     
@@ -158,17 +175,18 @@ public class Enemy : MonoBehaviour
     #endregion
     
     #region HOSTILE STATE
-    public void HostileRadiusTrigger()
-    {
-        BecomeHostile();
-    }
     public void BecomeHostile()
     {
         currentState = EnemyState.Hostile;
+        currentSpeed = hostileSpeed;
     }
     private void HostileUpdate()
     {
-        
+        if (hostileTriggerStatus == false)
+        {
+            HostileExitLogic();
+            BecomeIdle();
+        }
     }
     private void HostileFixedUpdate()
     {
@@ -177,6 +195,10 @@ public class Enemy : MonoBehaviour
     private void HostilePath()
     {
         _seeker.StartPath(_rigidbody.position, _player.position, OnPathLoaded);
+    }
+    private void HostileExitLogic()
+    {
+
     }
     #endregion
     
@@ -200,7 +222,16 @@ public class Enemy : MonoBehaviour
     #endregion
 
 
-    
+    #region Range Triggers
+    public void HostileRadiusEntryTrigger()
+    {
+        hostileTriggerStatus = true;
+    }
+    public void HostileRadiusExitTrigger()
+    {
+        hostileTriggerStatus = false;
+    }
+    #endregion
 
     #region Health/Die Functions
     public void ReceiveHarm(HarmfulObjectScript harmSource)
@@ -244,7 +275,7 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             if (_seeker.IsDone())
             {
-                switch (currentState) // Run the current state's Update function
+                switch (currentState) // Run the current state's Path function
                 {
                     case EnemyState.Idle:
                         IdlePath();
