@@ -21,13 +21,15 @@ public class PlayerMovement : MonoBehaviour
     private const string _lastHorizontal = "LastHorizontal";
     private const string _lastVertical = "LastVertical";
     
-    private Vector2 _movement;
+    private Vector2 movement;
     private Rigidbody2D _rigidbody;
+    private Animator _animator;
 
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -40,9 +42,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 isDashing = true;
                 currentDashCooldown = _dashCooldown;
-                _movement = lastDirection;
+                movement = lastDirection;
             }
         }
+
+        _animator.SetFloat(_horizontal, movement.x);
+        _animator.SetFloat(_vertical, movement.y);
+        if (movement != Vector2.zero)
+        {
+            lastDirection = movement;
+            _animator.SetFloat(_lastHorizontal, movement.x);
+            _animator.SetFloat(_lastVertical, movement.y);
+        }
+
     }
     private void FixedUpdate()
     {
@@ -52,13 +64,13 @@ public class PlayerMovement : MonoBehaviour
 
             if (!isDashing) // Walking
             {
-                _movement.Set(InputManager.Movement.x, InputManager.Movement.y);
-                _rigidbody.linearVelocity = _movement * _moveSpeed;
+                movement.Set(InputManager.Movement.x, InputManager.Movement.y);
+                _rigidbody.linearVelocity = movement * _moveSpeed;
             }
             
             if (isDashing)
             {
-                _rigidbody.linearVelocity = _movement * Mathf.Lerp(_dashSpeed, _moveSpeed, (_dashCooldown - currentDashCooldown)/_dashLength);
+                _rigidbody.linearVelocity = movement * Mathf.Lerp(_dashSpeed, _moveSpeed, (_dashCooldown - currentDashCooldown)/_dashLength);
 
                 if (_dashCooldown - currentDashCooldown >= _dashLength)
                 {
@@ -74,9 +86,9 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (_movement != Vector2.zero)
+            if (movement != Vector2.zero)
             {
-                lastDirection = _movement;
+                lastDirection = movement;
             }
         }
     }

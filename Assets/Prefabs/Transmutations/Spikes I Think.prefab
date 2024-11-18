@@ -105,7 +105,7 @@ MonoBehaviour:
   isBlockable: 0
   destroyOnContact: 0
   canDamagePlayer: 1
-  canDamageEnemy: 0
+  canDamageEnemy: 1
   thwartedByWalls: 0
   Source: {fileID: 0}
   ImpactObject: {fileID: 0}
