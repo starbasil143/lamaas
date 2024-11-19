@@ -27,12 +27,16 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private bool hostileTriggerStatus;
+    private bool attackTriggerStatus;
+    public LayerMask RaycastingMask;
+    private float lastHorizontal;
     
 
 
     public float maxHP;
     public float enemyDefense;
     private float currentHP;
+    public float attackDistance = 10f;
 
     private void Awake()
     {
@@ -98,7 +102,12 @@ public class Enemy : MonoBehaviour
                 currentWaypoint++;
             }
         }
-        _animator.SetFloat("HorizontalDirection", _rigidbody.linearVelocity.x);
+        lastHorizontal = _rigidbody.linearVelocity.x;
+        _animator.SetFloat("HorizontalDirection", lastHorizontal);
+        if(_rigidbody.linearVelocity.x == 0)
+        {
+            _animator.SetFloat("LastHorizontal", lastHorizontal);
+        }
 
         switch (currentState) // Run the current state's Update function
         {
@@ -130,15 +139,22 @@ public class Enemy : MonoBehaviour
     }
     private void IdleUpdate()
     {
-        if (hostileTriggerStatus == true)
+        if (hostileTriggerStatus == true) // If player is in range to start chasing
         {
-            IdleExitLogic();
-            BecomeHostile();
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, _player.position - transform.position, 100f, RaycastingMask);
+            if (ray.collider != null)
+            {
+                if (ray.collider.gameObject.CompareTag("Player"))
+                {
+                    IdleExitLogic();
+                    BecomeHostile();
+                }
+            }
         }
     }
     private void IdleFixedUpdate()
     {
-
+        
     }
     private void IdlePath()
     {
@@ -187,6 +203,11 @@ public class Enemy : MonoBehaviour
             HostileExitLogic();
             BecomeIdle();
         }
+        if (attackTriggerStatus == true)
+        {
+            HostileExitLogic();
+            BecomeAttacking();
+        }
     }
     private void HostileFixedUpdate()
     {
@@ -206,10 +227,16 @@ public class Enemy : MonoBehaviour
     public void BecomeAttacking()
     {
         currentState = EnemyState.Attacking;
+        Debug.Log("KILL !!!");
+        StartCoroutine(RepeatAttack());
     }
     private void AttackingUpdate()
     {
-        
+        if (attackTriggerStatus == false)
+        {
+            AttackingExitLogic();
+            BecomeHostile();
+        }
     }
     private void AttackingFixedUpdate()
     {
@@ -217,7 +244,27 @@ public class Enemy : MonoBehaviour
     }
     private void AttackingPath()
     {
+        _seeker.CancelCurrentPathRequest();
+        path = null;
+    }
+    private void AttackingExitLogic()
+    {
 
+    }
+
+    private IEnumerator RepeatAttack()
+    {
+        while (currentState == EnemyState.Attacking)
+        {
+            CastAttack();
+            yield return new WaitForSeconds(1.5f);
+        }
+        yield return null;
+    }
+
+    private void CastAttack()
+    {
+        Debug.Log("wooooo woooo i shoot  energy ball at you  wooo i am scary");
     }
     #endregion
 
@@ -231,6 +278,14 @@ public class Enemy : MonoBehaviour
     {
         hostileTriggerStatus = false;
     }
+    public void AttackRadiusEntryTrigger()
+    {
+        attackTriggerStatus = true;
+    }
+    public void AttackRadiusExitTrigger()
+    {
+        attackTriggerStatus = false;
+    }
     #endregion
 
     #region Health/Die Functions
@@ -243,6 +298,10 @@ public class Enemy : MonoBehaviour
             {
                 harmSource.DestroySelf();
             }
+        }
+        if (currentState==EnemyState.Idle && harmSource.Source.CompareTag("Player"))
+        {
+            
         }
     }
     public void Damage(float damageAmount)

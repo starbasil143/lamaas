@@ -164,8 +164,6 @@ public class PlayerCasting : MonoBehaviour
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists);
         
-        
-        Debug.Log("Switching to " + currentTile);
     }
 
     public void SwitchObject(GameObject newObject)

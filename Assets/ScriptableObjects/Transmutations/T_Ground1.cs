@@ -14,6 +14,7 @@ public class T_Ground1 : TransmutationSOBase
         if (!Physics2D.Raycast(new Vector2(player.transform.position.x, player.transform.position.y+0.5f) + mousePos.normalized*.5f, mousePos.normalized, .5f, 1<<LayerMask.NameToLayer("Collisions"))) // If you are not standing right up against a wall
         {
             GameObject Projectile = Instantiate(projectile, new Vector2(player.transform.position.x, player.transform.position.y+0.5f) + mousePos.normalized, Quaternion.Euler(0, 0, castAngle)); // Make the projectile
+            Projectile.GetComponent<HarmfulObjectScript>().Source = player;
             Physics2D.IgnoreCollision(Projectile.GetComponent<Collider2D>(), player.GetComponent<Collider2D>()); // Make the player collider and projectile collider ignore each other
             Vector2 shootForce = mousePos.normalized * 7; 
             Projectile.GetComponent<Rigidbody2D>().AddForce(shootForce, ForceMode2D.Impulse); // Give the projectile a force so it moves

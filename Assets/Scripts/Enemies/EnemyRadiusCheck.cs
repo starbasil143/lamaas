@@ -22,7 +22,7 @@ public class EnemyRadiusCheck : MonoBehaviour
                     _enemy.HostileRadiusEntryTrigger();
                 break;
                 case "Attack":
-
+                    _enemy.AttackRadiusEntryTrigger();
                 break;
                 default:
                 Debug.LogWarning("You Broke It,,,... (invalid entry radius type)");
@@ -41,7 +41,7 @@ public class EnemyRadiusCheck : MonoBehaviour
                     _enemy.HostileRadiusExitTrigger();
                 break;
                 case "Attack":
-
+                    _enemy.AttackRadiusExitTrigger();
                 break;
                 default:
                 Debug.LogWarning("You Broke It,,,... (invalid exit radius type)");
