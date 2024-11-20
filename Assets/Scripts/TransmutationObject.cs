@@ -15,27 +15,20 @@ public class TransmutationObject : MonoBehaviour
     {
         _objectTransmutation.PerformTransmutation(_player);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TryAddToList()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if(_player.GetComponentInChildren<PlayerCasting>().hasObjectUnlocked(objectName) && !inList)
         {
-            if(_player.GetComponent<PlayerCasting>().hasObjectUnlocked(objectName) && !inList)
-            {
-                Debug.Log("Adding " + gameObject.ToString() + "to list");
-                _player.GetComponent<PlayerCasting>().addObjectToInRangeList(gameObject);
-                inList = true;
-            }
+            _player.GetComponentInChildren<PlayerCasting>().addObjectToInRangeList(gameObject);
+            inList = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    public void TryRemoveFromList()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if(_player.GetComponentInChildren<PlayerCasting>().hasObjectUnlocked(objectName) && inList)
         {
-            if(_player.GetComponent<PlayerCasting>().hasObjectUnlocked(objectName) && inList)
-            {
-                _player.GetComponent<PlayerCasting>().removeObjectFromInRangeList(gameObject);
-                inList = false;
-            }
-        }
+            _player.GetComponentInChildren<PlayerCasting>().removeObjectFromInRangeList(gameObject);
+            inList = false;
+        } 
     }
 }

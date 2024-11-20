@@ -31,9 +31,12 @@ public class PlayerCasting : MonoBehaviour
     private float cooldown3 = 0f;
     private float cooldown4 = 0f;
 
+    private GameObject PlayerParent;
+
     private void Awake()
     {
-        _player = gameObject.GetComponent<Player>(); // get reference to Player.cs script
+        PlayerParent = transform.parent.gameObject;
+        _player = PlayerParent.GetComponentInChildren<Player>(); // get reference to Player.cs script
         objectsInRangeList = new List<GameObject>();
         
         // fill the dataFromTiles dictionary and the unlocksPerMaterial dictionary
@@ -114,23 +117,23 @@ public class PlayerCasting : MonoBehaviour
 
         if (InputManager.Slot1) // R - SuperMaterial Attack
         {
-            if (cooldown1 <= 0 && currentTile.slot1Exists && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
+            if (cooldown1 <= 0 && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
             {
-                currentTile.transmutation1.PerformTransmutation(gameObject);
+                currentTile.transmutation1.PerformTransmutation(PlayerParent);
             }
         }
         if (InputManager.Slot2) // F - SubMaterial Attack
         {
             if (cooldown2 <= 0 && unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists)
             {
-                currentTile.transmutation2.PerformTransmutation(gameObject);
+                currentTile.transmutation2.PerformTransmutation(PlayerParent);
             }
         }
         if (InputManager.Slot3) // T - SubMaterial Special 1
         {
             if (cooldown3 <= 0 && unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists)
             {
-                currentTile.transmutation3.PerformTransmutation(gameObject);
+                currentTile.transmutation3.PerformTransmutation(PlayerParent);
             }
         }
         if (InputManager.Slot4) // G - SubMaterial Special 2
@@ -166,22 +169,21 @@ public class PlayerCasting : MonoBehaviour
         
     }
 
+    #region Object Transmutation 
+
     public void SwitchObject(GameObject newObject)
     {
         currentObject = newObject;
         SlotFourImage.GetComponent<Animator>().SetBool("SlotIsEnabled",!(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName]);
     }
-
     public bool hasObjectUnlocked(string objectToCheck)
     {
         return unlocksPerObject[objectToCheck];
     }
-
     public void addObjectToInRangeList(GameObject objectToAdd)
     {
         objectsInRangeList.Add(objectToAdd);
     }
-
     public void removeObjectFromInRangeList(GameObject objectToRemove)
     {
         objectsInRangeList.Remove(objectToRemove);
@@ -193,13 +195,16 @@ public class PlayerCasting : MonoBehaviour
         float closestMagnitude = 143143143;
         foreach (GameObject availableObject in objectsInRangeList)
         {
-            if (Mathf.Abs((availableObject.transform.position - gameObject.transform.position).sqrMagnitude) < closestMagnitude)
+            if (Mathf.Abs((availableObject.transform.position - PlayerParent.transform.position).sqrMagnitude) < closestMagnitude)
             {
                 closestObject = availableObject;
-                closestMagnitude = Mathf.Abs((availableObject.transform.position - gameObject.transform.position).sqrMagnitude);
+                closestMagnitude = Mathf.Abs((availableObject.transform.position - PlayerParent.transform.position).sqrMagnitude);
             }
         }
         return closestObject;
     }
+    #endregion
+
+    
 
 }

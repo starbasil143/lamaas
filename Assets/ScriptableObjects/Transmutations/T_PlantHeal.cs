@@ -9,7 +9,7 @@ public class T_PlantHealth : TransmutationSOBase
     {
         base.PerformTransmutation(player);
         
-        player.GetComponent<Player>().Heal(healingAmount);
-        Destroy(player.GetComponent<PlayerCasting>().currentObject);
+        player.GetComponentInChildren<Player>().Heal(healingAmount);
+        Destroy(player.GetComponentInChildren<PlayerCasting>().currentObject);
     }
 }

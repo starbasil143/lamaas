@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2791982615649287639}
+  - component: {fileID: 3904532487147865351}
   - component: {fileID: 9172588382337046774}
   - component: {fileID: 6240151404827352677}
-  - component: {fileID: 3904532487147865351}
   m_Layer: 0
   m_Name: HealingPlant2
   m_TagString: TransmutationObject
@@ -34,6 +34,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3904532487147865351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942397595259399338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5e633637e1d7b468b0c387259e5a16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectTransmutation: {fileID: 11400000, guid: d13a4aa4c4a276b498b7e6c0cb458548, type: 2}
+  objectName: HealPlant2
 --- !u!212 &9172588382337046774
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +90,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1541214691
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 3555072755076529493, guid: 0b515287972760d4eb7ad46e34a17adb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -124,18 +138,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.46875}
-  m_Radius: 1.5
---- !u!114 &3904532487147865351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3942397595259399338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad5e633637e1d7b468b0c387259e5a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectTransmutation: {fileID: 11400000, guid: d13a4aa4c4a276b498b7e6c0cb458548, type: 2}
-  objectName: HealPlant2
+  m_Radius: 0.5

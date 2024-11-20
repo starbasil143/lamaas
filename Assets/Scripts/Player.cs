@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public int currentSlot = 0;
     public float immunityTime = 1f;
     private float immunityTimer = 0f;
+    private GameObject PlayerParent;
     
     public GameObject _exclamationIcon;
 
@@ -27,9 +28,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
-        _exclamationIcon = gameObject.transform.Find("Exclamation").gameObject;
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        PlayerParent = transform.parent.gameObject;
+        _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
+        _animator = PlayerParent.GetComponentInChildren<Animator>();
     }
 
 
@@ -110,7 +111,7 @@ public class Player : MonoBehaviour
     private void Die()
     {
         isPaused = true;
-        gameObject.SetActive(false);
+        PlayerParent.SetActive(false);
         //_deathCanvas.SetActive(true);
     }
 

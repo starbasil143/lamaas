@@ -90,16 +90,19 @@ public class Enemy : MonoBehaviour
                 reachedEndOfPath = false;
             }
 
-            Vector2 directionToMove = ((Vector2)path.vectorPath[currentWaypoint] - _rigidbody.position).normalized;  
-            Vector2 force = directionToMove * currentSpeed;
-            
-
-            _rigidbody.AddForce(force);
-            float distance = Vector2.Distance(_rigidbody.position, path.vectorPath[currentWaypoint]);
-            
-            if (distance < waypointAccuracy)
+            if (path.vectorPath[currentWaypoint] != null)
             {
-                currentWaypoint++;
+                Vector2 directionToMove = ((Vector2)path.vectorPath[currentWaypoint] - _rigidbody.position).normalized;  
+                Vector2 force = directionToMove * currentSpeed;
+                
+
+                _rigidbody.AddForce(force);
+                float distance = Vector2.Distance(_rigidbody.position, path.vectorPath[currentWaypoint]);
+                
+                if (distance < waypointAccuracy)
+                {
+                    currentWaypoint++;
+                }
             }
         }
         lastHorizontal = _rigidbody.linearVelocity.x;

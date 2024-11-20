@@ -24,12 +24,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D _rigidbody;
     private Animator _animator;
+    private GameObject PlayerParent;
+    [SerializeField] private GameObject PlayerGFX;
 
 
     private void Awake()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>();
+        PlayerParent = transform.parent.gameObject;
+        _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
+        _animator = PlayerGFX.GetComponent<Animator>();
     }
 
     private void Update()
@@ -37,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
         if (!isPaused)
         {
             // Movement
-
             if (InputManager.Dash && currentDashCooldown <= 0) // Dashing
             {
                 isDashing = true;
