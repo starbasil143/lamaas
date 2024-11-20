@@ -8295,11 +8295,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6513809
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.519715
+      value: -15.97
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -60842,11 +60842,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2366259
+      value: -0.49
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.780458
+      value: -14.96
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -65140,6 +65140,8 @@ MonoBehaviour:
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
+  projectile: {fileID: 2524667109626999555, guid: 661b967dd0feaad48963032ed2ef7177, type: 3}
+  EnemyGFX: {fileID: 1320845371}
   maxHP: 8
   enemyDefense: 1
   attackDistance: 5
@@ -65402,11 +65404,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8526734
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.026877
+      value: -13.95
       objectReference: {fileID: 0}
     - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
       propertyPath: m_LocalPosition.z

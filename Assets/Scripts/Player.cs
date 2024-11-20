@@ -98,11 +98,11 @@ public class Player : MonoBehaviour
         //HealSoundSource.Play();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    public void ReceiveHarm(HarmfulObjectScript harmSource)
     {
-        if (collision.gameObject.CompareTag("Harm") && collision.gameObject.GetComponent<HarmfulObjectScript>().canDamagePlayer && immunityTimer >= immunityTime)
+        if (harmSource.GetComponent<HarmfulObjectScript>().canDamagePlayer && immunityTimer >= immunityTime)
         {
-            Damage(collision.gameObject.GetComponent<HarmfulObjectScript>().damageAmount);
+            Damage(harmSource.GetComponent<HarmfulObjectScript>().damageAmount);
             immunityTimer = 0f;
         }
     }

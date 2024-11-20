@@ -30,7 +30,10 @@ public class Enemy : MonoBehaviour
     private bool attackTriggerStatus;
     public LayerMask RaycastingMask;
     private float lastHorizontal;
-    
+    [SerializeField] private GameObject projectile;
+    public GameObject EnemyGFX;
+    Coroutine repeatAttackCoroutine;
+    Coroutine maybeStopAttacking;
 
 
     public float maxHP;
@@ -232,14 +235,17 @@ public class Enemy : MonoBehaviour
     {
         currentState = EnemyState.Attacking;
         Debug.Log("KILL !!!");
-        StartCoroutine(RepeatAttack());
+        repeatAttackCoroutine = StartCoroutine(RepeatAttack());
     }
     private void AttackingUpdate()
     {
         if (attackTriggerStatus == false)
         {
-            AttackingExitLogic();
-            BecomeHostile();
+            if (maybeStopAttacking != null)
+            {
+                StopCoroutine(maybeStopAttacking);
+            }
+            StartCoroutine(MaybeStopAttackingAfterALittleBit(3f));
         }
     }
     private void AttackingFixedUpdate()
@@ -253,7 +259,7 @@ public class Enemy : MonoBehaviour
     }
     private void AttackingExitLogic()
     {
-
+        StopCoroutine(repeatAttackCoroutine);
     }
 
     private IEnumerator RepeatAttack()
@@ -265,10 +271,27 @@ public class Enemy : MonoBehaviour
         }
         yield return null;
     }
+    private IEnumerator MaybeStopAttackingAfterALittleBit(float littleBit)
+    {
+        yield return new WaitForSeconds(littleBit);
+        if (!attackTriggerStatus)
+        {
+            AttackingExitLogic();
+            BecomeHostile();
+        }
+        yield return null;
+    }
 
     private void CastAttack()
     {
-        Debug.Log("wooooo woooo i shoot  energy ball at you  wooo i am scary");
+        GameObject Projectile = Instantiate(projectile, new Vector2(transform.position.x, transform.position.y+0.5f), Quaternion.Euler(0, 0, 0)); // Make the projectile
+        Projectile.GetComponent<HarmfulObjectScript>().Source = gameObject;
+        Physics2D.IgnoreCollision(Projectile.GetComponent<Collider2D>(), GetComponentInParent<Collider2D>());
+        Physics2D.IgnoreCollision(Projectile.GetComponent<Collider2D>(), EnemyGFX.GetComponent<Collider2D>());
+        
+        Vector2 shootForce = ((Vector2)_player.position - (Vector2)transform.position).normalized * 5; 
+        Projectile.GetComponent<Rigidbody2D>().AddForce(shootForce, ForceMode2D.Impulse); // Give the projectile a force so it moves
+        
     }
     #endregion
 
