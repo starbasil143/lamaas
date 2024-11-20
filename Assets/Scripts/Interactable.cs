@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            collision.gameObject.GetComponent<Player>().NotifyOn();
+            collision.gameObject.GetComponentInChildren<Player>().NotifyOn();
         }
     }
 
@@ -32,7 +32,7 @@ public class Interactable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = false;
-            collision.gameObject.GetComponent<Player>().NotifyOff();
+            collision.gameObject.GetComponentInChildren<Player>().NotifyOff();
         }
     }
 }
