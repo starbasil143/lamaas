@@ -12,6 +12,9 @@ public class InputManager : MonoBehaviour
     public static bool Slot3;
     public static bool Slot4;
     public static bool NoSlot;
+    public static bool Advance;
+    public static bool Left;
+    public static bool Right;
 
     public static PlayerInput _playerInput;
     private InputAction _moveAction;
@@ -23,6 +26,10 @@ public class InputManager : MonoBehaviour
     private InputAction _slot3Action;
     private InputAction _slot4Action;
     private InputAction _noSlotAction;
+
+    private InputAction _textAdvanceAction;
+    private InputAction _textLeftAction;
+    private InputAction _textRightAction;
 
 
     private void Awake()
@@ -38,6 +45,9 @@ public class InputManager : MonoBehaviour
         _slot3Action = _playerInput.actions["Slot 3"];
         _slot4Action = _playerInput.actions["Slot 4"];
         _noSlotAction = _playerInput.actions["No Slot"];
+        _textAdvanceAction = _playerInput.actions["Advance"];
+        _textLeftAction = _playerInput.actions["Left"];
+        _textRightAction = _playerInput.actions["Right"];
     }
 
     private void Update()
@@ -45,12 +55,15 @@ public class InputManager : MonoBehaviour
         Movement = _moveAction.ReadValue<Vector2>();
         Dash = _dashAction.WasPressedThisFrame();
         Cast = _castAction.WasPressedThisFrame();
-        Interact = _interactAction.WasPressedThisFrame();
+        Interact = _interactAction.WasReleasedThisFrame();
         Slot1 = _slot1Action.WasPressedThisFrame();
         Slot2 = _slot2Action.WasPressedThisFrame();
         Slot3 = _slot3Action.WasPressedThisFrame();
         Slot4 = _slot4Action.WasPressedThisFrame();
         NoSlot = _noSlotAction.WasPressedThisFrame();
+        Advance = _textAdvanceAction.WasReleasedThisFrame();
+        Left = _textLeftAction.WasPressedThisFrame();
+        Right = _textRightAction.WasPressedThisFrame();
     }
 
     public static void DisableInput()
@@ -60,6 +73,15 @@ public class InputManager : MonoBehaviour
     public static void EnableInput()
     {
         _playerInput.currentActionMap.Enable();
+    }
+
+    public static void SwitchToDialogueControls()
+    {
+        _playerInput.SwitchCurrentActionMap("Dialogue");
+    }
+    public static void SwitchToPlayerControls()
+    {
+        _playerInput.SwitchCurrentActionMap("Player");
     }
 }
 
