@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
                 reachedEndOfPath = false;
             }
 
-            if (path.vectorPath[currentWaypoint] != null)
+            if (!reachedEndOfPath)
             {
                 Vector2 directionToMove = ((Vector2)path.vectorPath[currentWaypoint] - _rigidbody.position).normalized;  
                 Vector2 force = directionToMove * currentSpeed;
@@ -146,7 +146,8 @@ public class Enemy : MonoBehaviour
         {
             RaycastHit2D ray = Physics2D.Raycast(transform.position, _player.position - transform.position, 100f, RaycastingMask);
             if (ray.collider != null)
-            {
+            {   
+                Debug.Log(ray.collider.gameObject);
                 if (ray.collider.gameObject.CompareTag("Player"))
                 {
                     IdleExitLogic();

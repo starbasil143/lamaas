@@ -8285,6 +8285,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &743133258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6513809
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.519715
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06531109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942397595259399338, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_Name
+      value: HealingPlant2 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
 --- !u!1 &1099555235
 GameObject:
   m_ObjectHideFlags: 0
@@ -24093,7 +24150,7 @@ Transform:
   m_GameObject: {fileID: 1111881879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.9, y: -12.8, z: 0}
+  m_LocalPosition: {x: -3.87, y: -8.89, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60775,6 +60832,63 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.5}
   m_Radius: 5
+--- !u!1001 &1586935226
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2366259
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.780458
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06531109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942397595259399338, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_Name
+      value: HealingPlant2 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
 --- !u!1 &1621564944
 GameObject:
   m_ObjectHideFlags: 0
@@ -65278,6 +65392,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1986822857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.8526734
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -14.026877
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06531109
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791982615649287639, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942397595259399338, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
+      propertyPath: m_Name
+      value: HealingPlant2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba350a8d2b1b13e42b5ac50350574bfd, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -65290,3 +65461,6 @@ SceneRoots:
   - {fileID: 1153980689}
   - {fileID: 1136510956}
   - {fileID: 1111881881}
+  - {fileID: 1986822857}
+  - {fileID: 1586935226}
+  - {fileID: 743133258}

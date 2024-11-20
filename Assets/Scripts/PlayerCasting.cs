@@ -11,9 +11,11 @@ public class PlayerCasting : MonoBehaviour
     public Player _player;
     [SerializeField] private Tilemap map; // reference to the Ground tilemap
     [SerializeField] private List<TileData> tileDatas; // list of all tile types
+    [SerializeField] private TileData defaultTileData;
     [SerializeField] private List<string> objectNames;
     private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
     private Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
+    
     private Dictionary<string, bool> unlocksPerObject;
 
     // transmutation slot ui images
@@ -32,6 +34,7 @@ public class PlayerCasting : MonoBehaviour
     private float cooldown4 = 0f;
 
     private GameObject PlayerParent;
+    
 
     private void Awake()
     {
@@ -89,7 +92,14 @@ public class PlayerCasting : MonoBehaviour
         // Get current position, find its tile, and return its tile type.
         Vector3Int currentTilePosition = map.WorldToCell(transform.position);
         TileBase currentTile = map.GetTile(currentTilePosition);
-        return dataFromTiles[currentTile];
+        if (currentTile != null)
+        {
+            return dataFromTiles[currentTile];
+        }
+        else
+        {
+            return defaultTileData;
+        }
     }
 
 

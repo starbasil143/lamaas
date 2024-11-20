@@ -910,6 +910,8 @@ MonoBehaviour:
   tileDatas:
   - {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   - {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
+  - {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
+  defaultTileData: {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
   objectNames:
   - HealPlant2
   SlotOneImage: {fileID: 530501574270320908}
@@ -2369,7 +2371,7 @@ GameObject:
   - component: {fileID: 8685351868050182112}
   - component: {fileID: 5575344702577846713}
   - component: {fileID: 341607559546150144}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: T Object Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
