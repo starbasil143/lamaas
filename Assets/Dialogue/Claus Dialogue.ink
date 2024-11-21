@@ -1,4 +1,4 @@
-I am going to kill you
+I am going to <b><color=red>kill</color></b> you  #speaker:Claus #voice:typing
 Do you agree?
 + [no.]
     WAHHHHHHHH
@@ -6,3 +6,4 @@ Do you agree?
     bro is indecisive.......
 + [yeah....]
     (Claus theme)
+- My voice is like typing. hahaaha

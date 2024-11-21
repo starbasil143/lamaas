@@ -6,6 +6,7 @@ using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SearchService;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -14,17 +15,31 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBox;
     [SerializeField] private TextMeshProUGUI dialogueName;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject continueIcon;
 
     [SerializeField] private GameObject[] choices;
+    [SerializeField] private float typingSpeed = 0.02f;
     private int selectedChoiceIndex;
     private TextMeshProUGUI[] choicesText;
+    private Coroutine displayLineCoroutine;
 
     public Color textUnselectedColor;
     public Color textSelectedColor;
 
+    [Header("Voice Sounds")]
+    public AudioClip defaultVoice;
+    public AudioClip typingVoice;
+
+    private AudioClip currentVoice;
+    public AudioSource VoiceSource;
+
 
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
+    private bool canContinueToNextLine;
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string VOICE_TAG = "voice";
 
     private void Awake()
     {
@@ -55,13 +70,22 @@ public class DialogueManager : MonoBehaviour
         {
             if (InputManager.Advance)
             {
-                if (currentStory.currentChoices.Count == 0)
+                if (canContinueToNextLine)
                 {
-                    ContinueStory();
+                    if (currentStory.currentChoices.Count == 0)
+                    {
+                        ContinueStory();
+                    }
+                    else
+                    {
+                        MakeChoice(selectedChoiceIndex);
+                    }
                 }
                 else
                 {
-                    MakeChoice(selectedChoiceIndex);
+                    StopCoroutine(displayLineCoroutine);
+                    dialogueText.maxVisibleCharacters = 1430;
+                    EndTyping();
                 }
             }
 
@@ -108,6 +132,9 @@ public class DialogueManager : MonoBehaviour
         InputManager.SwitchToDialogueControls();
         dialogueBox.SetActive(true);
 
+        dialogueName.text = "???";
+        currentVoice = defaultVoice;
+
         ContinueStory();
     }
 
@@ -124,12 +151,100 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
-            ShowChoices();
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+            HandleTags(currentStory.currentTags);
+
         }
         else
         {
             StartCoroutine(ExitDialogue());
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
+
+        StartTyping();
+
+        bool ignoringText = false;
+        foreach (char letter in line)
+        {
+            if (letter == '<')
+            {
+                ignoringText = true;
+            }
+
+            if (!ignoringText)
+            {
+                yield return new WaitForSeconds(typingSpeed);
+                dialogueText.maxVisibleCharacters++;
+                if (letter != ' ')
+                {
+                    VoiceSource.PlayOneShot(currentVoice);
+                }
+            }
+
+            if (letter == '>')
+            {
+                ignoringText = false;
+            }
+        }
+        
+        EndTyping();
+        
+    }
+
+    private void StartTyping()
+    {
+        canContinueToNextLine = false;
+        continueIcon.SetActive(false);
+        HideChoices();
+    }
+    private void EndTyping()
+    {
+        ShowChoices();
+        continueIcon.SetActive(true);
+        canContinueToNextLine = true;
+    }
+
+    private void HandleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(":");
+            if (splitTag.Length == 2)
+            {
+                string tagKey = splitTag[0].Trim();
+                string tagValue = splitTag[1].Trim();
+
+                switch (tagKey)
+                {
+                    case SPEAKER_TAG:
+                        dialogueName.text = tagValue;
+                        break;
+                    case VOICE_TAG:
+                        switch (tagValue)
+                        {
+                            case "default":
+                                currentVoice = defaultVoice;
+                                break;
+                            case "typing":
+                                currentVoice = typingVoice;
+                                break;
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("the tag is broken");
+            }
         }
     }
 
@@ -157,9 +272,22 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    private void HideChoices()
+    {
+        foreach (GameObject choice in choices)
+        {
+            choice.SetActive(false);
+        }
+    }
+
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
+        }
+            
     }
+    
 }
