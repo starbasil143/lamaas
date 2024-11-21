@@ -15,5 +15,9 @@ public class EnemyDamageCheck : MonoBehaviour
         {
             _enemy.ReceiveHarm(collision.gameObject.GetComponent<HarmfulObjectScript>());
         }
+        if (collision.gameObject.CompareTag("Vines"))
+        {
+            _enemy.VinePull(collision.gameObject.GetComponent<HarmfulObjectScript>());
+        }
     }
 }

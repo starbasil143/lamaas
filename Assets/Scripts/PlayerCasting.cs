@@ -146,7 +146,7 @@ public class PlayerCasting : MonoBehaviour
                 currentTile.transmutation3.PerformTransmutation(PlayerParent);
             }
         }
-        if (InputManager.Slot4) // G - SubMaterial Special 2
+        if (InputManager.Slot4) // G - SubMaterial Special 2: Vine Grab
         {
             
             if (cooldown4 <= 0 && !(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName])

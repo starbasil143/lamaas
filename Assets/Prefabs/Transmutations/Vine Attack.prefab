@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6492710497363123779
+--- !u!1 &6723732250819957674
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3510392736427728935}
-  - component: {fileID: -5772348986637593754}
-  - component: {fileID: 4871136311873809372}
-  - component: {fileID: 7945580040320503752}
-  m_Layer: 0
-  m_Name: Bush
-  m_TagString: TransmutationObject
+  - component: {fileID: 2521849732453626596}
+  - component: {fileID: 4706509414230507939}
+  - component: {fileID: -7467485455168278102}
+  - component: {fileID: -1055639486502201045}
+  m_Layer: 7
+  m_Name: Vine Attack
+  m_TagString: Vines
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3510392736427728935
+--- !u!4 &2521849732453626596
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492710497363123779}
+  m_GameObject: {fileID: 6723732250819957674}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.99, y: -0.63, z: -0.011140104}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.61, y: -1.3068, z: 0.027886992}
+  m_LocalScale: {x: 3.4496, y: 2.3762, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5772348986637593754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492710497363123779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad5e633637e1d7b468b0c387259e5a16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _objectTransmutation: {fileID: 11400000, guid: 966bf27ea8438844c83f57b20c515085, type: 2}
-  objectName: Bush
---- !u!212 &4871136311873809372
+--- !u!212 &4706509414230507939
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492710497363123779}
+  m_GameObject: {fileID: 6723732250819957674}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -91,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1541214691
   m_SortingLayer: 2
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 248c4719787e9f6468a29d2b61248efa, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 34d4f1423713ee6408646ee839e8458e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,14 +88,35 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
---- !u!58 &7945580040320503752
-CircleCollider2D:
+  m_SpriteSortPoint: 0
+--- !u!114 &-7467485455168278102
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6492710497363123779}
+  m_GameObject: {fileID: 6723732250819957674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f793f5a0a6289488392e1a0f62624a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+  isBlockable: 0
+  destroyOnContact: 0
+  canDamagePlayer: 1
+  canDamageEnemy: 1
+  thwartedByWalls: 1
+  Source: {fileID: 0}
+  ImpactObject: {fileID: 0}
+  existenceTime: 10
+--- !u!61 &-1055639486502201045
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6723732250819957674}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -133,9 +140,19 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.5}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

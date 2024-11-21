@@ -331,6 +331,32 @@ public class Enemy : MonoBehaviour
             
         }
     }
+
+    public void VinePull(HarmfulObjectScript harmSource)
+    {
+        if (harmSource.canDamageEnemy)
+        {
+            Damage(harmSource.damageAmount * enemyDefense);
+
+            if (harmSource.Source != null)
+            {
+                Vector2 enemyPosition = _rigidbody.position;
+                Vector2 playerPosition = harmSource.Source.transform.position;
+
+                // Calculate midpoint between enemy and player
+                Vector2 pullDestination = Vector2.Lerp(enemyPosition, playerPosition, 0.5f);
+
+                // Move enemy to midpoint
+                _rigidbody.MovePosition(pullDestination);
+            }
+
+            if (harmSource.destroyOnContact)
+            {
+                harmSource.DestroySelf();
+            }
+        }
+    }
+
     public void Damage(float damageAmount)
     {
         currentHP -= damageAmount;

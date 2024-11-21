@@ -9,6 +9,7 @@ TagManager:
   - CinemachineCamera
   - TransmutationObject
   - Harm
+  - Vines
   - Fog
   layers:
   - Default
