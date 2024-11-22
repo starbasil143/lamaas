@@ -60977,9 +60977,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 801697657069254327, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 801697657069254327, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 801697657069254327, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1822550043, guid: 3903400d251141646b282f8e3c8f023f, type: 3}
+    - target: {fileID: 801697657069254327, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 801697657069254327, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416032668258375003, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
+      propertyPath: m_Name
+      value: Aphine GFX
+      objectReference: {fileID: 0}
     - target: {fileID: 6514065645683057761, guid: d14e7c0107ebb644ab1a7ccf34394626, type: 3}
       propertyPath: m_Name
-      value: NPC (2)
+      value: Aphine NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,4 +1,4 @@
-Ugh... Are you sleeping the day away again, Lamaas?
+Ugh... Are you sleeping the day away again, Lamaas? #speaker:Lithas #voice:default
 Get off your butt and help me outside. Those kids are back spewing nonsense again...
 + [I don't feel like it]
     Well too bad, you dont have a choice. Get up and help me.
