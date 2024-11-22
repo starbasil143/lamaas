@@ -911,6 +911,7 @@ MonoBehaviour:
   tileDatas:
   - {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   - {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
+  defaultTileData: {fileID: 0}
   objectNames:
   - HealPlant2
   SlotOneImage: {fileID: 530501574270320908}
@@ -1993,7 +1994,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1420440976577642722}
   - component: {fileID: 5871820259787111886}
-  - component: {fileID: 3841653303207306086}
   m_Layer: 6
   m_Name: ExpCollector
   m_TagString: Untagged
@@ -2511,42 +2511,6 @@ ParticleSystemForceField:
         m_RotationOrder: 4
     m_MultiplyDragByParticleSize: 1
     m_MultiplyDragByParticleVelocity: 1
---- !u!58 &3841653303207306086
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6795640430408162426}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.3}
-  m_Radius: 0.38
 --- !u!1 &7033702101439953203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2888,7 +2852,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1827629689
-  m_SortingLayer: 8
+  m_SortingLayer: 9
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: a5da0c5805ddf064e9af626389643f5c, type: 3}
   m_Color: {r: 0.8616352, g: 0, b: 0.1486745, a: 1}
