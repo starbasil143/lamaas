@@ -11,6 +11,8 @@ TagManager:
   - Harm
   - Vines
   - Fog
+  - TimelineManager
+  - DialogueManager
   layers:
   - Default
   - TransparentFX

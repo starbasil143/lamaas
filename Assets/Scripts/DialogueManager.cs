@@ -6,6 +6,7 @@ using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Playables;
 using UnityEngine.SearchService;
 
 public class DialogueManager : MonoBehaviour
@@ -23,6 +24,8 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI[] choicesText;
     private Coroutine displayLineCoroutine;
 
+    public TimelineManager _timelineManager;
+
     public Color textUnselectedColor;
     public Color textSelectedColor;
 
@@ -37,6 +40,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine;
+    private bool inCutscene;
 
     private const string SPEAKER_TAG = "speaker";
     private const string VOICE_TAG = "voice";
@@ -125,26 +129,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(TextAsset inkJSON)
+    public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         InputManager.SwitchToDialogueControls();
         dialogueBox.SetActive(true);
+        inCutscene = dialogueTriggeredByCutscene;
+
+        if (inCutscene)
+        {
+            _timelineManager = GameObject.FindGameObjectWithTag("TimelineManager").GetComponent<TimelineManager>();
+        }
+
 
         dialogueName.text = "???";
         currentVoice = defaultVoice;
 
         ContinueStory();
-    }
-
-    private IEnumerator ExitDialogue()
-    {
-        dialogueIsPlaying = false;
-        dialogueBox.SetActive(false);
-        yield return new WaitForSeconds(.1f);
-        InputManager.SwitchToPlayerControls();
-        dialogueText.text = "";
     }
 
     private void ContinueStory()
@@ -157,11 +159,24 @@ public class DialogueManager : MonoBehaviour
             }
             displayLineCoroutine = StartCoroutine(DisplayLine(currentStory.Continue()));
             HandleTags(currentStory.currentTags);
-
         }
         else
         {
             StartCoroutine(ExitDialogue());
+        }
+    }
+
+    private IEnumerator ExitDialogue()
+    {
+        dialogueIsPlaying = false;
+        dialogueBox.SetActive(false);
+        yield return new WaitForSeconds(.1f);
+        InputManager.SwitchToPlayerControls();
+        dialogueText.text = "";
+        
+        if (inCutscene)
+        {
+            _timelineManager.ResumeTimeline();
         }
     }
 

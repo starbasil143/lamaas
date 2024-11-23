@@ -94,6 +94,19 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+
+    public void Pause()
+    {
+        _rigidbody.linearVelocity = Vector2.zero;
+        movement = Vector2.zero;
+        isPaused = true;
+    }
+
+    public void Unpause()
+    {
+        isPaused = false;
+    }
     
     /*
     private IEnumerator Dash()
