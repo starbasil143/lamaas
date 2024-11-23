@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b76a5cbea5d06e4682228ed5f967921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyType: 0
+  idleBehavior: 1
+  hostileBehavior: 1
+  attackBehavior: 1
+  fleeBehavior: 0
   _player: {fileID: 0}
   hostileSpeed: 5
   idleSpeed: 2
@@ -55,9 +60,13 @@ MonoBehaviour:
     m_Bits: 72
   projectile: {fileID: 2524667109626999555, guid: 661b967dd0feaad48963032ed2ef7177, type: 3}
   EnemyGFX: {fileID: 4074228747910995950}
+  EnemyHarmBox: {fileID: 0}
   maxHP: 8
   enemyDefense: 1
   attackDistance: 5
+  timeBetweenCastAttacks: 1.5
+  timeBetweenLightChargeAttacks: 1.8
+  lungeForceMultiplier: 20
 --- !u!114 &1106054775620912857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,7 +427,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

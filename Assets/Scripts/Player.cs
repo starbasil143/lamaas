@@ -104,6 +104,7 @@ public class Player : MonoBehaviour
         {
             Damage(harmSource.GetComponent<HarmfulObjectScript>().damageAmount);
             immunityTimer = 0f;
+            _animator.Play("Harm");
         }
     }
 

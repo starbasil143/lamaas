@@ -1730,12 +1730,12 @@ MonoBehaviour:
   _player: {fileID: 0}
   map: {fileID: 0}
   tileDatas:
+  - {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
   - {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   - {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
-  - {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
-  - {fileID: 11400000, guid: 165061a0adbcde2438de86fa59f16477, type: 2}
-  - {fileID: 11400000, guid: d22ac35f7cfc92140b2a6921ffeb1e82, type: 2}
   - {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
+  - {fileID: 11400000, guid: d22ac35f7cfc92140b2a6921ffeb1e82, type: 2}
+  - {fileID: 11400000, guid: 165061a0adbcde2438de86fa59f16477, type: 2}
   defaultTileData: {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
   objectNames:
   - HealPlant2
@@ -2369,6 +2369,7 @@ MonoBehaviour:
   - {fileID: 7785460899530142159}
   - {fileID: 889214616063529392}
   typingSpeed: 0.05
+  _timelineManager: {fileID: 0}
   textUnselectedColor: {r: 1, g: 1, b: 1, a: 1}
   textSelectedColor: {r: 0.40548232, g: 0.6415094, b: 0.3328586, a: 1}
   defaultVoice: {fileID: 8300000, guid: 9d99c2147e137d14dbc4fb91427992ed, type: 3}

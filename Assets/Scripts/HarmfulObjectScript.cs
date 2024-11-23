@@ -8,6 +8,7 @@ public class HarmfulObjectScript : MonoBehaviour
     public bool destroyOnContact;
     public bool canDamagePlayer;
     public bool canDamageEnemy;
+    public bool canDamageSelf;
     public bool thwartedByWalls;
     public GameObject Source;
     public GameObject ImpactObject;
@@ -17,14 +18,23 @@ public class HarmfulObjectScript : MonoBehaviour
 
     private void Awake()
     {
-        
+        if (!canDamageSelf)
+        {
+            if (Source != null)
+            {
+                Physics2D.IgnoreCollision(GetComponent<Collider2D>(), Source.GetComponent<Collider2D>());
+            }
+        }
     }
     private void Update()
-    {
-        existenceTimer += Time.deltaTime;
-        if (existenceTimer >= existenceTime)
+    {   
+        if (existenceTime > 0f)
         {
-            Destroy(gameObject);
+            existenceTimer += Time.deltaTime;
+            if (existenceTimer >= existenceTime)
+            {
+                Destroy(gameObject);
+            }
         }
     }
     public void DestroySelf()

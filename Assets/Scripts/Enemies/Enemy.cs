@@ -12,7 +12,44 @@ public class Enemy : MonoBehaviour
         Attacking,
     }
 
+    public enum EnemyType
+    {
+        WeakCultist,
+        C_Bunny,
+        C_Deer,
+        C_Eel,
+        C_Bear,
+    }
+
+    public enum IdleBehavior
+    {
+        None,
+        Roam,
+    }
+    public enum HostileBehavior
+    {
+        None,
+        Chase,
+    }
+    public enum AttackBehavior
+    {
+        None,
+        ShootSingleProjectile,
+        LightCharge,
+        HeavyCharge,
+    }
+    public enum FleeBehavior
+    {
+        None,
+        Retreat,
+    }
+
     private EnemyState currentState;
+    public EnemyType enemyType;
+    public IdleBehavior idleBehavior;
+    public HostileBehavior hostileBehavior;
+    public AttackBehavior attackBehavior;
+    public FleeBehavior fleeBehavior;
     public Transform _player;
     private Transform _transform;
     public float hostileSpeed = 5f;
@@ -32,14 +69,20 @@ public class Enemy : MonoBehaviour
     private float lastHorizontal;
     [SerializeField] private GameObject projectile;
     public GameObject EnemyGFX;
-    Coroutine repeatAttackCoroutine;
+    public GameObject EnemyHarmBox;
+    Coroutine repeatCastAttackCoroutine;
     Coroutine maybeStopAttacking;
+    Coroutine lightChargeAttackCoroutine;
+
 
 
     public float maxHP;
     public float enemyDefense;
     private float currentHP;
     public float attackDistance = 10f;
+    public float timeBetweenCastAttacks = 1.5f;
+    public float timeBetweenLightChargeAttacks = 1.8f;
+    public float lungeForceMultiplier = 20f;
 
     private void Awake()
     {
@@ -165,10 +208,15 @@ public class Enemy : MonoBehaviour
     }
     private void IdlePath()
     {
-        if (reachedEndOfPath || path == null)
+        switch (idleBehavior)
         {
-            Vector2 randomPoint = _rigidbody.position + Random.insideUnitCircle * idleMoveRange;
-            _seeker.StartPath(_rigidbody.position, randomPoint, OnPathLoaded);
+            case IdleBehavior.Roam:
+                if (reachedEndOfPath || path == null)
+                {
+                    Vector2 randomPoint = _rigidbody.position + Random.insideUnitCircle * idleMoveRange;
+                    _seeker.StartPath(_rigidbody.position, randomPoint, OnPathLoaded);
+                }
+            break;
         }
 
     }
@@ -235,7 +283,18 @@ public class Enemy : MonoBehaviour
     {
         currentState = EnemyState.Attacking;
         Debug.Log("KILL !!!");
-        repeatAttackCoroutine = StartCoroutine(RepeatAttack());
+
+        switch (attackBehavior)
+        {
+            case AttackBehavior.ShootSingleProjectile:
+                repeatCastAttackCoroutine = StartCoroutine(RepeatCastAttack());
+            break;
+
+            case AttackBehavior.LightCharge:
+                lightChargeAttackCoroutine = StartCoroutine(RepeatLightCharge());
+            break;
+        }
+        
     }
     private void AttackingUpdate()
     {
@@ -254,32 +313,56 @@ public class Enemy : MonoBehaviour
     }
     private void AttackingPath()
     {
-        _seeker.CancelCurrentPathRequest();
-        path = null;
+        switch (attackBehavior)
+        {
+            default:
+                _seeker.CancelCurrentPathRequest();
+                path = null;
+            break;
+        }
     }
     private void AttackingExitLogic()
     {
-        StopCoroutine(repeatAttackCoroutine);
+        switch (attackBehavior)
+        {
+            case AttackBehavior.ShootSingleProjectile:
+                StopCoroutine(repeatCastAttackCoroutine);
+            break;
+
+            case AttackBehavior.LightCharge:
+                StopCoroutine(lightChargeAttackCoroutine);
+            break;
+        }
     }
 
-    private IEnumerator RepeatAttack()
+    private IEnumerator RepeatCastAttack()
     {
         while (currentState == EnemyState.Attacking)
         {
+            yield return new WaitForSeconds(timeBetweenCastAttacks);
             CastAttack();
-            yield return new WaitForSeconds(1.5f);
         }
         yield return null;
     }
-    private IEnumerator MaybeStopAttackingAfterALittleBit(float littleBit)
+
+    private IEnumerator RepeatLightCharge()
     {
-        yield return new WaitForSeconds(littleBit);
-        if (!attackTriggerStatus)
+        while (currentState == EnemyState.Attacking)
         {
-            AttackingExitLogic();
-            BecomeHostile();
+            yield return new WaitForSeconds(timeBetweenLightChargeAttacks * Random.Range(.8f, 1.2f));
+            StartCoroutine(LungeAttack());
         }
         yield return null;
+    }
+
+    private IEnumerator LungeAttack()
+    {
+        Vector2 lungeForce = ((Vector2)_player.position - (Vector2)transform.position).normalized * lungeForceMultiplier;
+        _rigidbody.AddForce(lungeForce, ForceMode2D.Impulse);
+
+        EnemyHarmBox.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        EnemyHarmBox.SetActive(false);
     }
 
     private void CastAttack()
@@ -293,6 +376,21 @@ public class Enemy : MonoBehaviour
         Projectile.GetComponent<Rigidbody2D>().AddForce(shootForce, ForceMode2D.Impulse); // Give the projectile a force so it moves
         
     }
+
+    private IEnumerator MaybeStopAttackingAfterALittleBit(float littleBit)
+    {
+        yield return new WaitForSeconds(littleBit);
+        if (!attackTriggerStatus)
+        {
+            AttackingExitLogic();
+            BecomeHostile();
+        }
+        yield return null;
+    }
+
+
+
+
     #endregion
 
 
