@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7038369255224778394}
   - component: {fileID: 4153784626438234668}
   m_Layer: 0
-  m_Name: Template Timeline Manager
+  m_Name: Timeline Manager
   m_TagString: TimelineManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

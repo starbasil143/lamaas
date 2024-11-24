@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4976832257994481012}
   - component: {fileID: 5325522894162758241}
   m_Layer: 0
-  m_Name: Template Timeline Trigger
+  m_Name: Timeline Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

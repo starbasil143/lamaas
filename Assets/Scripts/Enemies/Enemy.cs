@@ -65,6 +65,7 @@ public class Enemy : MonoBehaviour
     private Animator _animator;
     private bool hostileTriggerStatus;
     private bool attackTriggerStatus;
+    private bool isFacingRight = true;
     public LayerMask RaycastingMask;
     private float lastHorizontal;
     [SerializeField] private GameObject projectile;
@@ -96,7 +97,7 @@ public class Enemy : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _seeker = GetComponent<Seeker>();
         _rigidbody = GetComponentInParent<Rigidbody2D>();
-        _animator = transform.parent.GetComponentInChildren<Animator>();
+        //_animator = transform.parent.GetComponentInChildren<Animator>();
 
         StartCoroutine(UpdatePath());
     }
@@ -152,11 +153,7 @@ public class Enemy : MonoBehaviour
             }
         }
         lastHorizontal = _rigidbody.linearVelocity.x;
-        _animator.SetFloat("HorizontalDirection", lastHorizontal);
-        if(_rigidbody.linearVelocity.x == 0)
-        {
-            _animator.SetFloat("LastHorizontal", lastHorizontal);
-        }
+        FaceCorrectDirection(_rigidbody.linearVelocity);
 
         switch (currentState) // Run the current state's Update function
         {
@@ -461,7 +458,7 @@ public class Enemy : MonoBehaviour
 
         if (damageAmount > 0)
         {
-            _animator.Play("Hurt", -1, 0f);
+            //_animator.Play("Hurt", -1, 0f);
         }
 
         if (currentHP <= 0)
@@ -503,7 +500,25 @@ public class Enemy : MonoBehaviour
                         AttackingPath();
                     break;
                 }
+                if (path != null)
+                {
+                    //FaceCorrectDirection(((Vector2)path.vectorPath[0] - _rigidbody.position).normalized);
+                }
             }
+        }
+    }
+
+    private void FaceCorrectDirection(Vector2 velocity)
+    {
+        if (velocity.x < 0f && isFacingRight)
+        {
+            _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 180f, _transform.position.z));
+            isFacingRight = false;
+        }
+        if (velocity.x > 0f && !isFacingRight)
+        {
+            _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 0f, _transform.position.z));
+            isFacingRight = true;
         }
     }
 
