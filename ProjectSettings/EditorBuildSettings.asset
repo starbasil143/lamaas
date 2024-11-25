@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/_Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/TownScene.unity
+    path: Assets/_Scenes/TownScene.unity
     guid: db73d16ea99333348945a5b400729a32
   - enabled: 1
-    path: Assets/Scenes/TestScene.unity
+    path: Assets/_Scenes/TestScene.unity
     guid: ad8de488ce168d14788c16a440a9148d
   - enabled: 1
-    path: Assets/Scenes/PlayerHouseScene.unity
+    path: Assets/_Scenes/PlayerHouseScene.unity
     guid: 2e57f3c64ab589f4baa852574a434c74
   - enabled: 1
-    path: Assets/Scenes/ForestScene.unity
+    path: Assets/_Scenes/ForestScene.unity
     guid: 2b7fe25bc65bbeb4083ac1c2e2a31305
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -8,6 +8,7 @@ public class TimelineManager : MonoBehaviour
     private GameObject _dialogueManager;
     private PlayableDirector _director;
     public List<TextAsset> dialogueAssets;
+    public string associatedFlag;
     
 
     private void Start()
@@ -47,6 +48,11 @@ public class TimelineManager : MonoBehaviour
     {
         DialogueManager.instance.EnterDialogue(dialogueAssets[5], true);
         PauseTimeline();
+    }
+
+    public void SetAssociatedFlag()
+    {
+        _player.GetComponentInChildren<PlayerProgress>().progressFlags[associatedFlag] = true;
     }
 
     public void PauseTimeline()

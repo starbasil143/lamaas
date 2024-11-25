@@ -12,6 +12,7 @@ public class SceneTransitionManager : MonoBehaviour
     private static bool _loadFromEntry;
 
     private GameObject _player;
+    private Transform _cameraTargetPoint;
     private Collider2D _playerCollider;
     private Vector3 _playerEntryPoint;
     private Collider2D _entryCollider;
@@ -26,6 +27,7 @@ public class SceneTransitionManager : MonoBehaviour
         }
         _player = GameObject.FindGameObjectWithTag("Player");
         _playerCollider = _player.GetComponent<Collider2D>();
+        _cameraTargetPoint = _player.transform.Find("CameraFollowPoint");
         vcam = GameObject.FindGameObjectWithTag("CinemachineCamera").GetComponent<CinemachineCamera>();
     }
     private void OnEnable()
@@ -43,9 +45,9 @@ public class SceneTransitionManager : MonoBehaviour
         if (_loadFromEntry)
         {
             FindEntry(_entryToSpawnAt);
-            Vector3 oldPosition = _player.transform.position;
+            Vector3 oldPosition = _cameraTargetPoint.position;
             _player.transform.position = _playerEntryPoint;
-            vcam.OnTargetObjectWarped(_player.transform, _playerEntryPoint - oldPosition);
+            vcam.OnTargetObjectWarped(_cameraTargetPoint, _playerEntryPoint - oldPosition);
             _loadFromEntry = false;
         }
     }
