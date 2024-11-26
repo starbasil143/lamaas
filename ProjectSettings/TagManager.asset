@@ -9,16 +9,20 @@ TagManager:
   - CinemachineCamera
   - TransmutationObject
   - Harm
+  - Vines
+  - Fog
+  - TimelineManager
+  - DialogueManager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - Harm
+  - Range
   - 
   - 
   - 
@@ -85,8 +89,14 @@ TagManager:
   - name: AtopCoversPlayer2
     uniqueID: 904560291
     locked: 0
+  - name: Weather
+    uniqueID: 2178962757
+    locked: 0
   - name: UI
     uniqueID: 1827629689
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 320555485
     locked: 0
   m_RenderingLayers:
   - Default
