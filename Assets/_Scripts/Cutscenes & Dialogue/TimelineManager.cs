@@ -8,6 +8,8 @@ public class TimelineManager : MonoBehaviour
     private GameObject _dialogueManager;
     private PlayableDirector _director;
     public List<TextAsset> dialogueAssets;
+    public List<GameObject> objectsToDisable;
+    public List<GameObject> objectsToEnable;
     public string associatedFlag;
     
 
@@ -73,6 +75,21 @@ public class TimelineManager : MonoBehaviour
     public void ResumePlayer()
     {
         _player.GetComponentInChildren<PlayerMovement>().Unpause();
+    }
+
+    public void PlayerWalkBackward()
+    {
+        _player.GetComponentInChildren<PlayerMovement>().WalkBackwards();
+    }
+
+    public void DisableObjects()
+    {
+        objectsToDisable.ForEach(i => i.SetActive(false));
+    }
+
+    public void EnableObjects()
+    {
+        objectsToEnable.ForEach(i => i.SetActive(true));
     }
 
     public void DeactivateDirector()

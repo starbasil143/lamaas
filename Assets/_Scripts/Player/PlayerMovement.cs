@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     //private bool canDash = true;
     private Vector2 lastDirection;
-    public bool isPaused;
 
     
     private const string _horizontal = "Horizontal";
@@ -25,19 +24,21 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Animator _animator;
     private GameObject PlayerParent;
+    private Player _player;
     [SerializeField] private GameObject PlayerGFX;
 
 
     private void Awake()
     {
         PlayerParent = transform.parent.gameObject;
+        _player = PlayerParent.GetComponentInChildren<Player>();
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
         _animator = PlayerGFX.GetComponent<Animator>();
     }
 
     private void Update()
     {
-        if (!isPaused)
+        if (!_player.isPaused)
         {
             // Movement
             if (InputManager.Dash && currentDashCooldown <= 0) // Dashing
@@ -60,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!isPaused)
+        if (!_player.isPaused)
         {
             // Movement
 
@@ -100,12 +101,27 @@ public class PlayerMovement : MonoBehaviour
     {
         _rigidbody.linearVelocity = Vector2.zero;
         movement = Vector2.zero;
-        isPaused = true;
+        _player.isPaused = true;
     }
 
     public void Unpause()
     {
-        isPaused = false;
+        _player.isPaused = false;
+    }
+
+    public void WalkBackwards()
+    {
+        StartCoroutine(WalkBackwardsCoroutine());
+    }
+
+    private IEnumerator WalkBackwardsCoroutine()
+    {
+        isDashing = false;
+        Vector2 directionToReturn = lastDirection * -1;
+        movement = directionToReturn * _moveSpeed;
+        _rigidbody.linearVelocity = movement;
+        yield return new WaitForSeconds(.4f);
+        _rigidbody.linearVelocity = Vector2.zero;
     }
     
     /*

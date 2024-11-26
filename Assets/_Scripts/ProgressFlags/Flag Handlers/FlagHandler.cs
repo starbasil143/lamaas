@@ -20,14 +20,14 @@ public class FlagHandler : MonoBehaviour
         {
             if (_progress.progressFlags[flag] == false)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
         foreach (string flag in flagsMustBeFalse)
         {
             if (_progress.progressFlags[flag] == true)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

@@ -1,1 +1,1 @@
-Maybe do that thing you do? With the dirt? Yknow... <color='yellow'>pressing R</color> while standing on the dirt?#speaker:Lithas #voice:lithas
+Maybe do that thing you do with the ground? Yknow... <color=yellow>pressing R</color> while standing on a patch of dirt.#speaker:Lithas #voice:lithas

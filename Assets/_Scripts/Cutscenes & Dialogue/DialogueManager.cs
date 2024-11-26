@@ -41,6 +41,7 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; private set; }
     private bool canContinueToNextLine;
     private bool inCutscene;
+    private float typingSpeedMultiplier = 1f;
 
     private const string SPEAKER_TAG = "speaker";
     private const string VOICE_TAG = "voice";
@@ -195,13 +196,33 @@ public class DialogueManager : MonoBehaviour
                 ignoringText = true;
             }
 
+            
             if (!ignoringText)
             {
-                yield return new WaitForSeconds(typingSpeed);
+
+
+                yield return new WaitForSeconds(typingSpeed * typingSpeedMultiplier);
                 dialogueText.maxVisibleCharacters++;
                 if (letter != ' ')
                 {
                     VoiceSource.PlayOneShot(currentVoice);
+                }
+
+                switch (letter)
+                {
+                    case '?':
+                    case '!':
+                    case '.':
+                        typingSpeedMultiplier = 5;
+                        break;
+
+                    case ',':
+                        typingSpeedMultiplier = 3;
+                        break;
+
+                    default:
+                        typingSpeedMultiplier = 1;
+                        break;
                 }
             }
 

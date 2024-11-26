@@ -125,28 +125,28 @@ public class PlayerCasting : MonoBehaviour
             SwitchObject(null);
         }
 
-        if (InputManager.Slot1) // R - SuperMaterial Attack
+        if (InputManager.Slot1 && !_player.isPaused) // R - SuperMaterial Attack
         {
             if (cooldown1 <= 0 && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
             {
                 currentTile.transmutation1.PerformTransmutation(PlayerParent);
             }
         }
-        if (InputManager.Slot2) // F - SubMaterial Attack
+        if (InputManager.Slot2 && !_player.isPaused) // F - SubMaterial Attack
         {
             if (cooldown2 <= 0 && unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists)
             {
                 currentTile.transmutation2.PerformTransmutation(PlayerParent);
             }
         }
-        if (InputManager.Slot3) // T - SubMaterial Special 1
+        if (InputManager.Slot3 && !_player.isPaused) // T - SubMaterial Special 1
         {
             if (cooldown3 <= 0 && unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists)
             {
                 currentTile.transmutation3.PerformTransmutation(PlayerParent);
             }
         }
-        if (InputManager.Slot4) // G - SubMaterial Special 2: Vine Grab
+        if (InputManager.Slot4 && !_player.isPaused) // G - SubMaterial Special 2: Vine Grab
         {
             
             if (cooldown4 <= 0 && !(currentObject == null) && unlocksPerObject[currentObject.GetComponent<TransmutationObject>().objectName])

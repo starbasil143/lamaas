@@ -6,6 +6,8 @@ public class TypeTextOnAwake : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     private float typingSpeed = .055f; 
+    public AudioSource VoiceSource;
+    public AudioClip voiceClip;
 
 
     private void OnEnable()
@@ -31,7 +33,7 @@ public class TypeTextOnAwake : MonoBehaviour
                 dialogueText.maxVisibleCharacters++;
                 if (letter != ' ')
                 {
-                    //VoiceSource.PlayOneShot(currentVoice);
+                    VoiceSource.PlayOneShot(voiceClip);
                 }
             }
 
