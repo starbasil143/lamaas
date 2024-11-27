@@ -1729,7 +1729,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa9f8c271b355041ad0453ae8a74f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setAutomatically: []
+  setAutomatically:
+  - openingScene
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,7 +1777,6 @@ MonoBehaviour:
   _dashSpeed: 14
   _dashLength: 0.3
   _dashCooldown: 0.4
-  isPaused: 0
   PlayerGFX: {fileID: 5822185129890140543}
 --- !u!1 &2601046511256632499
 GameObject:
