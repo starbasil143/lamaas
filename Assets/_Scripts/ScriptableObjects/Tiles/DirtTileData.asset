@@ -15,10 +15,10 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: 641ea3f228ced944e8e78c5b2dda4c87, type: 2}
   slot1Exists: 1
-  slot2Exists: 0
+  slot2Exists: 1
   slot3Exists: 1
   slot4Exists: 0
   transmutation1: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
-  transmutation2: {fileID: 0}
+  transmutation2: {fileID: 11400000, guid: be24773dc6ec86d4ebfc9413ec678327, type: 2}
   transmutation3: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
   transmutation4: {fileID: 0}
