@@ -1729,8 +1729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa9f8c271b355041ad0453ae8a74f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setAutomatically:
-  - openingScene
+  setAutomatically: []
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
