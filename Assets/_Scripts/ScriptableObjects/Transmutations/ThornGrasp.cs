@@ -29,10 +29,17 @@ public class ThornGrasp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("") )&& playerRigidbody != null)
+        if ((other.gameObject.CompareTag("Enemy") )&& playerRigidbody != null) //need to use implement tree tags
         {
             // Set the target position to the enemy's position
             targetPosition = other.transform.position;
+
+            //// Ensure the enemy doesn't move accidentally
+            //Rigidbody2D enemyRigidbody = other.GetComponent<Rigidbody2D>();
+            //if (enemyRigidbody != null)
+            //{
+            //    enemyRigidbody.linearVelocity = Vector2.zero; // Stop any movement on the enemy
+            //}
 
             // Enable dragging
             isDragging = true;
@@ -53,7 +60,7 @@ public class ThornGrasp : MonoBehaviour
         Vector2 direction = (targetPosition - (Vector2)player.transform.position).normalized;
 
         // Apply velocity to the player
-        playerRigidbody.velocity = direction * dragSpeed;
+        playerRigidbody.linearVelocity = direction * dragSpeed;
 
         //
 
@@ -62,7 +69,7 @@ public class ThornGrasp : MonoBehaviour
         {
             // Stop dragging and reset velocity
             isDragging = false;
-            playerRigidbody.velocity = Vector2.zero;
+            playerRigidbody.linearVelocity = Vector2.zero;
         }
     }
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e331a96dcd25df44fa764e6a465a7fbe, type: 3}
   m_Name: T_ThornGrasp
   m_EditorClassIdentifier: 
-  thornGraspPrefab: {fileID: 6723732250819957674, guid: 68c8da92e325df343bd6e3fc780380aa, type: 3}
+  thornGraspPrefab: {fileID: 6723732250819957674, guid: 8815e8a0d10d212498e0c514d72d3cf9, type: 3}
