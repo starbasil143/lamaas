@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4107772744575187616}
   m_Layer: 7
   m_Name: ThornGraspProjectile
-  m_TagString: Vines
+  m_TagString: Harm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ MonoBehaviour:
   canDamagePlayer: 0
   canDamageEnemy: 1
   canDamageSelf: 0
-  thwartedByWalls: 0
+  thwartedByWalls: 1
   Source: {fileID: 0}
   ImpactObject: {fileID: 0}
   existenceTime: 10
