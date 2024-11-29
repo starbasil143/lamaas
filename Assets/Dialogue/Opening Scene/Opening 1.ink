@@ -1,1 +1,1 @@
-Lamaaaaaaaasss!!!!#speaker:??? #voice:lithas
+Lamaas!!!!#speaker:??? #voice:lithas
