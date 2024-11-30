@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 1
   isBlockable: 0
-  destroyOnContact: 0
+  destroyOnContact: 1
   canDamagePlayer: 0
   canDamageEnemy: 1
   canDamageSelf: 0
@@ -198,5 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca583a62f3122c04ea28303216401462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 7
-  stopDistance: 0.5
+  dragSpeed: 12
+  stopDistance: 2
+  returnSpeed: 12
+  maxLifetime: 1

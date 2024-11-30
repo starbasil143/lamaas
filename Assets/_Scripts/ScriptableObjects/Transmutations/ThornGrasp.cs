@@ -60,9 +60,15 @@ public class ThornGrasp : MonoBehaviour
                 // Disable enemy's attacks
                 currentEnemy.GetComponentInChildren<Enemy>().attackBehavior = Enemy.AttackBehavior.None;
 
-                spriteRenderer.enabled = false;
-                currentCollider.enabled = false;
+
             }
+            //else if (other.gameObject.CompareTag("Terrain"))
+            //{
+            //    currentEnemy.GetComponent<Sprite>
+            //}
+            spriteRenderer.enabled = false;
+            currentCollider.enabled = false;
+
             // Set the target position to the enemy's position
             targetPosition = other.transform.position;
             ChangeTargetColor(other);
@@ -80,7 +86,7 @@ public class ThornGrasp : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Terrain"))
         {
-            //other.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+            other.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
         }
     }
 
@@ -115,6 +121,10 @@ public class ThornGrasp : MonoBehaviour
                 currentEnemy.GetComponentInChildren<Enemy>().attackBehavior = originalEnemyBehavior; // Revert enemy behavior
                 playerRigidbody.linearVelocity = Vector2.zero;
             }
+            else if (other.gameObject.CompareTag("Terrain") )
+            {
+                other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
     }
 
@@ -141,7 +151,7 @@ public class ThornGrasp : MonoBehaviour
         if (!isDragging)
         {
             isReturning = true;
-            spriteRenderer.enabled = true; // Ensure thorn is visible when returning
+            //spriteRenderer.enabled = true; // Ensure thorn is visible when returning
             currentCollider.enabled = false; // Disable collisions during return
         }
     }
