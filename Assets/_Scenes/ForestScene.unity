@@ -1485,6 +1485,71 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &972444826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3386948179667669434, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_Name
+      value: SceneStartManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.8043346
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.4379945
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.5307364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101301303027260547, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: sceneHasFog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101301303027260547, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
+      propertyPath: startingMusicArea
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
 --- !u!1 &1099555235
 GameObject:
   m_ObjectHideFlags: 0
@@ -26485,51 +26550,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1829507832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1829507834}
-  - component: {fileID: 1829507833}
-  m_Layer: 0
-  m_Name: Forest Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1829507833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829507832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a887ff85762a394b88e24345910fb1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneHasFog: 1
---- !u!4 &1829507834
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829507832}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.850278, y: -1.1398362, z: -0.020730793}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1909358018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26805,9 +26825,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1210036813}
+  - {fileID: 972444826}
   - {fileID: 619394802}
   - {fileID: 1950118154}
-  - {fileID: 1829507834}
   - {fileID: 680862577}
   - {fileID: 1153980689}
   - {fileID: 1136510956}

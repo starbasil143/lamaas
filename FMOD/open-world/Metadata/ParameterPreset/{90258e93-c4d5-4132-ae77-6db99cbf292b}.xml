@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{90258e93-c4d5-4132-ae77-6db99cbf292b}">
+		<property name="name">
+			<value>song_version</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8551f137-645a-4916-b4ad-55e35880ab94}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{b63b757c-ae7d-4e40-abe8-c30ba55d5e32}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{b63b757c-ae7d-4e40-abe8-c30ba55d5e32}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.72999995946884155</value>
+		</property>
+	</object>
+</objects>

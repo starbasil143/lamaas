@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Playables;
 using UnityEngine.SearchService;
+using FMODUnity;
+using FMOD.Studio;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -29,12 +31,8 @@ public class DialogueManager : MonoBehaviour
     public Color textUnselectedColor;
     public Color textSelectedColor;
 
-    [Header("Voice Sounds")]
-    public AudioClip defaultVoice;
-    public AudioClip typingVoice;
 
-    private AudioClip currentVoice;
-    public AudioSource VoiceSource;
+    private EventReference currentVoice;
 
 
     private Story currentStory;
@@ -143,9 +141,8 @@ public class DialogueManager : MonoBehaviour
             _timelineManager = GameObject.FindGameObjectWithTag("TimelineManager").GetComponent<TimelineManager>();
         }
 
-
         dialogueName.text = "???";
-        currentVoice = defaultVoice;
+        currentVoice = FMODEvents.instance.voice_default;
 
         ContinueStory();
     }
@@ -205,7 +202,7 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.maxVisibleCharacters++;
                 if (letter != ' ')
                 {
-                    VoiceSource.PlayOneShot(currentVoice);
+                    AudioManager.instance.PlayOneShot(currentVoice, transform.position);
                 }
 
                 switch (letter)
@@ -267,11 +264,32 @@ public class DialogueManager : MonoBehaviour
                     case VOICE_TAG:
                         switch (tagValue)
                         {
-                            case "default":
-                                currentVoice = defaultVoice;
+                            case "lithas": 
+                                currentVoice = FMODEvents.instance.voice_lithas;
                                 break;
                             case "typing":
-                                currentVoice = typingVoice;
+                                currentVoice = FMODEvents.instance.voice_typing;
+                                break;
+                            case "default": 
+                                currentVoice = FMODEvents.instance.voice_default;
+                                break;
+                            case "inner":
+                                currentVoice = FMODEvents.instance.voice_inner;
+                                break;
+                            case "kid": 
+                                currentVoice = FMODEvents.instance.voice_kid;
+                                break;
+                            case "nasal":
+                                currentVoice = FMODEvents.instance.voice_nasal;
+                                break;
+                            case "deep":
+                                currentVoice = FMODEvents.instance.voice_deep;
+                                break;
+                            case "stupid": 
+                                currentVoice = FMODEvents.instance.voice_stupid;
+                                break;
+                            case "cultist":
+                                currentVoice = FMODEvents.instance.voice_cultist;
                                 break;
                         }
                         break;
