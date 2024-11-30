@@ -17,6 +17,7 @@ public class ThornGrasp : MonoBehaviour
     private Collider2D currentEnemy; // Reference to the enemy collider
 
     private SpriteRenderer spriteRenderer;
+    private TrailRenderer trailRenderer;
     private BoxCollider2D currentCollider;
 
     private Enemy enemyScript;
@@ -27,6 +28,7 @@ public class ThornGrasp : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentCollider = GetComponent<BoxCollider2D>();
+        trailRenderer = GetComponent<TrailRenderer>();
 
         // Find the player object
         player = GameObject.FindGameObjectWithTag("Player");
@@ -66,7 +68,10 @@ public class ThornGrasp : MonoBehaviour
             //{
             //    currentEnemy.GetComponent<Sprite>
             //}
+
+            //Disable on Trigger
             spriteRenderer.enabled = false;
+            trailRenderer.enabled = false;
             currentCollider.enabled = false;
 
             // Set the target position to the enemy's position
