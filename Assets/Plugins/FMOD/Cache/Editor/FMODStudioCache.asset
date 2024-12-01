@@ -101,7 +101,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5246098825979564375
+--- !u!114 &-4281570944947014582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Town.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/open-world/Build/Desktop/Town.bank
+  Name: Town
+  StudioPath: bank:/Town
+  lastModified: 638686049046456654
+  FileSizes:
+  - Name: Desktop
+    Value: 4023360
+  Exists: 1
+--- !u!114 &-3086874279242815012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,31 +145,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -2069593229743598673}
-  - {fileID: 2724461012506964552}
+  - {fileID: 1992967026522598364}
+  - {fileID: -353730045878267105}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4281570944947014582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Town.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD/open-world/Build/Desktop/Town.bank
-  Name: Town
-  StudioPath: bank:/Town
-  lastModified: 638685316966114237
-  FileSizes:
-  - Name: Desktop
-    Value: 3425536
-  Exists: 1
 --- !u!114 &-2520930347812743454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,36 +197,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-2069593229743598673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BGM/area
-  m_EditorClassIdentifier: 
-  Name: area
-  StudioPath: 
-  Min: 0
-  Max: 5
-  Default: 1
-  ID:
-    data1: 3779163128
-    data2: 2963285394
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - None
-  - Town
-  - Forest1
-  - Forest2
-  - PlayerHouse
-  - MalloryHouse
-  Exists: 1
 --- !u!114 &-601507058279553139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +216,30 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1632
+  Exists: 1
+--- !u!114 &-353730045878267105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/song_version
+  m_EditorClassIdentifier: 
+  Name: song_version
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1299405944
+    data2: 3882806434
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-291262799096344510
 MonoBehaviour:
@@ -296,7 +290,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 7719223382837444186}
   - {fileID: 4056161849488613501}
-  - {fileID: -5246098825979564375}
   - {fileID: 4201148899969175200}
   - {fileID: 4882333342563179104}
   - {fileID: -7169268526275324557}
@@ -306,13 +299,45 @@ MonoBehaviour:
   - {fileID: -2261699482299097269}
   - {fileID: 8544011299859455448}
   - {fileID: -291262799096344510}
+  - {fileID: -3086874279242815012}
   EditorParameters: []
   MasterBanks:
   - {fileID: -601507058279553139}
   StringsBanks:
   - {fileID: -7492806763642632584}
-  cacheTime: 638685325322027330
+  cacheTime: 638686049046456654
   cacheVersion: 131621
+--- !u!114 &1992967026522598364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/area
+  m_EditorClassIdentifier: 
+  Name: area
+  StudioPath: 
+  Min: 0
+  Max: 6
+  Default: 6
+  ID:
+    data1: 3779163128
+    data2: 2963285394
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - None
+  - Town
+  - Forest1
+  - Forest2
+  - PlayerHouse
+  - MalloryHouse
+  - Silent
+  Exists: 1
 --- !u!114 &2587803698390367836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,30 +357,6 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1080160
-  Exists: 1
---- !u!114 &2724461012506964552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BGM/song_version
-  m_EditorClassIdentifier: 
-  Name: song_version
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 1299405944
-    data2: 3882806434
-  Type: 0
-  IsGlobal: 0
-  Labels: []
   Exists: 1
 --- !u!114 &4056161849488613501
 MonoBehaviour:
@@ -534,8 +535,8 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Voices.bank
   Name: Voices
   StudioPath: bank:/Voices
-  lastModified: 638685325322027330
+  lastModified: 638686015114096628
   FileSizes:
   - Name: Desktop
-    Value: 11872
+    Value: 19616
   Exists: 1

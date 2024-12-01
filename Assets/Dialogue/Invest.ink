@@ -1,0 +1,1 @@
+Oddly, all of the furniture has been removed from this house. #inner #voice:inner

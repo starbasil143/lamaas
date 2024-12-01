@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance { get; private set; }
 
     [SerializeField] private GameObject dialogueBox;
+    [SerializeField] private GameObject nameBox;
     [SerializeField] private TextMeshProUGUI dialogueName;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject continueIcon;
@@ -43,6 +44,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string VOICE_TAG = "voice";
+    private const string INNER_TAG = "inner";
 
     private void Awake()
     {
@@ -57,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
+        nameBox.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int i = 0;
@@ -168,6 +171,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
+        nameBox.SetActive(false);
         yield return new WaitForSeconds(.1f);
         InputManager.SwitchToPlayerControls();
         dialogueText.text = "";
@@ -200,7 +204,7 @@ public class DialogueManager : MonoBehaviour
 
                 yield return new WaitForSeconds(typingSpeed * typingSpeedMultiplier);
                 dialogueText.maxVisibleCharacters++;
-                if (letter != ' ')
+                if (letter != ' ' && letter != '\n')
                 {
                     AudioManager.instance.PlayOneShot(currentVoice, transform.position);
                 }
@@ -251,15 +255,24 @@ public class DialogueManager : MonoBehaviour
         foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(":");
-            if (splitTag.Length == 2)
+            if (splitTag.Length <= 2)
             {
                 string tagKey = splitTag[0].Trim();
-                string tagValue = splitTag[1].Trim();
+                
+                string tagValue = "";
+                if (splitTag.Length == 2)
+                {   
+                    tagValue = splitTag[1].Trim();
+                }
 
                 switch (tagKey)
                 {
                     case SPEAKER_TAG:
                         dialogueName.text = tagValue;
+                        nameBox.SetActive(true);
+                        break;
+                    case INNER_TAG:
+                        nameBox.SetActive(false);
                         break;
                     case VOICE_TAG:
                         switch (tagValue)
@@ -290,6 +303,9 @@ public class DialogueManager : MonoBehaviour
                                 break;
                             case "cultist":
                                 currentVoice = FMODEvents.instance.voice_cultist;
+                                break;
+                            default:
+                                currentVoice = FMODEvents.instance.voice_default;
                                 break;
                         }
                         break;

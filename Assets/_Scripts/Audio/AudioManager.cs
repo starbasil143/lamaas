@@ -63,7 +63,11 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
-        UpdateVolumes();
+        masterBus.setVolume(masterVolume);
+        musicBus.setVolume(musicVolume);
+        sfxBus.setVolume(sfxVolume);
+        voiceBus.setVolume(voiceVolume);
+        ambienceBus.setVolume(ambienceVolume);
     }
 
     private void InitializeAmbience(EventReference ambienceEventReference)
@@ -110,14 +114,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void UpdateVolumes()
-    {
-        masterBus.setVolume(masterVolume);
-        musicBus.setVolume(musicVolume);
-        sfxBus.setVolume(sfxVolume);
-        voiceBus.setVolume(voiceVolume);
-        ambienceBus.setVolume(ambienceVolume);
-    }
+   
 
     private void OnDestroy()
     {

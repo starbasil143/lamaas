@@ -23113,6 +23113,10 @@ PrefabInstance:
       value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 7749411686268093432, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
+      propertyPath: _musicArea
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749411686268093432, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
       propertyPath: _sceneToLoad
       value: TownScene
       objectReference: {fileID: 0}

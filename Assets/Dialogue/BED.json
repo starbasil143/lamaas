@@ -1,1 +1,0 @@
-﻿{"inkVersion":21,"root":[["^THEY CALL ME THE BED ","#","^speaker:The Bed? ","/#","#","^voice:default","/#","\n","ev","str","^no they dont","/str","/ev",{"*":"0.c-0","flg":4},{"c-0":["\n","^yuore rigjht................................","\n",{"->":"0.g-0"},{"#f":5}],"g-0":["done",{"#f":5}]}],"done",{"#f":1}],"listDefs":{}}

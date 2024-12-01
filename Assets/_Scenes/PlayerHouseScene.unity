@@ -820,6 +820,18 @@ MonoBehaviour:
   flagsMustBeTrue: []
   flagsMustBeFalse:
   - openingScene
+--- !u!114 &304296234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304296228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83e18c027301adf4199f08c61aa68833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &365189765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -915,6 +927,10 @@ PrefabInstance:
     - target: {fileID: 6417485442426163731, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749411686268093432, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
+      propertyPath: _musicArea
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7749411686268093432, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
       propertyPath: _sceneToLoad
@@ -1285,8 +1301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 514496350}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!114 &514496353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1987,6 +2001,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4418000296738385174, guid: a82510c55accaed408422dadf57a0204, type: 3}
       insertIndex: -1
       addedObject: {fileID: 304296233}
+    - targetCorrespondingSourceObject: {fileID: 4418000296738385174, guid: a82510c55accaed408422dadf57a0204, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 304296234}
   m_SourcePrefab: {fileID: 100100000, guid: a82510c55accaed408422dadf57a0204, type: 3}
 --- !u!1 &647158478
 GameObject:
@@ -5138,71 +5155,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &1517986843
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3386948179667669434, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_Name
-      value: SceneStartManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.8043346
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.4379945
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5.5307364
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6460917326815337025, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101301303027260547, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: startingMusicArea
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101301303027260547, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
-      propertyPath: startingSongVersion
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6cf0b2550deee8d4a9268f1f1fc7cac9, type: 3}
 --- !u!1 &1530301572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,8 +5307,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1530301574}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!95 &1530301577
 Animator:
   serializedVersion: 7
@@ -5594,8 +5544,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1617811092}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!114 &1617811095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7229,8 +7177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1875025731}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!114 &1875025734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7523,8 +7469,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1981426334}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!114 &1981426337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7730,8 +7674,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 2137858457}
-  VoiceSource: {fileID: 0}
-  voiceClip: {fileID: 8300000, guid: 0597f83bf0fa4da4cb0c0a89da912ead, type: 3}
 --- !u!114 &2137858460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7831,7 +7773,6 @@ SceneRoots:
   - {fileID: 1210036813}
   - {fileID: 619394802}
   - {fileID: 1950118154}
-  - {fileID: 1517986843}
   - {fileID: 639719814}
   - {fileID: 680862577}
   - {fileID: 1153980689}
