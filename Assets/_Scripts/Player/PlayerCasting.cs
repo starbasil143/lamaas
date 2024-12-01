@@ -35,6 +35,8 @@ public class PlayerCasting : MonoBehaviour
     private float cooldown4 = 0f;
 
     private GameObject PlayerParent;
+
+    public bool unlockAllTransmutations;
     
 
     private void Awake()
@@ -56,7 +58,15 @@ public class PlayerCasting : MonoBehaviour
         unlocksPerMaterial = new Dictionary<TileData, bool[]>();
         foreach (TileData tileData in tileDatas)
         {
-            unlocksPerMaterial.Add(tileData, new bool[] {false, false, false, false});
+            if (unlockAllTransmutations)
+            {
+                unlocksPerMaterial.Add(tileData, new bool[] {true, true, true, true});
+            }
+            else
+            {
+                unlocksPerMaterial.Add(tileData, new bool[] {false, false, false, false});
+            }
+
         }
         unlocksPerMaterial[tileDatas[1]][0] = true; // auto unlock dirt throw
         cooldownsPerMaterial = new Dictionary<TileData, float[]>();

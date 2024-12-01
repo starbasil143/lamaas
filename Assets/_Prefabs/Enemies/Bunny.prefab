@@ -68,7 +68,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.5}
-  m_Radius: 2.5
+  m_Radius: 4
 --- !u!114 &3141486929604286435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.5}
-  m_Radius: 5
+  m_Radius: 6
 --- !u!114 &2270674677070529609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.044508, y: -3.6990085, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5250469415334791207}
@@ -422,27 +422,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyType: 0
-  idleBehavior: 0
-  hostileBehavior: 0
+  idleBehavior: 1
+  hostileBehavior: 1
   attackBehavior: 2
   fleeBehavior: 0
   _player: {fileID: 0}
-  hostileSpeed: 5
+  hostileSpeed: 6
   idleSpeed: 2
   waypointAccuracy: 1
   idleMoveRange: 5
+  _animator: {fileID: 1364533485054129926}
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
+  idleTimeBetweenPaths: 1
+  hostileTimeBetweenPaths: 1
   projectile: {fileID: 2524667109626999555, guid: 661b967dd0feaad48963032ed2ef7177, type: 3}
   EnemyGFX: {fileID: 8254784715141361784}
   EnemyHarmBox: {fileID: 1870556747127380065}
+  circleAroundRange: 2
   maxHP: 1
   enemyDefense: 1
   attackDistance: 5
   timeBetweenCastAttacks: 1.5
   timeBetweenLightChargeAttacks: 1.8
+  timeBetweenCircleCharges: 2
   lungeForceMultiplier: 20
+  chargeTime: 0.5
+  dropOnDeath: {fileID: 0}
+  ExecuteOnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6174691359257774066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +493,7 @@ GameObject:
   - component: {fileID: 8085410468565289845}
   - component: {fileID: 1546586170173978261}
   - component: {fileID: 1077424000013573469}
+  - component: {fileID: 1364533485054129926}
   m_Layer: 0
   m_Name: Bunny (GFX)
   m_TagString: Untagged
@@ -549,7 +560,7 @@ SpriteRenderer:
   m_SortingLayerID: 1541214691
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3103ae34401764946b6cd5cbb4189d76, type: 3}
+  m_Sprite: {fileID: -1992868609433134397, guid: 42221f2b042b87e49b18949f197d318e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -618,3 +629,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f519746d99bf1b643af97bcdc07b9ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1364533485054129926
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254784715141361784}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dda1664ecfa6d604baac05e22eb1adce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

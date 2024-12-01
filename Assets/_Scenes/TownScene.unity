@@ -69139,6 +69139,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 836105762779083802, guid: 6b2e4cd101f72684990d612d0e8a7b74, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3718280889673113245, guid: 6b2e4cd101f72684990d612d0e8a7b74, type: 3}
       propertyPath: m_Name
       value: Deer

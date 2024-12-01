@@ -437,6 +437,8 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator LungeAttack()
     {
+        
+        _animator.Play("Walk");
         Vector2 lungeForce = ((Vector2)_player.position - (Vector2)transform.position).normalized * lungeForceMultiplier;
         _rigidbody.AddForce(lungeForce, ForceMode2D.Impulse);
 
