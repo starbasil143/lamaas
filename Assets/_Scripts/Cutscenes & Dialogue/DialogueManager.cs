@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueName;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private GameObject continueIcon;
+    private GameObject _player;
 
     [SerializeField] private GameObject[] choices;
     [SerializeField] private float typingSpeed = 0.02f;
@@ -53,6 +54,7 @@ public class DialogueManager : MonoBehaviour
             Destroy(this);
         }
         instance = this;
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Start()
@@ -137,6 +139,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         InputManager.SwitchToDialogueControls();
         dialogueBox.SetActive(true);
+        _player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         inCutscene = dialogueTriggeredByCutscene;
 
         if (inCutscene)
