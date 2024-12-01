@@ -17,6 +17,7 @@ public class PlayerProgress : MonoBehaviour
       {"malloryVisit", false},
       {"deerCutscene", false},
       {"forestVisit1", false},
+      {"deerDefeated", false},
    };
 
    private void Awake()

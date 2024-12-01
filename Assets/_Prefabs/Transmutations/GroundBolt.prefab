@@ -102,11 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f793f5a0a6289488392e1a0f62624a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
+  damageAmount: 1
   isBlockable: 0
   destroyOnContact: 1
   canDamagePlayer: 0
   canDamageEnemy: 1
+  canDamageSelf: 0
   thwartedByWalls: 1
   Source: {fileID: 0}
   ImpactObject: {fileID: 0}

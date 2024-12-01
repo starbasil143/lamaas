@@ -16,6 +16,7 @@ public class PlayerCasting : MonoBehaviour
     private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
     private Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
     
+    private Dictionary <TileData, float[]> cooldownsPerMaterial;
     private Dictionary<string, bool> unlocksPerObject;
 
     // transmutation slot ui images
@@ -55,7 +56,13 @@ public class PlayerCasting : MonoBehaviour
         unlocksPerMaterial = new Dictionary<TileData, bool[]>();
         foreach (TileData tileData in tileDatas)
         {
-            unlocksPerMaterial.Add(tileData, new bool[] {true, true, true, true});
+            unlocksPerMaterial.Add(tileData, new bool[] {false, false, false, false});
+        }
+        unlocksPerMaterial[tileDatas[1]][0] = true; // auto unlock dirt throw
+        cooldownsPerMaterial = new Dictionary<TileData, float[]>();
+        foreach (TileData tileData in tileDatas)
+        {
+            cooldownsPerMaterial.Add(tileData, new float[] {0, 0, 0, 0});
         }
         unlocksPerObject = new Dictionary<string, bool>();
         foreach (string objectName in objectNames)
@@ -127,23 +134,26 @@ public class PlayerCasting : MonoBehaviour
 
         if (InputManager.Slot1 && !_player.isPaused) // R - SuperMaterial Attack
         {
-            if (cooldown1 <= 0 && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
+            if (cooldownsPerMaterial[currentTile][0] <= 0 && unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists)
             {
                 currentTile.transmutation1.PerformTransmutation(PlayerParent);
+                cooldownsPerMaterial[currentTile][0] = currentTile.transmutation1.cooldown;
             }
         }
         if (InputManager.Slot2 && !_player.isPaused) // F - SubMaterial Attack
         {
-            if (cooldown2 <= 0 && unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists)
+            if (cooldownsPerMaterial[currentTile][1] <= 0 && unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists)
             {
                 currentTile.transmutation2.PerformTransmutation(PlayerParent);
+                cooldownsPerMaterial[currentTile][1] = currentTile.transmutation2.cooldown;
             }
         }
         if (InputManager.Slot3 && !_player.isPaused) // T - SubMaterial Special 1
         {
-            if (cooldown3 <= 0 && unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists)
+            if (cooldownsPerMaterial[currentTile][2] <= 0 && unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists)
             {
                 currentTile.transmutation3.PerformTransmutation(PlayerParent);
+                cooldownsPerMaterial[currentTile][2] = currentTile.transmutation3.cooldown;
             }
         }
         if (InputManager.Slot4 && !_player.isPaused) // G - SubMaterial Special 2: Vine Grab
@@ -164,6 +174,17 @@ public class PlayerCasting : MonoBehaviour
             cooldown3 -= Time.deltaTime;
         if (cooldown4 > 0)
             cooldown4 -= Time.deltaTime;
+
+        foreach (KeyValuePair<TileData, float[]> tileData in cooldownsPerMaterial)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                if (tileData.Value[i] > 0)
+                {
+                    tileData.Value[i] -= Time.deltaTime;
+                }
+            }
+        }
     }
 
     private void SwitchTile()
@@ -176,6 +197,7 @@ public class PlayerCasting : MonoBehaviour
         SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists);
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists);
+        
         
     }
 

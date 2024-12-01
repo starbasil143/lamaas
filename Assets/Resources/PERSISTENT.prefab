@@ -1579,6 +1579,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setAutomatically: []
+  setAllTrue: 0
+  setAllTrueUpToPoint: 
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0

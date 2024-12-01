@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{f49f4564-1b5e-453b-9ea4-a2eb4b1d651f}">
 		<property name="name">
-			<value>Nested Event</value>
+			<value>BGM_Mallory</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -97,6 +97,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{85951e69-c4c8-42e1-886b-1eb6ad6effae}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>

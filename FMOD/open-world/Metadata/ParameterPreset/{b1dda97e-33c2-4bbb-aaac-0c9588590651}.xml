@@ -16,7 +16,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>7</value>
+			<value>11</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>None</value>
@@ -26,6 +26,10 @@
 			<value>PlayerHouse</value>
 			<value>MalloryHouse</value>
 			<value>Silent</value>
+			<value>Cult</value>
+			<value>Battle1</value>
+			<value>Battle2</value>
+			<value>Battle3</value>
 		</property>
 		<property name="initialValue">
 			<value>6</value>

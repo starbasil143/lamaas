@@ -1,6 +1,7 @@
 using UnityEngine;
 using Pathfinding;
 using System.Collections;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
     {
         None,
         Chase,
+        CircleAndCharge,
     }
     public enum AttackBehavior
     {
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
         ShootSingleProjectile,
         LightCharge,
         HeavyCharge,
+        CircleAndCharge,
     }
     public enum FleeBehavior
     {
@@ -54,6 +57,7 @@ public class Enemy : MonoBehaviour
     private Transform _transform;
     public float hostileSpeed = 5f;
     public float idleSpeed = 1f;
+
     private float currentSpeed;
     public float waypointAccuracy = 1f;
     private Path path;
@@ -62,18 +66,22 @@ public class Enemy : MonoBehaviour
     bool reachedEndOfPath = false;
     private Seeker _seeker;
     private Rigidbody2D _rigidbody;
-    private Animator _animator;
+    public Animator _animator;
     private bool hostileTriggerStatus;
     private bool attackTriggerStatus;
     private bool isFacingRight = true;
     public LayerMask RaycastingMask;
     private float lastHorizontal;
+    public float idleTimeBetweenPaths = 1f;
+    public float hostileTimeBetweenPaths = 1f;
+    private float timeBetweenPaths;
     [SerializeField] private GameObject projectile;
     public GameObject EnemyGFX;
     public GameObject EnemyHarmBox;
     Coroutine repeatCastAttackCoroutine;
     Coroutine maybeStopAttacking;
     Coroutine lightChargeAttackCoroutine;
+    public float circleAroundRange = 2f;
 
 
 
@@ -83,7 +91,12 @@ public class Enemy : MonoBehaviour
     public float attackDistance = 10f;
     public float timeBetweenCastAttacks = 1.5f;
     public float timeBetweenLightChargeAttacks = 1.8f;
+    public float timeBetweenCircleCharges = 2f;
+    private float circleChargeTimer = 0f;
     public float lungeForceMultiplier = 20f;
+    public float chargeTime = .5f;
+
+    public UnityEvent ExecuteOnDeath;
 
     private void Awake()
     {
@@ -97,7 +110,7 @@ public class Enemy : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _seeker = GetComponent<Seeker>();
         _rigidbody = GetComponentInParent<Rigidbody2D>();
-        //_animator = transform.parent.GetComponentInChildren<Animator>();
+        _animator = transform.parent.GetComponentInChildren<Animator>();
 
         StartCoroutine(UpdatePath());
     }
@@ -182,6 +195,8 @@ public class Enemy : MonoBehaviour
     {
         currentState = EnemyState.Idle;
         currentSpeed = idleSpeed;
+        timeBetweenPaths = idleTimeBetweenPaths;
+        _animator.Play("Walk");
     }
     private void IdleUpdate()
     {
@@ -247,18 +262,43 @@ public class Enemy : MonoBehaviour
     {
         currentState = EnemyState.Hostile;
         currentSpeed = hostileSpeed;
+        timeBetweenPaths = hostileTimeBetweenPaths;
+        _animator.Play("Walk");
     }
     private void HostileUpdate()
     {
-        if (hostileTriggerStatus == false)
+        switch (hostileBehavior)
         {
-            HostileExitLogic();
-            BecomeIdle();
-        }
-        if (attackTriggerStatus == true)
-        {
-            HostileExitLogic();
-            BecomeAttacking();
+            case HostileBehavior.Chase:
+                if (hostileTriggerStatus == false)
+                {
+                    HostileExitLogic();
+                    BecomeIdle();
+                }
+                if (attackTriggerStatus == true)
+                {
+                    HostileExitLogic();
+                    BecomeAttacking();
+                }
+                break;
+
+            case HostileBehavior.CircleAndCharge:
+                if (hostileTriggerStatus == false)
+                {
+                    HostileExitLogic();
+                    BecomeIdle();
+                }
+                if (circleChargeTimer >= timeBetweenCircleCharges)
+                {
+                    circleChargeTimer = 0f;
+                    HostileExitLogic();
+                    BecomeAttacking();
+                }
+                circleChargeTimer += Time.deltaTime;
+                break;
+
+
+            
         }
     }
     private void HostileFixedUpdate()
@@ -267,7 +307,16 @@ public class Enemy : MonoBehaviour
     }
     private void HostilePath()
     {
-        _seeker.StartPath(_rigidbody.position, _player.position, OnPathLoaded);
+        switch (hostileBehavior)
+        {
+            case HostileBehavior.Chase:
+                _seeker.StartPath(_rigidbody.position, _player.position, OnPathLoaded);
+                break;
+
+            case HostileBehavior.CircleAndCharge:
+                _seeker.StartPath(_rigidbody.position, _player.position + circleAroundRange * ((Quaternion.Euler(0f, 0f, 90f)) * (_player.position - (Vector3)_rigidbody.position)), OnPathLoaded);
+                break;
+        }
     }
     private void HostileExitLogic()
     {
@@ -290,18 +339,30 @@ public class Enemy : MonoBehaviour
             case AttackBehavior.LightCharge:
                 lightChargeAttackCoroutine = StartCoroutine(RepeatLightCharge());
             break;
+
+            case AttackBehavior.CircleAndCharge:
+                StartCoroutine(CircleChargeAttack());
+            break;
         }
         
     }
     private void AttackingUpdate()
     {
-        if (attackTriggerStatus == false)
+        switch (attackBehavior)
         {
-            if (maybeStopAttacking != null)
-            {
-                StopCoroutine(maybeStopAttacking);
-            }
-            StartCoroutine(MaybeStopAttackingAfterALittleBit(3f));
+            case AttackBehavior.CircleAndCharge:
+                break;
+
+            default:
+                if (attackTriggerStatus == false)
+                {
+                    if (maybeStopAttacking != null)
+                    {
+                        StopCoroutine(maybeStopAttacking);
+                    }
+                    StartCoroutine(MaybeStopAttackingAfterALittleBit(3f));
+                }
+                break;
         }
     }
     private void AttackingFixedUpdate()
@@ -350,6 +411,27 @@ public class Enemy : MonoBehaviour
             StartCoroutine(LungeAttack());
         }
         yield return null;
+    }
+
+    private IEnumerator CircleChargeAttack()
+    {
+        FaceCorrectDirection(_player.position - (Vector3)_rigidbody.position);
+        _seeker.CancelCurrentPathRequest();
+        path = null;
+        _rigidbody.linearVelocity = Vector3.zero;
+        _animator.Play("Charge");
+        yield return new WaitForSeconds(chargeTime);
+        _animator.Play("Run");
+        EnemyHarmBox.SetActive(true);
+        Vector2 lungeForce = ((Vector2)_player.position - (Vector2)transform.position).normalized * lungeForceMultiplier;
+        _rigidbody.AddForce(lungeForce, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(.3f);
+        lungeForce = Vector3.RotateTowards(lungeForce, _player.position-_transform.position, .5f, 0f);
+        _rigidbody.AddForce(lungeForce, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(.3f);
+        EnemyHarmBox.SetActive(false);
+        AttackingExitLogic();
+        BecomeHostile();
     }
 
     private IEnumerator LungeAttack()
@@ -458,7 +540,8 @@ public class Enemy : MonoBehaviour
 
         if (damageAmount > 0)
         {
-            //_animator.Play("Hurt", -1, 0f);
+            _animator.Play("Hurt", -1, 0f);
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDamage, transform.position); // change to enemy damage later (probably)
         }
 
         if (currentHP <= 0)
@@ -469,6 +552,10 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        if (ExecuteOnDeath != null)
+        {
+            ExecuteOnDeath.Invoke();
+        }
         Destroy(_transform.gameObject);
     }
     #endregion
@@ -479,7 +566,7 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(timeBetweenPaths);
             if (_seeker.IsDone())
             {
                 switch (currentState) // Run the current state's Path function

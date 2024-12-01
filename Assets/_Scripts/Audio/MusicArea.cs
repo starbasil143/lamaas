@@ -9,4 +9,8 @@ public enum MusicArea
     PLAYER_HOUSE = 4,
     MALLORY_HOUSE = 5,
     SILENT = 6,
+    CULT = 7,
+    BATTLE1 = 8,
+    BATTLE2 = 9,
+    BATTLE3 = 10,
 }

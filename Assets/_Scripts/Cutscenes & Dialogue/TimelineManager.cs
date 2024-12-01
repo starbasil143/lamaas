@@ -10,6 +10,7 @@ public class TimelineManager : MonoBehaviour
     public List<TextAsset> dialogueAssets;
     public List<GameObject> objectsToDisable;
     public List<GameObject> objectsToEnable;
+    public MusicArea musicArea;
     public string associatedFlag;
     
 
@@ -95,5 +96,10 @@ public class TimelineManager : MonoBehaviour
     public void DeactivateDirector()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetMusic()
+    {
+        AudioManager.instance.SetMusicArea(musicArea);
     }
 }

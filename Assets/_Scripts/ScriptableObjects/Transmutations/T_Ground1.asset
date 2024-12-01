@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 874755d73a0ea30499a0c905cccc4784, type: 3}
   m_Name: T_Ground1
   m_EditorClassIdentifier: 
+  cooldown: 2.5
   projectile: {fileID: 4837636442170556296, guid: 297d73dffe7c4fd41a33b3c5caced3ea, type: 3}

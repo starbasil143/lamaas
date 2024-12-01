@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638685316965094395
+  lastModified: 638686476998576986
   FileSizes:
   - Name: Desktop
-    Value: 1668
+    Value: 1714
   Exists: 1
 --- !u!114 &-7169268526275324557
 MonoBehaviour:
@@ -116,10 +116,10 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Town.bank
   Name: Town
   StudioPath: bank:/Town
-  lastModified: 638686049046456654
+  lastModified: 638686477011313894
   FileSizes:
   - Name: Desktop
-    Value: 4023360
+    Value: 5314528
   Exists: 1
 --- !u!114 &-3086874279242815012
 MonoBehaviour:
@@ -147,6 +147,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: 1992967026522598364}
   - {fileID: -353730045878267105}
+  - {fileID: -2227879051340498399}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -197,6 +198,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2227879051340498399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM/DiscreteSongVer
+  m_EditorClassIdentifier: 
+  Name: DiscreteSongVer
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 1638199815
+    data2: 2116889923
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-601507058279553139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +237,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638685316965064399
+  lastModified: 638686476998532779
   FileSizes:
   - Name: Desktop
     Value: 1632
@@ -305,7 +330,7 @@ MonoBehaviour:
   - {fileID: -601507058279553139}
   StringsBanks:
   - {fileID: -7492806763642632584}
-  cacheTime: 638686049046456654
+  cacheTime: 638686477011313894
   cacheVersion: 131621
 --- !u!114 &1992967026522598364
 MonoBehaviour:
@@ -322,7 +347,7 @@ MonoBehaviour:
   Name: area
   StudioPath: 
   Min: 0
-  Max: 6
+  Max: 10
   Default: 6
   ID:
     data1: 3779163128
@@ -337,6 +362,10 @@ MonoBehaviour:
   - PlayerHouse
   - MalloryHouse
   - Silent
+  - Cult
+  - Battle1
+  - Battle2
+  - Battle3
   Exists: 1
 --- !u!114 &2587803698390367836
 MonoBehaviour:

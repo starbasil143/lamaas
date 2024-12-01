@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -98,7 +98,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dirtspike_anim-sheet_0: -1984728998381122080
+      dirtspike_anim-sheet_1: 4785499305782836365
+      dirtspike_anim-sheet_2: -6350567152576077950
+      dirtspike_anim-sheet_3: -3248000842576030100
+      dirtspike_anim-sheet_4: 8916079307456354293
+      dirtspike_anim-sheet_5: -5499139788479985198
+      dirtspike_anim-sheet_6: -583463250197389810
+      dirtspike_anim-sheet_7: 4040072319468153958
+      dirtspike_anim-sheet_8: -5029803483828591931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
