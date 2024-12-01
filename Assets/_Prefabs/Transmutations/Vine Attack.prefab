@@ -106,6 +106,7 @@ MonoBehaviour:
   destroyOnContact: 0
   canDamagePlayer: 1
   canDamageEnemy: 1
+  canDamageSelf: 0
   thwartedByWalls: 1
   Source: {fileID: 0}
   ImpactObject: {fileID: 0}

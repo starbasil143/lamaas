@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class FlagHandler : MonoBehaviour
 
     public List<string> flagsMustBeTrue;
     public List<string> flagsMustBeFalse;
+    public bool delayDisable;
 
     private void Awake()
     {
@@ -20,16 +22,36 @@ public class FlagHandler : MonoBehaviour
         {
             if (_progress.progressFlags[flag] == false)
             {
-                gameObject.SetActive(false);
+                if (delayDisable)
+                {
+                    StartCoroutine(DeactivateLate());
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
         foreach (string flag in flagsMustBeFalse)
         {
             if (_progress.progressFlags[flag] == true)
             {
-                gameObject.SetActive(false);
+                if (delayDisable)
+                {
+                    StartCoroutine(DeactivateLate());
+                }
+                else
+                {
+                    gameObject.SetActive(false);
+                }
             }
         }
+    }
+
+    private IEnumerator DeactivateLate()
+    {
+        yield return new WaitForSeconds(.05f);
+        gameObject.SetActive(false);
     }
 
 

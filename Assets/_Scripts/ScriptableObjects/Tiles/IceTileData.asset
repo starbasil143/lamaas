@@ -74,11 +74,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7e0cf1e0f1739404bbf7ef94a1c635f8, type: 2}
   - {fileID: 11400000, guid: 0d3f8acfbc843e64190c0cb93c279ba2, type: 2}
   - {fileID: 11400000, guid: a6fe48bbc248239428e44fe02b324429, type: 2}
-  slot1Exists: 0
+  slot1Exists: 1
   slot2Exists: 0
   slot3Exists: 1
   slot4Exists: 0
-  transmutation1: {fileID: 0}
+  transmutation1: {fileID: 11400000, guid: f88d8c36f79b1f44399e2d46a0362c88, type: 2}
   transmutation2: {fileID: 0}
   transmutation3: {fileID: 11400000, guid: aab9fc0326fe83c42a9edfdce2ef1ecf, type: 2}
   transmutation4: {fileID: 0}

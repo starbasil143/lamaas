@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{755cdccf-ac0b-42e7-bd5d-2c23b9b1426e}">
+		<property name="assetPath">
+			<value>SFX/Voices/nasal.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{99080615-9386-40e6-9bde-83d71d2ba15c}</destination>
+		</relationship>
+	</object>
+</objects>

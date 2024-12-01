@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{948d025d-8e05-4fa2-80e9-cdd8faa5c9be}">
+		<property name="name">
+			<value>DiscreteSongVer</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8551f137-645a-4916-b4ad-55e35880ab94}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6938a299-7f5d-4e6a-b4aa-146fdd3107bb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6938a299-7f5d-4e6a-b4aa-146fdd3107bb}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
 
 
 
+
     private void Awake()
     {
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
@@ -105,6 +106,7 @@ public class Player : MonoBehaviour
             Damage(harmSource.GetComponent<HarmfulObjectScript>().damageAmount);
             immunityTimer = 0f;
             _animator.Play("Harm");
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.playerDamage, transform.position);
         }
     }
 

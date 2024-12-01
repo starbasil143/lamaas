@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe3f477df714dd4fba2de6eb2662087, type: 3}
   m_Name: T_VineGrab
   m_EditorClassIdentifier: 
+  cooldown: 0.2
   projectile: {fileID: 6723732250819957674, guid: 0ff2301a762bdfd40afa88f0fada2dea, type: 3}

@@ -19,4 +19,9 @@ public class Trigger : MonoBehaviour
             }
         }
     }
+
+    public void SetFlag(string flagToSet)
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerProgress>().progressFlags[flagToSet] = true;
+    }
 }
