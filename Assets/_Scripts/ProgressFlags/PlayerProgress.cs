@@ -31,12 +31,16 @@ public class PlayerProgress : MonoBehaviour
       }
       if (setAllTrueUpToPoint != "")
       {
-         foreach (string flag in progressFlags.Keys)
+         bool flagReached = false;
+         foreach (string flag in new List<string>(progressFlags.Keys))
          {
-            progressFlags[flag] = true;
-            if (flag == setAllTrueUpToPoint)
+            if (!flagReached)
             {
-               break;
+               progressFlags[flag] = true;
+               if (flag == setAllTrueUpToPoint)
+               {
+                  flagReached = true;
+               }
             }
          }
       }

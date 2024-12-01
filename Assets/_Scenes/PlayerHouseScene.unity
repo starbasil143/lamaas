@@ -820,6 +820,7 @@ MonoBehaviour:
   flagsMustBeTrue: []
   flagsMustBeFalse:
   - openingScene
+  delayDisable: 0
 --- !u!114 &304296234
 MonoBehaviour:
   m_ObjectHideFlags: 0

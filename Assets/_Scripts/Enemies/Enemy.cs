@@ -95,6 +95,7 @@ public class Enemy : MonoBehaviour
     private float circleChargeTimer = 0f;
     public float lungeForceMultiplier = 20f;
     public float chargeTime = .5f;
+    public GameObject dropOnDeath;
 
     public UnityEvent ExecuteOnDeath;
 
@@ -555,6 +556,10 @@ public class Enemy : MonoBehaviour
         if (ExecuteOnDeath != null)
         {
             ExecuteOnDeath.Invoke();
+        }
+        if (dropOnDeath != null)
+        {
+            Instantiate(dropOnDeath, transform.position, Quaternion.identity);
         }
         Destroy(_transform.gameObject);
     }

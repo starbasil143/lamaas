@@ -201,6 +201,12 @@ public class PlayerCasting : MonoBehaviour
         
     }
 
+    public void LearnSpell(TileData tileData, int index)
+    {
+        unlocksPerMaterial[tileData][index] = true;
+        SwitchTile();
+    }
+
     #region Object Transmutation 
 
     public void SwitchObject(GameObject newObject)
