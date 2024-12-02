@@ -63,6 +63,6 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void ButtonPressed()
     {
-        UnityEngine.Debug.Log(button + " Pressed");
+        UnityEngine.Debug.Log("Pressed");
     }
 }

@@ -10,6 +10,7 @@ public class PauseMenuController : MonoBehaviour
     public GameObject spellListPanel;
 
     public Button pauseButton;
+    public Button exitPauseButton;
 
     [SerializeField] Transform spellList;
     [SerializeField] Transform spellInformation;
@@ -27,6 +28,8 @@ public class PauseMenuController : MonoBehaviour
         {
             pauseMenuPanel.SetActive(false);
         }
+        pauseButton.onClick.AddListener(TogglePauseMenu);
+        exitPauseButton.onClick.AddListener(TogglePauseMenu);
     }
 
     void Update()

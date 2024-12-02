@@ -1590,28 +1590,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2059188560433272949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba777599192e6644a878d0bab5d99b8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5915538ae85c5904abe267b6021f5f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
   map: {fileID: 0}
-  tileDatas:
-  - {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
-  - {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
-  - {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
-  - {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
-  - {fileID: 11400000, guid: d22ac35f7cfc92140b2a6921ffeb1e82, type: 2}
-  - {fileID: 11400000, guid: 165061a0adbcde2438de86fa59f16477, type: 2}
+  tileDatas: []
   defaultTileData: {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
-  objectNames:
-  - HealPlant2
+  objectNames: []
   SlotOneImage: {fileID: 530501574270320908}
   SlotTwoImage: {fileID: 1600142811928097113}
   SlotThreeImage: {fileID: 2862764625915753896}
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 1
+  unlockAllTransmutations: 0
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4584,11 +4577,11 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
-  m_PointAction: {fileID: -7613115586433542833, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
+  m_PointAction: {fileID: 2304846248175104150, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_MoveAction: {fileID: -8455323636656507351, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_SubmitAction: {fileID: -1407468597833696592, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_CancelAction: {fileID: -3563402875025691088, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
-  m_LeftClickAction: {fileID: -735893674539022774, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
+  m_LeftClickAction: {fileID: -4440339896424404344, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_MiddleClickAction: {fileID: -5176855084819588587, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_RightClickAction: {fileID: -1326661028531661300, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
   m_ScrollWheelAction: {fileID: 4582529812786698258, guid: 9a0be268e4c52644a8a0349c833c6936, type: 3}
