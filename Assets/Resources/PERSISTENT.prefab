@@ -1562,7 +1562,7 @@ MonoBehaviour:
   healthAmount: 10
   isPaused: 0
   currentSlot: 0
-  immunityTime: 1
+  immunityTime: 0.5
   _exclamationIcon: {fileID: 8173497547851584300}
   HealthBarFillImage: {fileID: 445544933602325983}
   _playerCasting: {fileID: 2108771031858146728}
@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAutomatically: []
   setAllTrue: 0
-  setAllTrueUpToPoint: 
+  setAllTrueUpToPoint: malloryVisit
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1605,6 +1605,7 @@ MonoBehaviour:
   defaultTileData: {fileID: 11400000, guid: 7467f38e09419f448bb69246c70cf01e, type: 2}
   objectNames:
   - HealPlant2
+  - Water
   SlotOneImage: {fileID: 530501574270320908}
   SlotTwoImage: {fileID: 1600142811928097113}
   SlotThreeImage: {fileID: 2862764625915753896}
