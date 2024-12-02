@@ -63,6 +63,6 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void BackToMainMenu()
     {
-        UnityEngine.SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

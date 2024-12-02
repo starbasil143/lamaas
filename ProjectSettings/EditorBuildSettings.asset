@@ -23,6 +23,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MalloryHouseScene.unity
     guid: dd1a534d5b25f9a45935a02b112525a4
+  - enabled: 1
+    path: Assets/_Scenes/EndGameScene.unity
+    guid: 8f6a441311438be4eae0f62e165df8aa
+  - enabled: 1
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 17e1d8c9b765c3041bdb4163708c9492
+  - enabled: 1
+    path: Assets/_Scenes/ForestSceneMainLevel.unity
+    guid: c53b0228c135cf64a9523804d5757070
+  - enabled: 1
+    path: Assets/_Scenes/RightForestMainLevel.unity
+    guid: ec353dd4944255f458937d8a17e3b339
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
