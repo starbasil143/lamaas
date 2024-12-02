@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 5773357488867011879}
   - component: {fileID: 5107551333364882568}
   - component: {fileID: 6435234694154677888}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ToggleSpellDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 2635519110670812689}
   - component: {fileID: 4623356202675456520}
   - component: {fileID: 4560689151222588008}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 3397296628254658115}
   - component: {fileID: 7182107072037312690}
   - component: {fileID: 6649234820185799755}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,8 +1769,8 @@ Canvas:
   m_GameObject: {fileID: 1712557944798915922}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 517402141187924260}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1780,7 +1780,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 320555485
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &7182107072037312690
@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -1971,7 +1971,7 @@ GameObject:
   - component: {fileID: 4924434341305156422}
   - component: {fileID: 8786047962826800705}
   - component: {fileID: 2858069804257665112}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2220,7 +2220,7 @@ GameObject:
   - component: {fileID: 8894104801420002006}
   - component: {fileID: 1841529164907483784}
   - component: {fileID: 5735458087044850025}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2356,13 +2356,13 @@ GameObject:
   - component: {fileID: 6517199520760999874}
   - component: {fileID: 2185127594738076168}
   - component: {fileID: 1013597480365661110}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6517199520760999874
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 3873572427158919641}
   - component: {fileID: 1429534514426898092}
   - component: {fileID: 2803017557712487498}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SpellDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2928,7 +2928,7 @@ GameObject:
   - component: {fileID: 4219058452076092784}
   - component: {fileID: 1861935962320460989}
   - component: {fileID: 6820693960714014460}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3244,7 +3244,7 @@ GameObject:
   - component: {fileID: 8029490750221515336}
   - component: {fileID: 1874671685999892939}
   - component: {fileID: 6244531101389703636}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Back To Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3377,7 +3377,7 @@ GameObject:
   - component: {fileID: 3985997642941728580}
   - component: {fileID: 5190936581862887563}
   - component: {fileID: 4195093693178637145}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3521,7 +3521,7 @@ GameObject:
   - component: {fileID: 7352292252662925154}
   - component: {fileID: 4665378212775876096}
   - component: {fileID: 704448218612222497}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3657,7 +3657,7 @@ GameObject:
   - component: {fileID: 6517444677462282500}
   - component: {fileID: 6298740946240730544}
   - component: {fileID: 8553987633423994829}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quest Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3891,7 +3891,7 @@ GameObject:
   - component: {fileID: 4063055318777123672}
   - component: {fileID: 7118429984374497740}
   - component: {fileID: 4546291698579360415}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Current Quest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4724,7 +4724,7 @@ GameObject:
   - component: {fileID: 7635901294826933464}
   - component: {fileID: 4896645480448450051}
   - component: {fileID: 6712726715402558992}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4879,7 +4879,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8302406327813378058}
-  - {fileID: 7342197692589973794}
   - {fileID: 2340658760076489303}
   - {fileID: 8866251529441581415}
   - {fileID: 7124442322083310412}
@@ -4890,6 +4889,7 @@ Transform:
   - {fileID: 9124847854835045690}
   - {fileID: 8540713962999975782}
   - {fileID: 3930239884445003445}
+  - {fileID: 7342197692589973794}
   - {fileID: 5525388246444774361}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5193,7 +5193,7 @@ GameObject:
   - component: {fileID: 1378855637116761195}
   - component: {fileID: 8784338288629461138}
   - component: {fileID: 6220846442198025388}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quest Desc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5429,7 +5429,7 @@ GameObject:
   - component: {fileID: 726715920926829538}
   - component: {fileID: 784769635877345849}
   - component: {fileID: 6073151967004848921}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: DisplaySpell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
