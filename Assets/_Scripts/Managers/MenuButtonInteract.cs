@@ -38,7 +38,7 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
         colors.normalColor = hoverColor;
         button.colors = colors;
 
-        UnityEngine.Debug.Log("Mouse on Button");
+        //UnityEngine.Debug.Log("Mouse on Button");
     }
 
     // When mouse exits button area
@@ -52,17 +52,17 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
         colors.normalColor = originalColor;
         button.colors = colors;
 
-        UnityEngine.Debug.Log("Mouse off Button");
+        //UnityEngine.Debug.Log("Mouse off Button");
     }
 
     public void ExitGame()
     {
         UnityEngine.Application.Quit();
-        UnityEngine.Debug.Log("Exit Pressed");
+        //UnityEngine.Debug.Log("Exit Pressed");
     }
 
-    public void ButtonPressed()
+    public void BackToMainMenu()
     {
-        UnityEngine.Debug.Log("Pressed");
+        UnityEngine.SceneManager.LoadScene("MainMenu");
     }
 }

@@ -8,6 +8,7 @@ public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuPanel;
     public GameObject spellListPanel;
+    public GameObject howToPlayScreen;
 
     public Button pauseButton;
     public Button exitPauseButton;
@@ -24,9 +25,9 @@ public class PauseMenuController : MonoBehaviour
 
     void Start()
     {
-        if (pauseMenuPanel != null)
+        if (pauseMenuPanel != null || spellListPanel != null || howToPlayScreen != null)
         {
-            pauseMenuPanel.SetActive(false);
+            CloseAllMenus();
         }
         pauseButton.onClick.AddListener(TogglePauseMenu);
         exitPauseButton.onClick.AddListener(TogglePauseMenu);
@@ -62,7 +63,7 @@ public class PauseMenuController : MonoBehaviour
     public void ResumeGame()
     {
         // Close pause menu
-        pauseMenuPanel.SetActive(false);
+        CloseAllMenus();
 
         // Unpause game
         Time.timeScale = 1f;
@@ -71,10 +72,11 @@ public class PauseMenuController : MonoBehaviour
     public void ReturnToMainMenu()
     {
         // Unpause the game before loading
+        CloseAllMenus();
         Time.timeScale = 1f;
 
         // Load main menu scene
-        //UnityEngine.SceneManagement.LoadScene("MainMenu"); // Replace with your main menu scene name
+        //UnityEngine.SceneManagement.LoadScene("MainMenu"); // Replace with main menu scene name
     }
 
     public void CloseSpellList()
@@ -84,5 +86,12 @@ public class PauseMenuController : MonoBehaviour
 
         // Show main pause menu
         pauseMenuPanel.SetActive(true);
+    }
+
+    public void CloseAllMenus()
+    {
+        spellListPanel.SetActive(false);
+        howToPlayScreen.SetActive(false);
+        pauseMenuPanel.SetActive(false);
     }
 }
