@@ -229,6 +229,11 @@ public class PlayerCasting : MonoBehaviour
         }
     }
 
+    public bool KnowsObjectSpell(string objectName)
+    {
+        return unlocksPerObject[objectName];
+    }
+
     #region Object Transmutation 
 
     public void SwitchObject(GameObject newObject)

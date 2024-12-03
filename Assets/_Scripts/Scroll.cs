@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class Scroll : MonoBehaviour
 {
@@ -8,9 +9,15 @@ public class Scroll : MonoBehaviour
     [SerializeField] private bool objectTransmutation;
     public string objectName;
     public TextAsset dialogueAsset;
+    public PlayableDirector cutscene;
     void Start()
     {
         _playerCasting = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCasting>();
+
+        if (_playerCasting.KnowsObjectSpell(objectName))
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void LearnSpell()
@@ -28,6 +35,16 @@ public class Scroll : MonoBehaviour
         {
             DialogueManager.instance.EnterDialogue(dialogueAsset, false, true);
         }
-        Destroy(gameObject);
+        
+        if (cutscene != null)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            cutscene.gameObject.SetActive(true);
+            cutscene.Play();
+        }   
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
