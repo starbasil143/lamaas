@@ -84,10 +84,7 @@ public class IceTomb : MonoBehaviour
 
     private IEnumerator FreezeEnemy()
     {
-        // Disable movement and attacks
-        enemyRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
-        hasFrozenEnemy = true;
-
+        // Freeze the enemy's movement
         if (enemyRb != null)
         {
             enemyRb.velocity = Vector2.zero;
@@ -100,7 +97,7 @@ public class IceTomb : MonoBehaviour
 
         Debug.Log("Freezing Enemy");
 
-        // Wait for the freeze duration or until unfreezed
+        // Wait for the freeze duration or until manually unfrozen
         float elapsedTime = 0f;
         while (elapsedTime < freezeDuration && hasFrozenEnemy)
         {
@@ -108,7 +105,7 @@ public class IceTomb : MonoBehaviour
             elapsedTime += Time.deltaTime;
         }
 
-        // If still frozen after the duration, unfreeze
+        // Unfreeze if still frozen after the duration
         if (hasFrozenEnemy)
         {
             Debug.Log("Enemy will now UnFreeze");
@@ -118,21 +115,77 @@ public class IceTomb : MonoBehaviour
 
     private void UnFreezeEnemy()
     {
-        enemyRB.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.None;
+        if (enemyRb != null)
+            enemyRb.constraints = RigidbodyConstraints2D.None; // Allow full movement
+
         hasFrozenEnemy = false;
 
         // Restore the enemy's original state
         if (enemyScript != null)
+        {
             enemyScript.attackBehavior = originalEnemyBehavior;
-
-        if (enemyRb != null)
-            enemyRb.constraints = RigidbodyConstraints2D.None;
+            enemyScript.currentState = originalEnemyState;
+            enemyScript.hostileBehavior = originalHostileBehavior;
+        }
 
         if (enemySprite != null)
-            enemySprite.color = Color.white;
+            enemySprite.color = Color.white; // Reset color
 
-        EnableEnemyBehavior();
+        Debug.Log("Enemy Unfrozen");
     }
+
+
+    //private IEnumerator FreezeEnemy()
+    //{
+    //    // Disable movement and attacks
+    //    enemyRB.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+    //    hasFrozenEnemy = true;
+
+    //    if (enemyRb != null)
+    //    {
+    //        enemyRb.velocity = Vector2.zero;
+    //        enemyRb.constraints = RigidbodyConstraints2D.FreezeAll;
+    //    }
+
+    //    // Change enemy color to indicate freezing
+    //    if (enemySprite != null)
+    //        enemySprite.color = Color.cyan;
+
+    //    Debug.Log("Freezing Enemy");
+
+    //    // Wait for the freeze duration or until unfreezed
+    //    float elapsedTime = 0f;
+    //    while (elapsedTime < freezeDuration && hasFrozenEnemy)
+    //    {
+    //        yield return null;
+    //        elapsedTime += Time.deltaTime;
+    //    }
+
+    //    // If still frozen after the duration, unfreeze
+    //    if (hasFrozenEnemy)
+    //    {
+    //        Debug.Log("Enemy will now UnFreeze");
+    //        UnFreezeEnemy();
+    //    }
+    //}
+
+    //private void UnFreezeEnemy()
+    //{
+    //    enemyRB.constraints = RigidbodyConstraints2D.None;
+    //    hasFrozenEnemy = false;
+
+    //    // Restore the enemy's original state
+    //    if (enemyScript != null)
+    //        enemyScript.attackBehavior = originalEnemyBehavior;
+
+    //    if (enemyRb != null)
+    //        enemyRb.constraints = RigidbodyConstraints2D.None;
+
+    //    if (enemySprite != null)
+    //        enemySprite.color = Color.white;
+
+    //    EnableEnemyBehavior();
+    //}
 
     private void DisableEnemyBehavior()
     {
