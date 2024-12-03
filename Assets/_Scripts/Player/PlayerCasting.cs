@@ -14,7 +14,7 @@ public class PlayerCasting : MonoBehaviour
     [SerializeField] private TileData defaultTileData;
     [SerializeField] private List<string> objectNames;
     private Dictionary<TileBase, TileData> dataFromTiles; // list of tiles paired with tile types
-    private Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
+    public Dictionary<TileData, bool[]> unlocksPerMaterial; // list of each material and whether each of their four transmutations are unlocked
     
     private Dictionary <TileData, float[]> cooldownsPerMaterial;
     private Dictionary<string, bool> unlocksPerObject;

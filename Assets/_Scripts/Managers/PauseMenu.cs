@@ -3,28 +3,20 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Tilemaps;
+using System.Collections.Generic;
+using System.Diagnostics;
 
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuPanel;
-    public GameObject spellListPanel;
+    public GameObject settingsPanel;
 
-    public Button pauseButton;
-    public Button exitPauseButton;
-
-    [SerializeField] Transform spellList;
-    [SerializeField] Transform spellInformation;
-
-    [SerializeField] Image spellInformationImage;
-
-    public TextMeshProUGUI[] spellInformationText;
-
-    public CanvasGroup background;
     private GameObject player;
 
     void Start()
     {
-        if (pauseMenuPanel != null || spellListPanel != null)
+        if (pauseMenuPanel != null || settingsPanel != null)
         {
             CloseAllMenus();
         }
@@ -48,15 +40,6 @@ public class PauseMenuController : MonoBehaviour
         Time.timeScale = pauseMenuPanel.activeSelf ? 0f : 1f;
     }
 
-    public void ShowSpellList()
-    {
-        // Hide main pause menu
-        pauseMenuPanel.SetActive(false);
-
-        // Show spell list panel
-        spellListPanel.SetActive(true);
-    }
-
     public void ReturnToMainMenu()
     {
         // Unpause the game before loading
@@ -67,18 +50,15 @@ public class PauseMenuController : MonoBehaviour
         SceneManager.LoadScene("MainMenu"); // Replace with main menu scene name
     }
 
-    public void CloseSpellList()
+    public void ToggleSettings()
     {
-        // Hide spell list
-        spellListPanel.SetActive(false);
-
-        // Show main pause menu
-        pauseMenuPanel.SetActive(true);
+        // Toggle settings menu visibility
+        settingsPanel.SetActive(!settingsPanel.activeSelf);
     }
 
     public void CloseAllMenus()
     {
-        spellListPanel.SetActive(false);
         pauseMenuPanel.SetActive(false);
+        settingsPanel.SetActive(false);
     }
 }

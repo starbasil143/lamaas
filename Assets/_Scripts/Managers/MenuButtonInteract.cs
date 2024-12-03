@@ -9,11 +9,9 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
 {
     // Original button properties
     private Vector3 originalScale;
-    private Color originalColor;
 
     // Hover effect properties
     public float hoverScaleMultiplier = 1.2f;
-    public Color hoverColor = new Color(1f, 1f, 1f, 1f); // White
 
     public Button button;
 
@@ -22,9 +20,8 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
         // Get the button component
         button = GetComponent<Button>();
 
-        // Store original scale and color
+        // Store original scale
         originalScale = transform.localScale;
-        originalColor = button.colors.normalColor;
     }
 
     // When mouse enters button area
@@ -32,11 +29,6 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
     {
         // Scale up the button
         transform.localScale = originalScale * hoverScaleMultiplier;
-
-        // Change button color
-        ColorBlock colors = button.colors;
-        colors.normalColor = hoverColor;
-        button.colors = colors;
 
         //UnityEngine.Debug.Log("Mouse on Button");
     }
@@ -47,14 +39,19 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
         // Restore original scale
         transform.localScale = originalScale;
 
-        // Restore original color
-        ColorBlock colors = button.colors;
-        colors.normalColor = originalColor;
-        button.colors = colors;
-
         //UnityEngine.Debug.Log("Mouse off Button");
     }
 
+    public void NewGame()
+    {
+        SceneManager.LoadScene("TownScene");
+    }
+
+    public void ContinueGame()
+    {
+        UnityEngine.Debug.Log("Continue Game button pressed");
+    }
+    
     public void ExitGame()
     {
         UnityEngine.Application.Quit();
