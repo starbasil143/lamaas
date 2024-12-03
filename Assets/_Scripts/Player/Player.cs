@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
     public GameObject _exclamationIcon;
 
     public GameObject HealthBarFillImage;
+    private NonEntrySceneChange _sceneChanger;
 
     public PlayerCasting _playerCasting;
 
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
         _animator = PlayerParent.GetComponentInChildren<Animator>();
+        
     }
 
 
@@ -113,9 +116,10 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        isPaused = true;
-        PlayerParent.SetActive(false);
+        //isPaused = true;
         //_deathCanvas.SetActive(true);
+        GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+        healthAmount = maxHealthAmount;
     }
 
     public void NotifyOn()

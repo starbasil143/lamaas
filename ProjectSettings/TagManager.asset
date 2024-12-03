@@ -15,6 +15,7 @@ TagManager:
   - DialogueManager
   - Terrain
   - Water
+  - SceneManager
   layers:
   - Default
   - TransparentFX
