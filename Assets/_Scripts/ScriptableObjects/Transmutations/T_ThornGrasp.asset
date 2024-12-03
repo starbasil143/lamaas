@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldown: 0.2
   thornGraspPrefab: {fileID: 6723732250819957674, guid: 8815e8a0d10d212498e0c514d72d3cf9, type: 3}
+  ThornGraspSpeed: 18

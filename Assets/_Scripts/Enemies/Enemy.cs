@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         Retreat,
     }
 
-    private EnemyState currentState;
+    public EnemyState currentState;
     public EnemyType enemyType;
     public IdleBehavior idleBehavior;
     public HostileBehavior hostileBehavior;

@@ -199,9 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca583a62f3122c04ea28303216401462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 12
+  dragSpeed: 17
   stopDistance: 2
-  returnSpeed: 12
+  returnSpeed: 35
   maxLifetime: 1
 --- !u!96 &1458921218934262634
 TrailRenderer:
@@ -294,8 +294,8 @@ TrailRenderer:
       atime5: 0
       atime6: 0
       atime7: 0
-      m_Mode: 0
-      m_ColorSpace: -1
+      m_Mode: 1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
