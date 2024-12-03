@@ -346,7 +346,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -431,7 +431,6 @@ MonoBehaviour:
   idleSpeed: 2
   waypointAccuracy: 1
   idleMoveRange: 5
-  _animator: {fileID: 1364533485054129926}
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
@@ -639,7 +638,7 @@ Animator:
   m_GameObject: {fileID: 8254784715141361784}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dda1664ecfa6d604baac05e22eb1adce, type: 2}
+  m_Controller: {fileID: 9100000, guid: f1d7d7c1d074d9a4fa93bb3c349a4336, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
