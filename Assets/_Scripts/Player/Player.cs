@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Player has {_exp} Experience Points");
+        Debug.Log($"Player has {_exp} Experience Points");
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
