@@ -77,7 +77,7 @@ public class PlayerCasting : MonoBehaviour
         unlocksPerObject = new Dictionary<string, bool>();
         foreach (string objectName in objectNames)
         {
-            unlocksPerObject.Add(objectName, true);
+            unlocksPerObject.Add(objectName, unlockAllTransmutations);
         }
     }
 
@@ -215,6 +215,18 @@ public class PlayerCasting : MonoBehaviour
     {
         unlocksPerMaterial[tileData][index] = true;
         SwitchTile();
+    }
+
+    public void LearnObjectSpell(string objectName)
+    {
+        if (unlocksPerObject.ContainsKey(objectName))
+        {
+            unlocksPerObject[objectName] = true;
+        }
+        else
+        {
+            Debug.LogWarning("that is NOT a real object");
+        }
     }
 
     #region Object Transmutation 

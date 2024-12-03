@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 1541214691
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4388853251789224351, guid: 3f79d8de389e56a458211cfb3e9bf894, type: 3}
-  m_Color: {r: 0.7798742, g: 0.49361172, b: 0.100549765, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 06c671b9e1929f64d93406a05fb14089, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,6 +108,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   index: 0
+  objectTransmutation: 0
+  objectName: 
+  dialogueAsset: {fileID: 4900000, guid: b9153c6d105b28648a89aac2328a5e9e, type: 3}
 --- !u!114 &-5917671151384820742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +167,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -186,7 +189,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.78125, y: 1}
+    oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 0.78125, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

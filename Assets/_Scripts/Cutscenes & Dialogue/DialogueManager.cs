@@ -133,8 +133,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false)
+    public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false, bool pauseGame = false)
     {
+        if (pauseGame)
+        {
+            Time.timeScale = 0f;
+        }
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         InputManager.SwitchToDialogueControls();
@@ -175,7 +179,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
         nameBox.SetActive(false);
-        yield return new WaitForSeconds(.1f);
+        Time.timeScale = 1f;
+        yield return new WaitForSecondsRealtime(.1f);
         InputManager.SwitchToPlayerControls();
         dialogueText.text = "";
         
@@ -205,7 +210,7 @@ public class DialogueManager : MonoBehaviour
             {
 
 
-                yield return new WaitForSeconds(typingSpeed * typingSpeedMultiplier);
+                yield return new WaitForSecondsRealtime(typingSpeed * typingSpeedMultiplier);
                 dialogueText.maxVisibleCharacters++;
                 if (letter != ' ' && letter != '\n')
                 {

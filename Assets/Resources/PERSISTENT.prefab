@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAutomatically: []
   setAllTrue: 0
-  setAllTrueUpToPoint: deerDefeated
+  setAllTrueUpToPoint: 
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,7 +1612,7 @@ MonoBehaviour:
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 1
+  unlockAllTransmutations: 0
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0

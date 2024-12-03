@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3382279468400438554}
   - component: {fileID: 3318541661464582726}
   - component: {fileID: 3141486929604286435}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: AttackRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 82284375497964924}
   - component: {fileID: 2969408829910994702}
   - component: {fileID: 31159849948568539}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bunny Damage
   m_TagString: Harm
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3196132267672183166}
   - component: {fileID: 5551285458432478023}
   - component: {fileID: 2270674677070529609}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: HostileRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 8653984604604002607}
   - component: {fileID: 2880990890471335889}
   - component: {fileID: 5913000397819491951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bunny
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 5250469415334791207}
   - component: {fileID: 8755043556430637135}
   - component: {fileID: 6174691359257774066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bunny (Logic)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 1546586170173978261}
   - component: {fileID: 1077424000013573469}
   - component: {fileID: 1364533485054129926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bunny (GFX)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

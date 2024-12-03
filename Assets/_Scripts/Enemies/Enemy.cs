@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour
     bool reachedEndOfPath = false;
     private Seeker _seeker;
     private Rigidbody2D _rigidbody;
-    public Animator _animator;
+    private Animator _animator;
     private bool hostileTriggerStatus;
     private bool attackTriggerStatus;
     private bool isFacingRight = true;
@@ -101,6 +101,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        _animator = EnemyGFX.GetComponent<Animator>();
         BecomeIdle();
         currentHP = maxHP;
         _transform = transform.parent.transform;
@@ -111,10 +112,10 @@ public class Enemy : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _seeker = GetComponent<Seeker>();
         _rigidbody = GetComponentInParent<Rigidbody2D>();
-        _animator = transform.parent.GetComponentInChildren<Animator>();
 
         StartCoroutine(UpdatePath());
     }
+
 
     private void Update()
     {
@@ -625,4 +626,15 @@ public class Enemy : MonoBehaviour
         }
     }
     #endregion
+
+    private void PauseEnemy()
+    {
+
+    }
+
+    private void ResumeEnemy()
+    {
+
+    }
+
 }
