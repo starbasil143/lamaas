@@ -1658,6 +1658,7 @@ GameObject:
   - component: {fileID: 7675009118267193946}
   - component: {fileID: 2108771031858146728}
   - component: {fileID: 2775812986114529591}
+  - component: {fileID: 6639713384438524226}
   m_Layer: 6
   m_Name: PlayerLogic
   m_TagString: Untagged
@@ -1769,6 +1770,18 @@ MonoBehaviour:
   _dashLength: 0.3
   _dashCooldown: 0.4
   PlayerGFX: {fileID: 5822185129890140543}
+--- !u!114 &6639713384438524226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059188560433272949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e0be7e386086342b887391386e3e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2340485180572066391
 GameObject:
   m_ObjectHideFlags: 0

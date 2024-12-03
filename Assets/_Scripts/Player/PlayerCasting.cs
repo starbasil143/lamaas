@@ -39,6 +39,7 @@ public class PlayerCasting : MonoBehaviour
     public bool unlockAllTransmutations;
     
 
+
     private void Awake()
     {
         PlayerParent = transform.parent.gameObject;
@@ -81,14 +82,48 @@ public class PlayerCasting : MonoBehaviour
         }
     }
 
+    public void CreateSaveData_PlayerCasting()
+    {
+        foreach (TileData tileData in tileDatas)
+        {
+            PlayerPrefs.SetInt(tileData.name + "0", unlocksPerMaterial[tileData][0]?1:0);
+            PlayerPrefs.SetInt(tileData.name + "1", unlocksPerMaterial[tileData][1]?1:0);
+            PlayerPrefs.SetInt(tileData.name + "2", unlocksPerMaterial[tileData][2]?1:0);
+            PlayerPrefs.SetInt(tileData.name + "3", unlocksPerMaterial[tileData][3]?1:0);
+        }
+        foreach (string objName in objectNames)
+        {
+            PlayerPrefs.SetInt(objName, unlocksPerObject[objName]?1:0);
+        }
+    }
+
+    public void LoadSaveData_PlayerCasting()
+    {
+        foreach (TileData tileData in tileDatas)
+        {
+            unlocksPerMaterial[tileData][0] = PlayerPrefs.GetInt(tileData.name + "0") == 1;
+            unlocksPerMaterial[tileData][1] = PlayerPrefs.GetInt(tileData.name + "1") == 1;
+            unlocksPerMaterial[tileData][2] = PlayerPrefs.GetInt(tileData.name + "2") == 1;
+            unlocksPerMaterial[tileData][3] = PlayerPrefs.GetInt(tileData.name + "3") == 1;
+        }
+        foreach (string objName in objectNames)
+        {
+            unlocksPerObject[objName] = PlayerPrefs.GetInt(objName) == 1;
+        }
+    }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoad;
+        PlayerSaveDataManager.onSaveData += CreateSaveData_PlayerCasting;
+        PlayerSaveDataManager.onLoadData += LoadSaveData_PlayerCasting;
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoad;
+        PlayerSaveDataManager.onSaveData -= CreateSaveData_PlayerCasting;
+        PlayerSaveDataManager.onLoadData -= LoadSaveData_PlayerCasting;
     }
 
     private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode)
@@ -273,6 +308,8 @@ public class PlayerCasting : MonoBehaviour
         return closestObject;
     }
     #endregion
+
+    
 
     
 
