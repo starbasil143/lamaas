@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8979332e598ce8a46a5c71c96dfbce7a, type: 3}
   m_Name: T_IceTomb
   m_EditorClassIdentifier: 
+  cooldown: 2
   IceTomb: {fileID: 4928552277281312742, guid: 0f5645a18c79cb44680cce8278021eb3, type: 3}
-  knockback: 0
-  duration: 0
+  knockback: 2
+  duration: 2
