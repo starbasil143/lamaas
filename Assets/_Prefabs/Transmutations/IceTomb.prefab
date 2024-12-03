@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 3
   isBlockable: 0
-  destroyOnContact: 1
+  destroyOnContact: 0
   canDamagePlayer: 0
   canDamageEnemy: 1
   canDamageSelf: 0
