@@ -96,6 +96,7 @@ public class Enemy : MonoBehaviour
     public float lungeForceMultiplier = 20f;
     public float chargeTime = .5f;
     public GameObject dropOnDeath;
+    public GameObject expPrefab;
 
     public UnityEvent ExecuteOnDeath;
 
@@ -563,6 +564,10 @@ public class Enemy : MonoBehaviour
         if (dropOnDeath != null)
         {
             Instantiate(dropOnDeath, transform.position, Quaternion.identity);
+        }
+        if(expPrefab != null)
+        {
+            Instantiate(expPrefab, transform.position, Quaternion.identity);
         }
         Destroy(_transform.gameObject);
     }
