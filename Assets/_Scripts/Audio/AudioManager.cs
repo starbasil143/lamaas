@@ -49,10 +49,10 @@ public class AudioManager : MonoBehaviour
         eventInstances = new List<EventInstance>();
 
         masterBus = RuntimeManager.GetBus("bus:/");
-        masterBus = RuntimeManager.GetBus("bus:/Music");
-        masterBus = RuntimeManager.GetBus("bus:/Voices");
-        masterBus = RuntimeManager.GetBus("bus:/SFX");
-        masterBus = RuntimeManager.GetBus("bus:/Ambience");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        voiceBus = RuntimeManager.GetBus("bus:/Voices");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        ambienceBus = RuntimeManager.GetBus("bus:/Ambience");
     }
 
     private void Start()
