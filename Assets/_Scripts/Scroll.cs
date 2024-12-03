@@ -14,10 +14,18 @@ public class Scroll : MonoBehaviour
     {
         _playerCasting = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCasting>();
 
-        if (_playerCasting.KnowsObjectSpell(objectName))
+        if (objectTransmutation)
+        {
+            if (_playerCasting.KnowsObjectSpell(objectName))
+            {
+                Destroy(gameObject);
+            }
+        }
+        else if (_playerCasting.KnowsSpell(tileData, index))
         {
             Destroy(gameObject);
         }
+       
     }
 
     public void LearnSpell()

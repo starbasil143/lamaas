@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string VOICE_TAG = "voice";
     private const string INNER_TAG = "inner";
+    private const string GIVEUP_TAG = "giveup";
+    private const string TRYAGAIN_TAG = "tryagain";
 
     private void Awake()
     {
@@ -315,6 +317,17 @@ public class DialogueManager : MonoBehaviour
                             default:
                                 currentVoice = FMODEvents.instance.voice_default;
                                 break;
+                        }
+                        break;
+                    case GIVEUP_TAG:
+                        {
+                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                        }
+                        break;
+
+                    case TRYAGAIN_TAG:
+                        {
+                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
                         }
                         break;
                 }

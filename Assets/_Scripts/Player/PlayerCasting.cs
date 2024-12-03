@@ -228,6 +228,10 @@ public class PlayerCasting : MonoBehaviour
             Debug.LogWarning("that is NOT a real object");
         }
     }
+    public bool KnowsSpell(TileData td, int i)
+    {
+        return unlocksPerMaterial[td][i];
+    }
 
     public bool KnowsObjectSpell(string objectName)
     {

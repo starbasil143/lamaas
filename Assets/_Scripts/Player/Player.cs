@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     private NonEntrySceneChange _sceneChanger;
 
     public PlayerCasting _playerCasting;
+    public GameObject _deathCanvas;
+    public TextAsset deathMessage;
 
     public float _exp = 0;
 
@@ -119,10 +121,9 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        //isPaused = true;
-        //_deathCanvas.SetActive(true);
-        GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
-        healthAmount = maxHealthAmount;
+        isPaused = true;
+        _deathCanvas.SetActive(true);
+        DialogueManager.instance.EnterDialogue(deathMessage);
     }
 
     public void NotifyOn()
