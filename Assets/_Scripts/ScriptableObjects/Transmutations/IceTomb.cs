@@ -5,7 +5,9 @@ public class IceTomb : MonoBehaviour
     [Header("Settings")]
     public float freezeDuration = 5f; // Duration to freeze the enemy
     public GameObject iceCubePrefab;
+    public HarmfulObjectScript harmfulObjectScript;
     private GameObject iceCube;
+    
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
@@ -23,6 +25,7 @@ public class IceTomb : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        harmfulObjectScript = GetComponent<HarmfulObjectScript>();
     }
 
     private void Update()

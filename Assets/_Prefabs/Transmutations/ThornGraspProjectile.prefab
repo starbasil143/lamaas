@@ -200,9 +200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSpeed: 17
-  stopDistance: 2
+  stopDistance: 5
   returnSpeed: 35
-  maxLifetime: 1
+  maxLifetime: 0.4
 --- !u!96 &1458921218934262634
 TrailRenderer:
   serializedVersion: 3
