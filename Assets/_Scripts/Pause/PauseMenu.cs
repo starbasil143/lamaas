@@ -12,6 +12,9 @@ public class PauseMenuController : MonoBehaviour
     public GameObject pauseMenuPanel;
     public GameObject settingsPanel;
 
+    public List<GameObject> subMenuPanels;
+
+    private bool isPaused;
     private GameObject player;
 
     void Start()
@@ -24,7 +27,6 @@ public class PauseMenuController : MonoBehaviour
 
     void Update()
     {
-        // Toggle pause menu with Escape key
         if (InputManager.ToggleMenu)
         {
             TogglePauseMenu();
@@ -33,32 +35,38 @@ public class PauseMenuController : MonoBehaviour
 
     public void TogglePauseMenu()
     {
-        // Toggle pause menu visibility
-        pauseMenuPanel.SetActive(!pauseMenuPanel.activeSelf);
+        isPaused = !isPaused;
 
-        // Pause or unpause the game
-        Time.timeScale = pauseMenuPanel.activeSelf ? 0f : 1f;
+        if (isPaused)
+        {
+            pauseMenuPanel.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            CloseAllMenus();
+            Time.timeScale = 1f;
+        }
+
+        
     }
 
     public void ReturnToMainMenu()
     {
-        // Unpause the game before loading
         CloseAllMenus();
         Time.timeScale = 1f;
 
-        // Load main menu scene
-        SceneManager.LoadScene("MainMenu"); // Replace with main menu scene name
-    }
-
-    public void ToggleSettings()
-    {
-        // Toggle settings menu visibility
-        settingsPanel.SetActive(!settingsPanel.activeSelf);
+        //SceneManager.LoadScene("MainMenu"); // Replace with main menu scene name
     }
 
     public void CloseAllMenus()
     {
-        pauseMenuPanel.SetActive(false);
+        foreach (GameObject subMenuPanel in subMenuPanels)
+        {
+            subMenuPanel.SetActive(false);
+        }
         settingsPanel.SetActive(false);
+        pauseMenuPanel.SetActive(false);
+
     }
 }
