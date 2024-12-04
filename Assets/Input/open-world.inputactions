@@ -334,6 +334,28 @@
                 },
                 {
                     "name": "",
+                    "id": "0b36ff99-9b92-4bb9-b5b8-98a150424bb7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Advance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bcd8ae86-7a47-40a2-b1dc-f90b7222aaee",
+                    "path": "*/{Submit}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Advance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a8506eee-20ee-4a44-be5c-10ded1ae266b",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -380,13 +402,22 @@
         },
         {
             "name": "UI",
-            "id": "4334536b-44ab-4065-aab3-3bfac61a990d",
+            "id": "9c696414-1200-4bd7-931d-95c277a234f0",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Click",
                     "type": "Button",
-                    "id": "74fbbad2-07fa-413d-b5bf-a363ce109bd8",
+                    "id": "6019357c-4ad2-4a72-8bc0-b9659a5a5a1b",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Point",
+                    "type": "PassThrough",
+                    "id": "af3630b5-1083-41bc-a866-b9feb515e5c3",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -395,12 +426,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "b7a36730-efa5-4b34-86fb-4a9aed429dfa",
-                    "path": "",
+                    "id": "e99d0893-f9e6-46b6-b16a-2ef0f306ba92",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aeaad0d6-b8ca-4c36-851e-a3e0fc3c7348",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Point",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
