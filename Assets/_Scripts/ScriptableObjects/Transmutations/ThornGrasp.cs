@@ -22,6 +22,8 @@ public class ThornGrasp : MonoBehaviour
 
     private Enemy enemyScript;
     private Enemy.AttackBehavior originalEnemyBehavior;
+    private Enemy.EnemyState originalEnemyState;
+    private Enemy.HostileBehavior originalHostileBehavior;
     private bool isReturning = false;
 
     private void Start()
@@ -58,10 +60,11 @@ public class ThornGrasp : MonoBehaviour
             {
                 // Save original enemy behavior
                 originalEnemyBehavior = currentEnemy.GetComponentInChildren<Enemy>().attackBehavior;
+                originalEnemyState = currentEnemy.GetComponentInChildren<Enemy>().currentState;
+                originalHostileBehavior = currentEnemy.GetComponentInChildren<Enemy>().hostileBehavior;
 
                 // Disable enemy's attacks
-                currentEnemy.GetComponentInChildren<Enemy>().attackBehavior = Enemy.AttackBehavior.None;
-
+                DisableEnemyBehavior();
 
             }
             //else if (other.gameObject.CompareTag("Terrain"))
@@ -81,6 +84,14 @@ public class ThornGrasp : MonoBehaviour
             // Enable dragging
             isDragging = true;
         }
+    }
+
+    private void DisableEnemyBehavior()
+    {
+        Enemy enemy = currentEnemy.GetComponentInChildren<Enemy>();
+        enemy.attackBehavior = Enemy.AttackBehavior.None;
+        enemy.currentState = Enemy.EnemyState.Idle;
+        enemy.hostileBehavior = Enemy.HostileBehavior.None;
     }
 
     private void ChangeTargetColor(Collider2D other)
@@ -123,7 +134,8 @@ public class ThornGrasp : MonoBehaviour
             if (other.gameObject.CompareTag("Enemy"))
             {
                 other.gameObject.GetComponentInChildren<SpriteRenderer>().color = Color.white; // Revert target color
-                currentEnemy.GetComponentInChildren<Enemy>().attackBehavior = originalEnemyBehavior; // Revert enemy behavior
+                EnableEnemyBehavior();
+
                 playerRigidbody.linearVelocity = Vector2.zero;
             }
             else if (other.gameObject.CompareTag("Terrain") )
@@ -131,6 +143,14 @@ public class ThornGrasp : MonoBehaviour
                 other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
+    }
+
+    private void EnableEnemyBehavior()
+    {
+        Enemy enemy = currentEnemy.GetComponentInChildren<Enemy>();
+        enemy.attackBehavior = originalEnemyBehavior; // Revert enemy behavior
+        enemy.currentState = originalEnemyState;
+        enemy.hostileBehavior = originalHostileBehavior;
     }
 
     private void ReturnToPlayer()
