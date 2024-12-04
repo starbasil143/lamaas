@@ -68,6 +68,11 @@ public class Player : MonoBehaviour
             currentSlot = 0;
         }
 
+        if (InputManager.ToggleMenu)
+        {
+            
+        }
+
         if (immunityTimer < immunityTime)
         {
             immunityTimer += Time.deltaTime;

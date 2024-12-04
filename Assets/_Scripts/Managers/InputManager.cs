@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     public static bool Advance;
     public static bool Left;
     public static bool Right;
+    public static bool ToggleMenu;
 
     public static PlayerInput _playerInput;
     private InputAction _moveAction;
@@ -26,6 +27,7 @@ public class InputManager : MonoBehaviour
     private InputAction _slot3Action;
     private InputAction _slot4Action;
     private InputAction _noSlotAction;
+    private InputAction _toggleMenuAction;
 
     private InputAction _textAdvanceAction;
     private InputAction _textLeftAction;
@@ -48,6 +50,7 @@ public class InputManager : MonoBehaviour
         _textAdvanceAction = _playerInput.actions["Advance"];
         _textLeftAction = _playerInput.actions["Left"];
         _textRightAction = _playerInput.actions["Right"];
+        _toggleMenuAction = _playerInput.actions["Toggle Menu"];
     }
 
     private void Update()
@@ -64,6 +67,7 @@ public class InputManager : MonoBehaviour
         Advance = _textAdvanceAction.WasReleasedThisFrame();
         Left = _textLeftAction.WasPressedThisFrame();
         Right = _textRightAction.WasPressedThisFrame();
+        ToggleMenu = _toggleMenuAction.WasPressedThisFrame();
     }
 
     public static void DisableInput()
@@ -78,6 +82,10 @@ public class InputManager : MonoBehaviour
     public static void SwitchToDialogueControls()
     {
         _playerInput.SwitchCurrentActionMap("Dialogue");
+    }
+    public static void SwitchToMenuControls()
+    {
+        _playerInput.SwitchCurrentActionMap("UI");
     }
     public static void SwitchToPlayerControls()
     {

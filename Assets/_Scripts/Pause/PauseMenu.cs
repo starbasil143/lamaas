@@ -25,7 +25,7 @@ public class PauseMenuController : MonoBehaviour
     void Update()
     {
         // Toggle pause menu with Escape key
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (InputManager.ToggleMenu)
         {
             TogglePauseMenu();
         }
