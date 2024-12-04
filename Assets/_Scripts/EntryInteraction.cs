@@ -22,17 +22,21 @@ public class EntryInteraction : MonoBehaviour
 
     [Header("This Entry")]
     public EntryToSpawnAt _thisEntryNumber;
+    public bool locked;
 
     public void Interact()
     {
-        SceneTransitionManager.StartSceneChangeFromEntry(_sceneToLoad, _entryToSpawnAt);
-
-        
-        if (_musicArea != MusicArea.NONE)
+        if (!locked)
         {
-            AudioManager.instance.SetMusicArea(_musicArea);
+            SceneTransitionManager.StartSceneChangeFromEntry(_sceneToLoad, _entryToSpawnAt);
+
+            
+            if (_musicArea != MusicArea.NONE)
+            {
+                AudioManager.instance.SetMusicArea(_musicArea);
+            }
+            AudioManager.instance.SetSongVersion(_songVersion);
         }
-        AudioManager.instance.SetSongVersion(_songVersion);
 
     }
 

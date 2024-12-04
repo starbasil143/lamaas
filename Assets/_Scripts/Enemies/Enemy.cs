@@ -199,7 +199,7 @@ public class Enemy : MonoBehaviour
         currentState = EnemyState.Idle;
         currentSpeed = idleSpeed;
         timeBetweenPaths = idleTimeBetweenPaths;
-        _animator.Play("Walk");
+            _animator.Play("Walk");
     }
     private void IdleUpdate()
     {
@@ -610,12 +610,12 @@ public class Enemy : MonoBehaviour
 
     private void FaceCorrectDirection(Vector2 velocity)
     {
-        if (velocity.x < 0f && isFacingRight)
+        if (velocity.x < -0.1f && isFacingRight)
         {
             _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 180f, _transform.position.z));
             isFacingRight = false;
         }
-        if (velocity.x > 0f && !isFacingRight)
+        if (velocity.x > 0.1f && !isFacingRight)
         {
             _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 0f, _transform.position.z));
             isFacingRight = true;
