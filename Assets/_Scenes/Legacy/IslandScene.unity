@@ -659,7 +659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8755043556430637135, guid: 38e5f7cf87ca97f41bb37b6c09176cb6, type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755043556430637135, guid: 38e5f7cf87ca97f41bb37b6c09176cb6, type: 3}
+      propertyPath: attackBehavior
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

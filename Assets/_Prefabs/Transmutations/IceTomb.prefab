@@ -199,3 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   freezeDuration: 5
+  iceCubePrefab: {fileID: 3744714082082282541, guid: 875415fcb7494b743bd7a577527ee428, type: 3}

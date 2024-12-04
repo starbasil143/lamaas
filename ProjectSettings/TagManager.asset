@@ -15,6 +15,7 @@ TagManager:
   - DialogueManager
   - Terrain
   - Water
+  - IceCube
   layers:
   - Default
   - TransparentFX
