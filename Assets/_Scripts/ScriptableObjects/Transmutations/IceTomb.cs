@@ -1,49 +1,74 @@
-using System.Collections;
 using UnityEngine;
 
 public class IceTomb : MonoBehaviour
 {
     [Header("Settings")]
     public float freezeDuration = 5f; // Duration to freeze the enemy
+    public GameObject iceCubePrefab;
+    public HarmfulObjectScript harmfulObjectScript;
+    private GameObject iceCube;
+    
 
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
 
-    // Reference to enemy components
-    private Rigidbody2D enemyRb;
     private Enemy enemyScript;
-    private Enemy.AttackBehavior originalEnemyBehavior;
+    private Rigidbody2D enemyRb;
     private SpriteRenderer enemySprite;
+    private Animator enemyAnimator;
+    private Transform enemyTransform;
+
+    private float freezeTimer = 0f; // Timer to track freeze duration
+    private bool isFrozen = false; // Tracks if the enemy is frozen
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        harmfulObjectScript = GetComponent<HarmfulObjectScript>();
     }
+
+    private void Update()
+    {
+        if (isFrozen)
+        {
+            // Increment the timer while the enemy is frozen
+            freezeTimer += Time.deltaTime;
+            Debug.Log(freezeTimer);
+
+            if (freezeTimer >= freezeDuration)
+            {
+                Debug.Log("Enemy will now unfreeze");
+                UnFreezeEnemy();
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("You Have Hit an Enemy");
+            if (other.GetComponentInChildren<Enemy>().isFrozen == true)
+            {
+                Debug.Log("You've hit a frozen enemy");
+                EnemyTakesDamageWhileFrozen(other);
+                return;
+            }
 
-            //Disable player shots
+            Debug.Log("You have hit an enemy with Ice Tomb");
+
             spriteRenderer.enabled = false;
             boxCollider.enabled = false;
 
-            // Get references to the enemy's components
             enemyScript = other.GetComponentInChildren<Enemy>();
             enemyRb = other.GetComponent<Rigidbody2D>();
             enemySprite = other.GetComponentInChildren<SpriteRenderer>();
-            
-            ErrorChecking();
+            enemyTransform = other.GetComponent<Transform>();
+            enemyAnimator = other.GetComponentInChildren<Animator>();
 
             if (enemyScript != null && enemyRb != null && enemySprite != null)
             {
-                // Save the original attack behavior
-                originalEnemyBehavior = enemyScript.attackBehavior;
-
-                // Freeze the enemy
-                StartCoroutine(FreezeEnemy());
+                FreezeEnemy();
             }
             else
             {
@@ -52,53 +77,50 @@ public class IceTomb : MonoBehaviour
         }
     }
 
-    private void ErrorChecking()
+    private void FreezeEnemy()
     {
-        if (enemySprite == null)
-        {
-            Debug.LogError("Enemy Sprite DNE");
-        }
-        if (enemyRb == null)
-        {
-            Debug.LogError("Enemy RB DNE");
-        }
-        if (enemyScript == null)
-        {
-            Debug.LogError("Enemy Script DNE");
-        }
-    }
+        isFrozen = true;
+        freezeTimer = 0f; // Reset the freeze timer
 
-    private IEnumerator FreezeEnemy()
-    {
-        // Disable movement and attacks
-        enemyScript.attackBehavior = Enemy.AttackBehavior.None;
         if (enemyRb != null)
         {
-            enemyRb.linearVelocity = Vector2.zero;
             enemyRb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
+        enemyAnimator.speed = 0f;
+        iceCube = Instantiate(iceCubePrefab, enemyTransform.position + new Vector3(0,.5f,0), Quaternion.identity);
 
-        // Change enemy color to indicate freezing
         if (enemySprite != null)
+        {
             enemySprite.color = Color.cyan;
-        Debug.Log("Freezing Enemy");
-        // Wait for the freeze duration
-        yield return new WaitForSeconds(freezeDuration);
-        Debug.Log("Enemy will now UnFreeze");
+            Vector2 enemySize = enemySprite.bounds.size; // Get the enemy's size from its SpriteRenderer bounds
+            iceCube.transform.localScale = enemySize * 1.5f;    // Adjust the iceCube's scale to match the enemy
+        }
 
-        UnFreezeEnemy();
+        Debug.Log("Enemy frozen");
     }
 
-    private void UnFreezeEnemy()
+    public void UnFreezeEnemy()
     {
-        // Restore the enemy's original state
-        if (enemyScript != null)
-            enemyScript.attackBehavior = originalEnemyBehavior;
+        enemyAnimator.speed = 1f;
+        isFrozen = false;
 
         if (enemyRb != null)
+        {
             enemyRb.constraints = RigidbodyConstraints2D.None;
+        }
 
         if (enemySprite != null)
+        {
             enemySprite.color = Color.white;
+            Destroy(iceCube);
+        }
+
+        Debug.Log("Enemy unfrozen");
+    }
+
+    private void EnemyTakesDamageWhileFrozen(Collider2D enemy)
+    {
+        Debug.Log("Enemy has taken damage while frozen");
+        UnFreezeEnemy();
     }
 }

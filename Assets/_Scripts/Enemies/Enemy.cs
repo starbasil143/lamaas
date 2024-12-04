@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
         Retreat,
     }
 
-    private EnemyState currentState;
+    public EnemyState currentState;
     public EnemyType enemyType;
     public IdleBehavior idleBehavior;
     public HostileBehavior hostileBehavior;
@@ -57,6 +57,7 @@ public class Enemy : MonoBehaviour
     private Transform _transform;
     public float hostileSpeed = 5f;
     public float idleSpeed = 1f;
+    public bool isFrozen = false; //Put here by Abu
 
     private float currentSpeed;
     public float waypointAccuracy = 1f;
