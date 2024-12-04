@@ -82,7 +82,8 @@ public class Enemy : MonoBehaviour
     Coroutine maybeStopAttacking;
     Coroutine lightChargeAttackCoroutine;
     public float circleAroundRange = 2f;
-
+    public int xpAmountMin = 2;
+    public int xpAmountMax = 3;
 
 
     public float maxHP;
@@ -567,7 +568,8 @@ public class Enemy : MonoBehaviour
         }
         if(expPrefab != null)
         {
-            Instantiate(expPrefab, transform.position, Quaternion.identity);
+            GameObject expObject = Instantiate(expPrefab, transform.position, Quaternion.identity);
+            expObject.GetComponent<ExpHandler>().EmitXP(Random.Range(xpAmountMin, xpAmountMax+1));
         }
         Destroy(_transform.gameObject);
     }

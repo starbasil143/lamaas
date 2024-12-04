@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9075262555113806569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Freeze
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Freeze
+  Guid:
+    Data1: -1753475677
+    Data2: 1229074515
+    Data3: 632499132
+    Data4: -1305560867
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8738872520361863887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,10 +69,10 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638688419024725058
+  lastModified: 638688582868984946
   FileSizes:
   - Name: Desktop
-    Value: 1714
+    Value: 2530
   Exists: 1
 --- !u!114 &-7169268526275324557
 MonoBehaviour:
@@ -67,6 +94,33 @@ MonoBehaviour:
     Data4: -7022933
   Banks:
   - {fileID: 9133829112577384346}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7144508139452887344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Bear 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Bear 2
+  Guid:
+    Data1: -588131067
+    Data2: 1177644384
+    Data3: -1216638554
+    Data4: -437258333
+  Banks:
+  - {fileID: -2520930347812743454}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -101,6 +155,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6667107539214458269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Deer 2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Deer 2
+  Guid:
+    Data1: 776374326
+    Data2: 1151809797
+    Data3: 933461399
+    Data4: -881818073
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6297485628504942088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Thorn Bomb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Thorn Bomb
+  Guid:
+    Data1: 1916204001
+    Data2: 1287408190
+    Data3: -1459968607
+    Data4: -279308783
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5322229682769298406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/XP
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/XP
+  Guid:
+    Data1: 1482661411
+    Data2: 1335939563
+    Data3: -1851670635
+    Data4: 1469877262
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4281570944947014582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,11 +251,65 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Town.bank
   Name: Town
   StudioPath: bank:/Town
-  lastModified: 638688419025567329
+  lastModified: 638688575392274606
   FileSizes:
   - Name: Desktop
-    Value: 5314528
+    Value: 6988800
   Exists: 1
+--- !u!114 &-3407158187270327791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Dirt Throw
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Dirt Throw
+  Guid:
+    Data1: -936060330
+    Data2: 1257171009
+    Data3: 1460702862
+    Data4: 487884540
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3156380559470426990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Ice Spike
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Ice Spike
+  Guid:
+    Data1: 1207068224
+    Data2: 1278223298
+    Data3: 1554073742
+    Data4: 1902958617
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3086874279242815012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,10 +355,10 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638688419024805065
+  lastModified: 638688591617483571
   FileSizes:
   - Name: Desktop
-    Value: 3008
+    Value: 277824
   Exists: 1
 --- !u!114 &-2261699482299097269
 MonoBehaviour:
@@ -222,6 +411,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1367189448871811352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Vine End
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Vine End
+  Guid:
+    Data1: 72264158
+    Data2: 1222354263
+    Data3: -1208084553
+    Data4: 2113848278
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-601507058279553139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +453,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638688419024635031
+  lastModified: 638688582868944937
   FileSizes:
   - Name: Desktop
     Value: 1632
@@ -293,6 +509,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-199274657064428220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/Select
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/Select
+  Guid:
+    Data1: -1739545857
+    Data2: 1272680004
+    Data3: 1355948191
+    Data4: -581982612
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,13 +568,58 @@ MonoBehaviour:
   - {fileID: 8544011299859455448}
   - {fileID: -291262799096344510}
   - {fileID: -3086874279242815012}
+  - {fileID: -7144508139452887344}
+  - {fileID: 4892126737108805667}
+  - {fileID: 3614429699281412374}
+  - {fileID: -5322229682769298406}
+  - {fileID: -3156380559470426990}
+  - {fileID: -3407158187270327791}
+  - {fileID: 4230992600210598542}
+  - {fileID: 2277380336692350883}
+  - {fileID: -9075262555113806569}
+  - {fileID: 7905928116490210991}
+  - {fileID: 1370552994515039722}
+  - {fileID: -1367189448871811352}
+  - {fileID: -6297485628504942088}
+  - {fileID: 8654102025471064226}
+  - {fileID: 9018116238974982193}
+  - {fileID: -6667107539214458269}
+  - {fileID: 4273076551777377068}
+  - {fileID: -199274657064428220}
   EditorParameters: []
   MasterBanks:
   - {fileID: -601507058279553139}
   StringsBanks:
   - {fileID: -7492806763642632584}
-  cacheTime: 638688419025657347
+  cacheTime: 638688591617483571
   cacheVersion: 131621
+--- !u!114 &1370552994515039722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Dirt Throw Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Dirt Throw Hit
+  Guid:
+    Data1: 1566378707
+    Data2: 1245158226
+    Data3: 212393871
+    Data4: -745289055
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1992967026522598364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,6 +655,33 @@ MonoBehaviour:
   - Battle2
   - Battle3
   Exists: 1
+--- !u!114 &2277380336692350883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/StartGame
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/StartGame
+  Guid:
+    Data1: 1067768222
+    Data2: 1290487682
+    Data3: 1039624350
+    Data4: 2111894538
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2587803698390367836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,11 +697,38 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Forest1.bank
   Name: Forest1
   StudioPath: bank:/Forest1
-  lastModified: 638688419024565020
+  lastModified: 638688575343733322
   FileSizes:
   - Name: Desktop
     Value: 1080160
   Exists: 1
+--- !u!114 &3614429699281412374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Vine Start
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Vine Start
+  Guid:
+    Data1: 1272523540
+    Data2: 1074209234
+    Data3: -1096864610
+    Data4: 1157002998
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4056161849488613501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +783,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &4230992600210598542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Bear 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Bear 1
+  Guid:
+    Data1: -1857842051
+    Data2: 1231374445
+    Data3: -277999968
+    Data4: -808500319
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4273076551777377068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/Deer 1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/Deer 1
+  Guid:
+    Data1: -205196550
+    Data2: 1157943434
+    Data3: 831814074
+    Data4: -919835576
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4882333342563179104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,6 +857,33 @@ MonoBehaviour:
     Data4: -1006283519
   Banks:
   - {fileID: 9133829112577384346}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4892126737108805667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Heal
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Heal
+  Guid:
+    Data1: 578185991
+    Data2: 1121047939
+    Data3: 2057500808
+    Data4: 949395413
+  Banks:
+  - {fileID: -2520930347812743454}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -522,6 +945,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 90240
+--- !u!114 &7905928116490210991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Ice Tomb
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Ice Tomb
+  Guid:
+    Data1: 204423856
+    Data2: 1182934813
+    Data3: 2022284468
+    Data4: 368354428
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8544011299859455448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +999,60 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8654102025471064226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Dirt Slam
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Dirt Slam
+  Guid:
+    Data1: -1175030035
+    Data2: 1109314355
+    Data3: -1304048206
+    Data4: 127349556
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &9018116238974982193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Transmutations/Ice Tomb Shatter
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Transmutations/Ice Tomb Shatter
+  Guid:
+    Data1: 523951351
+    Data2: 1273552199
+    Data3: -1452543054
+    Data4: 251289648
+  Banks:
+  - {fileID: -2520930347812743454}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &9133829112577384346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +1068,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Voices.bank
   Name: Voices
   StudioPath: bank:/Voices
-  lastModified: 638688419025657347
+  lastModified: 638688575393777986
   FileSizes:
   - Name: Desktop
     Value: 19616

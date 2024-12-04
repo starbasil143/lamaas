@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
     public GameObject _deathCanvas;
     public TextAsset deathMessage;
 
+    private Coroutine slowTimeCoroutine;
+
     public float _exp = 0;
 
 
@@ -39,7 +42,6 @@ public class Player : MonoBehaviour
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
         _animator = PlayerParent.GetComponentInChildren<Animator>();
-        
     }
 
 
@@ -133,6 +135,25 @@ public class Player : MonoBehaviour
     public void NotifyOff()
     {
         _exclamationIcon.SetActive(false);
+    }
+
+    public void FreezeForSauce(float duration, float multiplier = 0f)
+    {
+        if (slowTimeCoroutine != null)
+        {
+            StopCoroutine(slowTimeCoroutine);
+        }
+        else
+        {
+            slowTimeCoroutine = StartCoroutine(SlowTimeCoroutine(duration, multiplier));
+        }
+    }
+
+    public IEnumerator SlowTimeCoroutine(float duration, float multiplier)
+    {
+        Time.timeScale = multiplier;
+        yield return new WaitForSecondsRealtime(duration);
+        Time.timeScale = 1f;
     }
 
     

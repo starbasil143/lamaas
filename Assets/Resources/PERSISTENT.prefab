@@ -289,8 +289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebeb7feea4460142aeef5b1ff08a236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVolume: 0.703
-  musicVolume: 0.665
+  masterVolume: 0.552
+  musicVolume: 0.669
   sfxVolume: 0.7
   voiceVolume: 0.7
   ambienceVolume: 0.7
@@ -1699,7 +1699,7 @@ MonoBehaviour:
   healthAmount: 10
   isPaused: 0
   currentSlot: 0
-  immunityTime: 0.5
+  immunityTime: 0.4
   _exclamationIcon: {fileID: 8173497547851584300}
   HealthBarFillImage: {fileID: 445544933602325983}
   _playerCasting: {fileID: 2108771031858146728}
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAutomatically: []
   setAllTrue: 0
-  setAllTrueUpToPoint: 
+  setAllTrueUpToPoint: deerDefeated
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 0
+  unlockAllTransmutations: 1
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3420,6 +3420,132 @@ MonoBehaviour:
       Data3: 709982141
       Data4: 1659937059
     Path: event:/Voices/CultistVoice
+  sfx_dirtthrow:
+    Guid:
+      Data1: -936060330
+      Data2: 1257171009
+      Data3: 1460702862
+      Data4: 487884540
+    Path: event:/SFX/Transmutations/Dirt Throw
+  sfx_dirtthrowhit:
+    Guid:
+      Data1: 1566378707
+      Data2: 1245158226
+      Data3: 212393871
+      Data4: -745289055
+    Path: event:/SFX/Transmutations/Dirt Throw Hit
+  sfx_dirtslam:
+    Guid:
+      Data1: -1175030035
+      Data2: 1109314355
+      Data3: -1304048206
+      Data4: 127349556
+    Path: event:/SFX/Transmutations/Dirt Slam
+  sfx_vinestart:
+    Guid:
+      Data1: 1272523540
+      Data2: 1074209234
+      Data3: -1096864610
+      Data4: 1157002998
+    Path: event:/SFX/Transmutations/Vine Start
+  sfx_vineend:
+    Guid:
+      Data1: 72264158
+      Data2: 1222354263
+      Data3: -1208084553
+      Data4: 2113848278
+    Path: event:/SFX/Transmutations/Vine End
+  sfx_icespike:
+    Guid:
+      Data1: 1207068224
+      Data2: 1278223298
+      Data3: 1554073742
+      Data4: 1902958617
+    Path: event:/SFX/Transmutations/Ice Spike
+  sfx_icetomb:
+    Guid:
+      Data1: 204423856
+      Data2: 1182934813
+      Data3: 2022284468
+      Data4: 368354428
+    Path: event:/SFX/Transmutations/Ice Tomb
+  sfx_icetombshatter:
+    Guid:
+      Data1: 523951351
+      Data2: 1273552199
+      Data3: -1452543054
+      Data4: 251289648
+    Path: event:/SFX/Transmutations/Ice Tomb Shatter
+  sfx_heal:
+    Guid:
+      Data1: 578185991
+      Data2: 1121047939
+      Data3: 2057500808
+      Data4: 949395413
+    Path: event:/SFX/Transmutations/Heal
+  sfx_freeze:
+    Guid:
+      Data1: -1753475677
+      Data2: 1229074515
+      Data3: 632499132
+      Data4: -1305560867
+    Path: event:/SFX/Transmutations/Freeze
+  sfx_thornbomb:
+    Guid:
+      Data1: 1916204001
+      Data2: 1287408190
+      Data3: -1459968607
+      Data4: -279308783
+    Path: event:/SFX/Transmutations/Thorn Bomb
+  sfx_deer1:
+    Guid:
+      Data1: -205196550
+      Data2: 1157943434
+      Data3: 831814074
+      Data4: -919835576
+    Path: event:/SFX/Enemies/Deer 1
+  sfx_deer2:
+    Guid:
+      Data1: 776374326
+      Data2: 1151809797
+      Data3: 933461399
+      Data4: -881818073
+    Path: event:/SFX/Enemies/Deer 2
+  sfx_bear1:
+    Guid:
+      Data1: -1857842051
+      Data2: 1231374445
+      Data3: -277999968
+      Data4: -808500319
+    Path: event:/SFX/Enemies/Bear 1
+  sfx_bear2:
+    Guid:
+      Data1: -588131067
+      Data2: 1177644384
+      Data3: -1216638554
+      Data4: -437258333
+    Path: event:/SFX/Enemies/Bear 2
+  sfx_startgame:
+    Guid:
+      Data1: 1067768222
+      Data2: 1290487682
+      Data3: 1039624350
+      Data4: 2111894538
+    Path: event:/SFX/UI/StartGame
+  sfx_select:
+    Guid:
+      Data1: -1739545857
+      Data2: 1272680004
+      Data3: 1355948191
+      Data4: -581982612
+    Path: event:/SFX/UI/Select
+  sfx_xp:
+    Guid:
+      Data1: 1482661411
+      Data2: 1335939563
+      Data3: -1851670635
+      Data4: 1469877262
+    Path: event:/SFX/XP
   playerDamage:
     Guid:
       Data1: 6453230
@@ -4650,9 +4776,9 @@ ParticleSystemForceField:
   m_GameObject: {fileID: 7908208320521584326}
   m_Enabled: 1
   m_Parameters:
-    m_Shape: 3
+    m_Shape: 0
     m_StartRange: 0
-    m_EndRange: 3
+    m_EndRange: 15
     m_Length: 1
     m_GravityFocus: 0
     m_RotationRandomness: {x: 0, y: 0}
@@ -4818,7 +4944,7 @@ ParticleSystemForceField:
     m_GravityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 1
       maxCurve:
         serializedVersion: 2

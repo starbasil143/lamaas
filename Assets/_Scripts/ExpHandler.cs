@@ -22,12 +22,15 @@ public class ExpHandler : MonoBehaviour
 
     }
 
+    public void EmitXP(int amountOfXP)
+    {
+        exp.Emit(amountOfXP);
+    }
+
     private void OnParticleTrigger()
     {
-        //Debug.Log("Particle has collided");
         int triggerParticles = exp.GetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
-
-        Debug.Log("Collided with Player");
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_xp, transform.position);
         for (int i = 0; i < triggerParticles; i++)
         {
             ParticleSystem.Particle p = particles[i];
@@ -38,7 +41,7 @@ public class ExpHandler : MonoBehaviour
             if (_player != null)
             {
                 _player._exp += expValue;
-                Debug.Log("Player now has " + _player._exp + " experience pointa");
+                Debug.Log("Player now has a " + _player._exp + " experience pointa  -mario mario");
             }
             exp.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
         }
