@@ -68,7 +68,7 @@ MonoBehaviour:
   circleAroundRange: 2
   xpAmountMin: 9
   xpAmountMax: 11
-  maxHP: 8
+  maxHP: 6
   enemyDefense: 1
   attackDistance: 5
   timeBetweenCastAttacks: 1.5
