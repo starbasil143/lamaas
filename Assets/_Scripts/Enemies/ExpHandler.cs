@@ -40,8 +40,7 @@ public class ExpHandler : MonoBehaviour
 
             if (_player != null)
             {
-                _player._exp += expValue;
-                Debug.Log("Player now has a " + _player._exp + " experience pointa  -mario mario");
+                _player.exp += expValue;
             }
             exp.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
         }

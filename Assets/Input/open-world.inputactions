@@ -243,7 +243,7 @@
                 {
                     "name": "",
                     "id": "9ab299e5-a5de-4a9b-b658-a893350ed9ae",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -412,7 +412,7 @@
                 {
                     "name": "",
                     "id": "4d97d354-3e2b-457c-9e36-d9c6c2aae2e9",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",

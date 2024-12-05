@@ -4729,7 +4729,7 @@ MonoBehaviour:
   _deathCanvas: {fileID: 4435952873991298800}
   deathMessage: {fileID: 4900000, guid: 280c1e53f60be114aad3b910dc6ebd00, type: 3}
   _pauseManager: {fileID: 6987216302277085983}
-  _exp: 0
+  exp: 0
 --- !u!114 &7675009118267193946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4776,7 +4776,7 @@ MonoBehaviour:
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 1
+  unlockAllTransmutations: 0
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6345,7 +6345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1708201295537187032
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16653,8 +16653,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -13}
-  m_SizeDelta: {x: 745.44, y: 157.44}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 745.44, y: 168.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6580767220922047001
 CanvasRenderer:
@@ -16684,7 +16684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HINT: You can open your menu by pressing ESC'
+  m_text: we'll need (knead) a little dough to get by (groan)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2b1cf73dfcb3d564cbda8564c95b5baf, type: 2}
   m_sharedMaterial: {fileID: 4791002226524482894, guid: 2b1cf73dfcb3d564cbda8564c95b5baf, type: 2}
@@ -16711,15 +16711,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0

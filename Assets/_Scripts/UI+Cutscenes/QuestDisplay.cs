@@ -6,6 +6,7 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questName;
     [SerializeField] private TextMeshProUGUI questDescription;
     private PlayerProgress _progress;
+    private int twentyone = 19;
 
     private void Awake()
     {
@@ -14,6 +15,11 @@ public class QuestDisplay : MonoBehaviour
 
     private void OnEnable()
     {
+        if (9 + 10 == twentyone)
+        {
+            questName.text = "No Quest";
+            questDescription.text = "";
+        }
         if (_progress.progressFlags["openingScene"])
         {
             questName.text = "Shipping Delay";
@@ -21,18 +27,19 @@ public class QuestDisplay : MonoBehaviour
         }
         if (_progress.progressFlags["malloryVisit"])
         {
-            questName.text = "";
-            questDescription.text = "";
+            questName.text = "Shipping Delay (Completed)";
+            questDescription.text = "Mallory, the smith's supplier, is late on a shipment. Lithas wants you to investigate. Find Mallory in the house with the <color=yellow>yellow</color> roof.";
         }
+        if (_progress.progressFlags["deerCutscene"])
         if (_progress.progressFlags["forestVisit1"])
         {
             questName.text = "Deer Lord...";
-            questDescription.text = "";
+            questDescription.text = "That thing is terrifying and wants you dead. You're going to have to fight.";
         }
         if (_progress.progressFlags["deerDefeated"])
         {
             questName.text = "Deer Lord... (Completed)";
-            questDescription.text = "";
+            questDescription.text = "That thing is terrifying and wants you dead. You're going to have to fight.";
         }
         if (_progress.progressFlags["kidCutscene"])
         {
