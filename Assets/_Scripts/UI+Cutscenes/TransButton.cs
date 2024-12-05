@@ -8,7 +8,7 @@ public class TransButton : MonoBehaviour
     [SerializeField] private GameObject button;
     [SerializeField] private GameObject image;
     [SerializeField] private GameObject lockedGFX;
-    [SerializeField] private TextMeshProUGUI priceText;
+    private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI expText;
     public TileData t_tileData;
     public int t_index;
@@ -25,7 +25,8 @@ public class TransButton : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Player>();
         _playerCasting = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCasting>();
-
+        
+        priceText = transform.Find("Button").Find("LockedGFX").Find("Price").gameObject.GetComponent<TextMeshProUGUI>();
         originalButtonColor = button.GetComponent<Image>().color;
         originalImageColor = image.GetComponent<Image>().color;
         priceText.text = expCost.ToString();
