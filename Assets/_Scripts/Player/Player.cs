@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -32,14 +33,14 @@ public class Player : MonoBehaviour
 
     private Coroutine slowTimeCoroutine;
 
-    public float _exp = 0;
+    public float exp = 0;
 
 
 
 
     private void Awake()
     {
-        Debug.Log($"Player has {_exp} Experience Points");
+        Debug.Log($"Player has {exp} Experience Points");
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
@@ -83,6 +84,27 @@ public class Player : MonoBehaviour
 
 
 
+    public void CreateSaveData_Player()
+    {
+        PlayerPrefs.SetInt("exp", (int)Math.Floor(exp));
+    }
+
+    public void LoadSaveData_Player()
+    {
+        exp = PlayerPrefs.GetInt("exp");
+    }
+
+    private void OnEnable()
+    {
+        PlayerSaveDataManager.onSaveData += CreateSaveData_Player;
+        PlayerSaveDataManager.onLoadData += LoadSaveData_Player;
+    }
+
+    private void OnDisable()
+    {
+        PlayerSaveDataManager.onSaveData -= CreateSaveData_Player;
+        PlayerSaveDataManager.onLoadData -= LoadSaveData_Player;
+    }
 
 
     public void Damage(float damage, bool silent = false)
