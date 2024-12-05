@@ -1,31 +1,40 @@
 fileFormatVersion: 2
-guid: 813b7cd888e4d144297670568b27914c
+guid: 28a1b478e9517254d931e2a92097dabd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7620865237851327571
-    second: cloaker_2_0
+      213: -3378275176484901122
+    second: vine_anim_0
   - first:
-      213: -7271326279045090351
-    second: cloaker_2_1
+      213: -9117182748454914532
+    second: vine_anim_1
   - first:
-      213: 6670022857894888054
-    second: cloaker_2_2
+      213: 870730457658358950
+    second: vine_anim_2
   - first:
-      213: -4948104567357336427
-    second: cloaker_2_3
+      213: 5534980320944016101
+    second: vine_anim_3
   - first:
-      213: -3349819284996960010
-    second: cloaker_2_4
+      213: -3955689310105782324
+    second: vine_anim_4
   - first:
-      213: 1530230040502364808
-    second: cloaker_2_5
+      213: 2392271319184344092
+    second: vine_anim_5
   - first:
-      213: 6136256362222333500
-    second: cloaker_2_6
+      213: -4735464140010779987
+    second: vine_anim_6
   - first:
-      213: -2533092363433437493
-    second: cloaker_2_7
+      213: -6786591421635890296
+    second: vine_anim_7
+  - first:
+      213: -1588430216113529213
+    second: vine_anim_8
+  - first:
+      213: -7782550784507773713
+    second: vine_anim_9
+  - first:
+      213: -7913202414327243893
+    second: vine_anim_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,177 +130,243 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cloaker_2_0
+      name: vine_anim_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 325
+        width: 11
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 35c40478e80c2c960800000000000000
-      internalID: 7620865237851327571
+      spriteID: efee81830a4fd11d0800000000000000
+      internalID: -3378275176484901122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_1
+      name: vine_anim_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 293
+        width: 29
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d3fd8b364f071b90800000000000000
-      internalID: -7271326279045090351
+      spriteID: c16760e5892497180800000000000000
+      internalID: -9117182748454914532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_2
+      name: vine_anim_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 261
+        width: 34
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6728f80337ea09c50800000000000000
-      internalID: 6670022857894888054
+      spriteID: 6acf6d7ecb4751c00800000000000000
+      internalID: 870730457658358950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_3
+      name: vine_anim_3
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 229
+        width: 44
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5949d27bc1dc45bb0800000000000000
-      internalID: -4948104567357336427
+      spriteID: 5ea45acb64330dc40800000000000000
+      internalID: 5534980320944016101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_4
+      name: vine_anim_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 197
+        width: 118
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f0d000cb1d0381d0800000000000000
-      internalID: -3349819284996960010
+      spriteID: cc7b555d7819a19c0800000000000000
+      internalID: -3955689310105782324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_5
+      name: vine_anim_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 165
+        width: 177
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88a66c44d187c3510800000000000000
-      internalID: 1530230040502364808
+      spriteID: c14865a071e033120800000000000000
+      internalID: 2392271319184344092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_6
+      name: vine_anim_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 133
+        width: 118
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3e2ef076ac582550800000000000000
-      internalID: 6136256362222333500
+      spriteID: daa8e084470484eb0800000000000000
+      internalID: -4735464140010779987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_7
+      name: vine_anim_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
+        x: 15
+        y: 101
+        width: 44
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc69b469ae5a8dcd0800000000000000
-      internalID: -2533092363433437493
+      spriteID: 883fda51f0f21d1a0800000000000000
+      internalID: -6786591421635890296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vine_anim_8
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 69
+        width: 34
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e5e026223c4f9e0800000000000000
+      internalID: -1588430216113529213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vine_anim_9
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 37
+        width: 29
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecf9f29b43def390800000000000000
+      internalID: -7782550784507773713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vine_anim_10
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 5
+        width: 11
+        height: 11
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8bd2428458ae2290800000000000000
+      internalID: -7913202414327243893
       vertices: []
       indices: 
       edges: []
@@ -300,7 +375,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 92b193f329dbbaa4cb9f107fe78f7130
+    spriteID: e7724b3f7802f6d4893022367444b137
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cloaker_2_0: 7620865237851327571
-      cloaker_2_1: -7271326279045090351
-      cloaker_2_2: 6670022857894888054
-      cloaker_2_3: -4948104567357336427
-      cloaker_2_4: -3349819284996960010
-      cloaker_2_5: 1530230040502364808
-      cloaker_2_6: 6136256362222333500
-      cloaker_2_7: -2533092363433437493
+      vine_anim_0: -3378275176484901122
+      vine_anim_1: -9117182748454914532
+      vine_anim_10: -7913202414327243893
+      vine_anim_2: 870730457658358950
+      vine_anim_3: 5534980320944016101
+      vine_anim_4: -3955689310105782324
+      vine_anim_5: 2392271319184344092
+      vine_anim_6: -4735464140010779987
+      vine_anim_7: -6786591421635890296
+      vine_anim_8: -1588430216113529213
+      vine_anim_9: -7782550784507773713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

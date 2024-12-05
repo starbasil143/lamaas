@@ -10,6 +10,7 @@ public class TransButton : MonoBehaviour
     [SerializeField] private GameObject lockedGFX;
     private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI expText;
+    [SerializeField] private bool requiresScroll;
     public TileData t_tileData;
     public int t_index;
 
@@ -29,7 +30,15 @@ public class TransButton : MonoBehaviour
         priceText = transform.Find("Button").Find("LockedGFX").Find("Price").gameObject.GetComponent<TextMeshProUGUI>();
         originalButtonColor = button.GetComponent<Image>().color;
         originalImageColor = image.GetComponent<Image>().color;
-        priceText.text = expCost.ToString();
+
+        if (!requiresScroll)
+        {
+            priceText.text = expCost.ToString();
+        }
+        else
+        {
+            priceText.text = "Requires Scroll";
+        }
     }
 
     private void OnEnable()

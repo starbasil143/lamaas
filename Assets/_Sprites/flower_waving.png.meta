@@ -1,28 +1,28 @@
 fileFormatVersion: 2
-guid: 48a8c55a18954fc4790086218e462cb9
+guid: dacc1f2ca49639e4690a5f554507f54e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4984399702122365372
-    second: ground_slam_anim_0
+      213: 3598059600314104118
+    second: flower_waving_0
   - first:
-      213: 4013494036717548800
-    second: ground_slam_anim_1
+      213: 4859784803210785350
+    second: flower_waving_1
   - first:
-      213: 1384901194425643940
-    second: ground_slam_anim_2
+      213: -6682036723847862723
+    second: flower_waving_2
   - first:
-      213: 4851301810201952749
-    second: ground_slam_anim_3
+      213: -7286792242806610134
+    second: flower_waving_3
   - first:
-      213: -3442302237801029605
-    second: ground_slam_anim_4
+      213: 9065756832703338264
+    second: flower_waving_4
   - first:
-      213: 1504225401403578226
-    second: ground_slam_anim_5
+      213: 6889272042928664090
+    second: flower_waving_5
   - first:
-      213: -7630483466684350890
-    second: ground_slam_anim_6
+      213: 5313574747377097538
+    second: flower_waving_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -92,7 +92,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -118,155 +118,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ground_slam_anim_0
+      name: flower_waving_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 27
-        width: 44
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44efe6021ead3dab0800000000000000
-      internalID: -4984399702122365372
+      spriteID: 639f765a420eee130800000000000000
+      internalID: 3598059600314104118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_anim_1
+      name: flower_waving_1
       rect:
         serializedVersion: 2
-        x: 116
-        y: 24
-        width: 58
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 005b2bedf8bc2b730800000000000000
-      internalID: 4013494036717548800
+      spriteID: 6427830c78c617340800000000000000
+      internalID: 4859784803210785350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_anim_2
+      name: flower_waving_2
       rect:
         serializedVersion: 2
-        x: 211
-        y: 23
-        width: 59
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a331ce7c48283310800000000000000
-      internalID: 1384901194425643940
+      spriteID: d36eeeaa003a443a0800000000000000
+      internalID: -6682036723847862723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ground_slam_anim_3
+      name: flower_waving_3
       rect:
         serializedVersion: 2
-        x: 307
-        y: 24
-        width: 59
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de10c470b49435340800000000000000
-      internalID: 4851301810201952749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_anim_4
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 11
-        width: 72
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1066525a5c7a30d0800000000000000
-      internalID: -3442302237801029605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_anim_5
-      rect:
-        serializedVersion: 2
-        x: 495
-        y: 13
-        width: 66
-        height: 68
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27797c8680510e410800000000000000
-      internalID: 1504225401403578226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ground_slam_anim_6
-      rect:
-        serializedVersion: 2
-        x: 591
-        y: 11
-        width: 66
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 65eb9cf07b31b1690800000000000000
-      internalID: -7630483466684350890
+      spriteID: a27a07fef0d10ea90800000000000000
+      internalID: -7286792242806610134
       vertices: []
       indices: 
       edges: []
@@ -275,7 +209,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3d64a7d4e9ad1924ba345f129a20fa9e
     internalID: 0
     vertices: []
     indices: 
@@ -285,13 +219,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ground_slam_anim_0: -4984399702122365372
-      ground_slam_anim_1: 4013494036717548800
-      ground_slam_anim_2: 1384901194425643940
-      ground_slam_anim_3: 4851301810201952749
-      ground_slam_anim_4: -3442302237801029605
-      ground_slam_anim_5: 1504225401403578226
-      ground_slam_anim_6: -7630483466684350890
+      flower_waving_0: 3598059600314104118
+      flower_waving_1: 4859784803210785350
+      flower_waving_2: -6682036723847862723
+      flower_waving_3: -7286792242806610134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

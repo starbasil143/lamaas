@@ -1,31 +1,19 @@
 fileFormatVersion: 2
-guid: 813b7cd888e4d144297670568b27914c
+guid: aa5251a88afbe0942b3d419155ef9e99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7620865237851327571
-    second: cloaker_2_0
+      213: -3198907129751886346
+    second: icespike_anim_reverse_0
   - first:
-      213: -7271326279045090351
-    second: cloaker_2_1
+      213: -8779491895792531772
+    second: icespike_anim_reverse_1
   - first:
-      213: 6670022857894888054
-    second: cloaker_2_2
+      213: -8420849564435531213
+    second: icespike_anim_reverse_2
   - first:
-      213: -4948104567357336427
-    second: cloaker_2_3
-  - first:
-      213: -3349819284996960010
-    second: cloaker_2_4
-  - first:
-      213: 1530230040502364808
-    second: cloaker_2_5
-  - first:
-      213: 6136256362222333500
-    second: cloaker_2_6
-  - first:
-      213: -2533092363433437493
-    second: cloaker_2_7
+      213: -721556683744052106
+    second: icespike_anim_reverse_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,146 +109,14 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cloaker_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35c40478e80c2c960800000000000000
-      internalID: 7620865237851327571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d3fd8b364f071b90800000000000000
-      internalID: -7271326279045090351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6728f80337ea09c50800000000000000
-      internalID: 6670022857894888054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5949d27bc1dc45bb0800000000000000
-      internalID: -4948104567357336427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f0d000cb1d0381d0800000000000000
-      internalID: -3349819284996960010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88a66c44d187c3510800000000000000
-      internalID: 1530230040502364808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_6
+      name: icespike_anim_reverse_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 64
-      alignment: 9
+        height: 32
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -268,21 +124,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3e2ef076ac582550800000000000000
-      internalID: 6136256362222333500
+      spriteID: 6f5acadf9e23b93d0800000000000000
+      internalID: -3198907129751886346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_7
+      name: icespike_anim_reverse_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 64
-      alignment: 9
+        height: 32
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -290,8 +146,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc69b469ae5a8dcd0800000000000000
-      internalID: -2533092363433437493
+      spriteID: 4c68dd2f2aaf82680800000000000000
+      internalID: -8779491895792531772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icespike_anim_reverse_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a31dccfe1232b80800000000000000
+      internalID: -8420849564435531213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icespike_anim_reverse_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c7024e4048cf5f0800000000000000
+      internalID: -721556683744052106
       vertices: []
       indices: 
       edges: []
@@ -300,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 92b193f329dbbaa4cb9f107fe78f7130
+    spriteID: 68861aadcf240b441ba6ba8cd039cb78
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cloaker_2_0: 7620865237851327571
-      cloaker_2_1: -7271326279045090351
-      cloaker_2_2: 6670022857894888054
-      cloaker_2_3: -4948104567357336427
-      cloaker_2_4: -3349819284996960010
-      cloaker_2_5: 1530230040502364808
-      cloaker_2_6: 6136256362222333500
-      cloaker_2_7: -2533092363433437493
+      icespike_anim_reverse_0: -3198907129751886346
+      icespike_anim_reverse_1: -8779491895792531772
+      icespike_anim_reverse_2: -8420849564435531213
+      icespike_anim_reverse_3: -721556683744052106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

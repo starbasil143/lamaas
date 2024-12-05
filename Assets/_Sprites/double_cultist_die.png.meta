@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 813b7cd888e4d144297670568b27914c
+guid: c0900056c5625e643ad18d26a279b386
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7620865237851327571
-    second: cloaker_2_0
+      213: -8534161473380465868
+    second: double_cultist_die_0
   - first:
-      213: -7271326279045090351
-    second: cloaker_2_1
+      213: 7505919036035433207
+    second: double_cultist_die_1
   - first:
-      213: 6670022857894888054
-    second: cloaker_2_2
+      213: 7131607867801725075
+    second: double_cultist_die_2
   - first:
-      213: -4948104567357336427
-    second: cloaker_2_3
+      213: -1866807843735532954
+    second: double_cultist_die_3
   - first:
-      213: -3349819284996960010
-    second: cloaker_2_4
+      213: 3409951969831931351
+    second: double_cultist_die_4
   - first:
-      213: 1530230040502364808
-    second: cloaker_2_5
+      213: 568839239757498464
+    second: double_cultist_die_5
   - first:
-      213: 6136256362222333500
-    second: cloaker_2_6
+      213: 1884446673100355599
+    second: double_cultist_die_6
   - first:
-      213: -2533092363433437493
-    second: cloaker_2_7
+      213: 5390952891524484470
+    second: double_cultist_die_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,177 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cloaker_2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35c40478e80c2c960800000000000000
-      internalID: 7620865237851327571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 192
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1d3fd8b364f071b90800000000000000
-      internalID: -7271326279045090351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6728f80337ea09c50800000000000000
-      internalID: 6670022857894888054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5949d27bc1dc45bb0800000000000000
-      internalID: -4948104567357336427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6f0d000cb1d0381d0800000000000000
-      internalID: -3349819284996960010
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88a66c44d187c3510800000000000000
-      internalID: 1530230040502364808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cloaker_2_6
+      name: double_cultist_die_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 64
+        width: 80
+        height: 59
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3e2ef076ac582550800000000000000
-      internalID: 6136256362222333500
+      spriteID: 433455b1b51909980800000000000000
+      internalID: -8534161473380465868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cloaker_2_7
+      name: double_cultist_die_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 80
         y: 0
-        width: 32
-        height: 64
+        width: 80
+        height: 59
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.2, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc69b469ae5a8dcd0800000000000000
-      internalID: -2533092363433437493
+      spriteID: 7f20cbf58916a2860800000000000000
+      internalID: 7505919036035433207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398e3b5229f88f260800000000000000
+      internalID: 7131607867801725075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a0b3a2824c716e0800000000000000
+      internalID: -1866807843735532954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ddc9f6ff35925f20800000000000000
+      internalID: 3409951969831931351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0688c04564ce4e700800000000000000
+      internalID: 568839239757498464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f083054d346e62a10800000000000000
+      internalID: 1884446673100355599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: double_cultist_die_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 59
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d8e24a71380da40800000000000000
+      internalID: 5390952891524484470
       vertices: []
       indices: 
       edges: []
@@ -300,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 92b193f329dbbaa4cb9f107fe78f7130
+    spriteID: 39ba644758ecc2c44949cef130c28264
     internalID: 0
     vertices: []
     indices: 
@@ -310,14 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cloaker_2_0: 7620865237851327571
-      cloaker_2_1: -7271326279045090351
-      cloaker_2_2: 6670022857894888054
-      cloaker_2_3: -4948104567357336427
-      cloaker_2_4: -3349819284996960010
-      cloaker_2_5: 1530230040502364808
-      cloaker_2_6: 6136256362222333500
-      cloaker_2_7: -2533092363433437493
+      double_cultist_die_0: -8534161473380465868
+      double_cultist_die_1: 7505919036035433207
+      double_cultist_die_2: 7131607867801725075
+      double_cultist_die_3: -1866807843735532954
+      double_cultist_die_4: 3409951969831931351
+      double_cultist_die_5: 568839239757498464
+      double_cultist_die_6: 1884446673100355599
+      double_cultist_die_7: 5390952891524484470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
