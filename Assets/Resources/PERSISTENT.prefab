@@ -16392,7 +16392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebb1a0b39095d24d8ebc8bc65151fed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVolume: 0.5
+  defaultVolume: 0.7
   audioManager: {fileID: 905157885313435079}
   musicVolumeSlider: {fileID: 8820658773896485346}
   sfxVolumeSlider: {fileID: 3044936992468415421}
