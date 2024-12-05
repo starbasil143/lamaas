@@ -44,7 +44,7 @@ public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void NewGame()
     {
-        SceneManager.LoadScene("TownScene");
+        SceneManager.LoadScene("PlayerHouseScene");
     }
 
     public void ContinueGame()

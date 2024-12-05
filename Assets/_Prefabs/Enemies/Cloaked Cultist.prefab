@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4934047704502302457}
   - component: {fileID: 7642659636985705550}
   - component: {fileID: 1106054775620912857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloaked Cultist (Logic)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,18 +55,28 @@ MonoBehaviour:
   idleSpeed: 2
   waypointAccuracy: 1
   idleMoveRange: 5
+  _animator: {fileID: 0}
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
+  idleTimeBetweenPaths: 1
+  hostileTimeBetweenPaths: 1
   projectile: {fileID: 2524667109626999555, guid: 661b967dd0feaad48963032ed2ef7177, type: 3}
   EnemyGFX: {fileID: 4074228747910995950}
   EnemyHarmBox: {fileID: 0}
+  circleAroundRange: 2
   maxHP: 8
   enemyDefense: 1
   attackDistance: 5
   timeBetweenCastAttacks: 1.5
   timeBetweenLightChargeAttacks: 1.8
+  timeBetweenCircleCharges: 2
   lungeForceMultiplier: 20
+  chargeTime: 0.5
+  dropOnDeath: {fileID: 0}
+  ExecuteOnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1106054775620912857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +117,7 @@ GameObject:
   - component: {fileID: 3249828052386159367}
   - component: {fileID: 4542597033054074026}
   - component: {fileID: 2374473031357443721}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloaked Cultist (GFX)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +263,7 @@ GameObject:
   - component: {fileID: 900852353399366926}
   - component: {fileID: 1308943043848855408}
   - component: {fileID: 7537020316972442051}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: HostileRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +345,7 @@ GameObject:
   - component: {fileID: 4439245044375313446}
   - component: {fileID: 4886096816969972806}
   - component: {fileID: 4520355357805247138}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cloaked Cultist
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -445,7 +455,7 @@ GameObject:
   - component: {fileID: 638004491637409813}
   - component: {fileID: 2922955875599108696}
   - component: {fileID: 4508987848421160233}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: AttackRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}

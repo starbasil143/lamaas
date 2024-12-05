@@ -9,7 +9,9 @@ public class SceneTransitionManager : MonoBehaviour
     public static SceneTransitionManager instance;
 
     private EntryInteraction.EntryToSpawnAt _entryToSpawnAt;
+    private Vector3 _positionToSpawnAt;
     private static bool _loadFromEntry;
+    private static bool _loadFromPosition;
 
     private GameObject _player;
     private Transform _cameraTargetPoint;
@@ -50,12 +52,25 @@ public class SceneTransitionManager : MonoBehaviour
             vcam.OnTargetObjectWarped(_cameraTargetPoint, _playerEntryPoint - oldPosition);
             _loadFromEntry = false;
         }
+        else if (_loadFromPosition)
+        {
+            Vector3 oldPosition = _cameraTargetPoint.position;
+            _player.transform.position = _positionToSpawnAt;
+            vcam.OnTargetObjectWarped(_cameraTargetPoint, _positionToSpawnAt - oldPosition);
+            _loadFromPosition = false;
+        }
     }
 
     public static void StartSceneChangeFromEntry(string scene, EntryInteraction.EntryToSpawnAt entryToSpawnAt)
     {
         _loadFromEntry = true;
         instance.StartCoroutine(instance.FadeToSceneChange(scene, entryToSpawnAt));
+    }
+
+    public static void StartSceneChangeFromPosition(string scene, Vector3 positionToSpawnAt)
+    {
+        _loadFromPosition = true;
+        instance.StartCoroutine(instance.FadeToSceneChangePosition(scene, positionToSpawnAt));
     }
 
     private IEnumerator FadeToSceneChange(string scene, EntryInteraction.EntryToSpawnAt entryToSpawnAt = EntryInteraction.EntryToSpawnAt.None)
@@ -69,6 +84,19 @@ public class SceneTransitionManager : MonoBehaviour
 
         _entryToSpawnAt = entryToSpawnAt;
         SceneManager.LoadScene(scene);
+    }
+
+    private IEnumerator FadeToSceneChangePosition(string scene, Vector3 positionToSpawnAt)
+    {
+        SceneFadeManager.instance.StartFadeOut();
+        while (SceneFadeManager.instance.isFadingOut)
+        {
+            yield return null;
+        }
+
+        _positionToSpawnAt = positionToSpawnAt;
+        SceneManager.LoadScene(scene);
+
     }
 
     private void FindEntry(EntryInteraction.EntryToSpawnAt entryToSpawnAt)

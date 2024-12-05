@@ -1,5 +1,6 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -20,18 +21,25 @@ public class Player : MonoBehaviour
     public GameObject _exclamationIcon;
 
     public GameObject HealthBarFillImage;
+    private NonEntrySceneChange _sceneChanger;
 
     public PlayerCasting _playerCasting;
+    public GameObject _deathCanvas;
+    public TextAsset deathMessage;
+
+    public float _exp = 0;
 
 
 
 
     private void Awake()
     {
+        Debug.Log($"Player has {_exp} Experience Points");
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
         _animator = PlayerParent.GetComponentInChildren<Animator>();
+        
     }
 
 
@@ -114,8 +122,8 @@ public class Player : MonoBehaviour
     private void Die()
     {
         isPaused = true;
-        PlayerParent.SetActive(false);
-        //_deathCanvas.SetActive(true);
+        _deathCanvas.SetActive(true);
+        DialogueManager.instance.EnterDialogue(deathMessage);
     }
 
     public void NotifyOn()

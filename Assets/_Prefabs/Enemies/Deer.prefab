@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4200503416463926174}
   - component: {fileID: 8412897258565805325}
   - component: {fileID: 6303064744065276895}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Deer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 576
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 2486426728934671768}
   - component: {fileID: 5787798647590819411}
   - component: {fileID: 6625659196763128780}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Deer Damage
   m_TagString: Harm
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 8030368575965193726}
   - component: {fileID: 4947824122130832014}
   - component: {fileID: 7631594267154097371}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Deer (Logic)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,6 @@ MonoBehaviour:
   idleSpeed: 2
   waypointAccuracy: 1
   idleMoveRange: 5
-  _animator: {fileID: 5345147556398964156}
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
@@ -285,6 +284,7 @@ MonoBehaviour:
   timeBetweenCircleCharges: 2
   lungeForceMultiplier: 25
   chargeTime: 0.6
+  dropOnDeath: {fileID: 0}
   ExecuteOnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 703562106507385173}
   - component: {fileID: 5631452101826848532}
   - component: {fileID: 441943100284071816}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: AttackRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 8383404923122772706}
   - component: {fileID: 4279401194205611019}
   - component: {fileID: 5345147556398964156}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Deer (GFX)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 8040048278686451196}
   - component: {fileID: 9047675128527199014}
   - component: {fileID: 5695347141158173492}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: HostileRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}

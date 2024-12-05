@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerProgress : MonoBehaviour
@@ -18,7 +19,39 @@ public class PlayerProgress : MonoBehaviour
       {"deerCutscene", false},
       {"forestVisit1", false},
       {"deerDefeated", false},
+      {"kidCutscene", false},
    };
+
+
+   public void CreateSaveData_PlayerProgress()
+   {
+      List<string> flagNames = progressFlags.Keys.ToList();
+      foreach (string flag in flagNames)
+      {
+         PlayerPrefs.SetInt(flag, progressFlags[flag]?1:0);
+      }
+   }
+
+   public void LoadSaveData_PlayerProgress()
+   {
+      List<string> flagNames = progressFlags.Keys.ToList();
+      foreach (string flag in flagNames)
+      {
+         progressFlags[flag] = PlayerPrefs.GetInt(flag) == 1;
+      }
+   }
+
+   private void OnEnable()
+   {
+      PlayerSaveDataManager.onSaveData += CreateSaveData_PlayerProgress;
+      PlayerSaveDataManager.onLoadData += LoadSaveData_PlayerProgress;
+   }
+
+   private void OnDisable()
+   {
+      PlayerSaveDataManager.onSaveData -= CreateSaveData_PlayerProgress;
+      PlayerSaveDataManager.onLoadData -= LoadSaveData_PlayerProgress;
+   }
 
    private void Awake()
    {

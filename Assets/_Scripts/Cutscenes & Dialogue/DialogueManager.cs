@@ -46,6 +46,8 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string VOICE_TAG = "voice";
     private const string INNER_TAG = "inner";
+    private const string GIVEUP_TAG = "giveup";
+    private const string TRYAGAIN_TAG = "tryagain";
 
     private void Awake()
     {
@@ -133,8 +135,12 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false)
+    public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false, bool pauseGame = false)
     {
+        if (pauseGame)
+        {
+            Time.timeScale = 0f;
+        }
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         InputManager.SwitchToDialogueControls();
@@ -175,7 +181,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueBox.SetActive(false);
         nameBox.SetActive(false);
-        yield return new WaitForSeconds(.1f);
+        Time.timeScale = 1f;
+        yield return new WaitForSecondsRealtime(.1f);
         InputManager.SwitchToPlayerControls();
         dialogueText.text = "";
         
@@ -205,7 +212,7 @@ public class DialogueManager : MonoBehaviour
             {
 
 
-                yield return new WaitForSeconds(typingSpeed * typingSpeedMultiplier);
+                yield return new WaitForSecondsRealtime(typingSpeed * typingSpeedMultiplier);
                 dialogueText.maxVisibleCharacters++;
                 if (letter != ' ' && letter != '\n')
                 {
@@ -310,6 +317,17 @@ public class DialogueManager : MonoBehaviour
                             default:
                                 currentVoice = FMODEvents.instance.voice_default;
                                 break;
+                        }
+                        break;
+                    case GIVEUP_TAG:
+                        {
+                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                        }
+                        break;
+
+                    case TRYAGAIN_TAG:
+                        {
+                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
                         }
                         break;
                 }
