@@ -14,6 +14,7 @@ public class T_IceSpike : TransmutationSOBase
         Vector2 playerPos = player.transform.position;
 
         GameObject iceSpike = Instantiate(IceSpike, mousePos, Quaternion.identity);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_icespike, player.transform.position);
 
     }
 }

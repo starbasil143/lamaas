@@ -33,7 +33,7 @@ public class T_WaterFreeze : TransmutationSOBase
         {
             waterMap.SetTile(positionToDestroy, null);
         }
-        
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_icespike, player.transform.position);
 
     }
 

@@ -19,7 +19,7 @@ public class T_IceTomb : TransmutationSOBase
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 playerPos = player.transform.position;
-
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_icespike, player.transform.position);
         GameObject iceTomb = Instantiate(IceTomb, mousePos, Quaternion.identity);
 
     }

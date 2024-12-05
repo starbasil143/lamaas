@@ -9,6 +9,7 @@ public class T_PlantHealth : TransmutationSOBase
     {
         base.PerformTransmutation(player);
         
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_heal, player.transform.position);
         player.GetComponentInChildren<Player>().Heal(healingAmount);
         Destroy(player.GetComponentInChildren<PlayerCasting>().currentObject);
     }

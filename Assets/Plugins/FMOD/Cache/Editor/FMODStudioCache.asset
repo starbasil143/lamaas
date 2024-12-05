@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638688774537224794
+  lastModified: 638690085346970826
   FileSizes:
   - Name: Desktop
     Value: 2530
@@ -251,7 +251,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Town.bank
   Name: Town
   StudioPath: bank:/Town
-  lastModified: 638690103975391553
+  lastModified: 638690085404139789
   FileSizes:
   - Name: Desktop
     Value: 8612320
@@ -355,7 +355,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638690040291980232
+  lastModified: 638690085352521426
   FileSizes:
   - Name: Desktop
     Value: 277824
@@ -453,7 +453,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638687798376980403
+  lastModified: 638690085346940390
   FileSizes:
   - Name: Desktop
     Value: 1632
@@ -591,7 +591,7 @@ MonoBehaviour:
   - {fileID: -601507058279553139}
   StringsBanks:
   - {fileID: -7492806763642632584}
-  cacheTime: 638690103975391553
+  cacheTime: 638690085406956048
   cacheVersion: 131621
 --- !u!114 &1370552994515039722
 MonoBehaviour:
@@ -699,7 +699,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Forest1.bank
   Name: Forest1
   StudioPath: bank:/Forest1
-  lastModified: 638687798376950457
+  lastModified: 638690085346742094
   FileSizes:
   - Name: Desktop
     Value: 1080160
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Voices.bank
   Name: Voices
   StudioPath: bank:/Voices
-  lastModified: 638687798377931925
+  lastModified: 638690085406956048
   FileSizes:
   - Name: Desktop
     Value: 19616
