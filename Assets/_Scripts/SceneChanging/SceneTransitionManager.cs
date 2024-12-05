@@ -42,7 +42,11 @@ public class SceneTransitionManager : MonoBehaviour
     }
 
     private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode)
-    {
+    {   
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
+        {
+            return;
+        }
         SceneFadeManager.instance.StartFadeIn();
         if (_loadFromEntry)
         {

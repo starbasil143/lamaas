@@ -78,6 +78,16 @@ public class TimelineManager : MonoBehaviour
         _player.GetComponentInChildren<PlayerMovement>().Unpause();
     }
 
+    public void FullDisablePlayer()
+    {
+        _player.SetActive(false);
+    }
+
+    public void FullEnablePlayer()
+    {
+        _player.SetActive(true);
+    }
+
     public void PlayerWalkBackward()
     {
         _player.GetComponentInChildren<PlayerMovement>().WalkBackwards();
@@ -101,5 +111,10 @@ public class TimelineManager : MonoBehaviour
     public void SetMusic()
     {
         AudioManager.instance.SetMusicArea(musicArea);
+    }
+
+    public void SaveTheGame()
+    {
+        GetComponent<PlayerSaveDataManager>().SaveGame();
     }
 }

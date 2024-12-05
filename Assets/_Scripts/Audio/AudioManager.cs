@@ -97,6 +97,7 @@ public class AudioManager : MonoBehaviour
     public void SetMusicArea(MusicArea area)
     {
         musicEventInstance.setParameterByName("area", (float) area);
+        Debug.Log(area);
     }
 
     public void SetSongVersion(float version)

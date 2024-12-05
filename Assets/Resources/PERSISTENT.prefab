@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebeb7feea4460142aeef5b1ff08a236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masterVolume: 0.552
+  masterVolume: 0.64
   musicVolume: 0.669
   sfxVolume: 0.7
   voiceVolume: 0.7
@@ -5140,6 +5140,7 @@ MonoBehaviour:
   isPaused: 0
   currentSlot: 0
   immunityTime: 0.4
+  disableOnMainMenu: []
   _exclamationIcon: {fileID: 8173497547851584300}
   HealthBarFillImage: {fileID: 445544933602325983}
   _playerCasting: {fileID: 2108771031858146728}
@@ -5192,7 +5193,7 @@ MonoBehaviour:
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 1
+  unlockAllTransmutations: 0
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11839,6 +11840,7 @@ MonoBehaviour:
   - {fileID: 7785460899530142159}
   - {fileID: 889214616063529392}
   typingSpeed: 0.043
+  vine: {fileID: 0}
   _timelineManager: {fileID: 0}
   textUnselectedColor: {r: 1, g: 1, b: 1, a: 1}
   textSelectedColor: {r: 0.40548232, g: 0.6415094, b: 0.3328586, a: 1}

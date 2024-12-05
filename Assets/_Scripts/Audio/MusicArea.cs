@@ -13,4 +13,6 @@ public enum MusicArea
     BATTLE1 = 8,
     BATTLE2 = 9,
     BATTLE3 = 10,
+    TITLE = 11,
+    WIN = 12,
 }

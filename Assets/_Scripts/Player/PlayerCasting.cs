@@ -128,11 +128,20 @@ public class PlayerCasting : MonoBehaviour
 
     private void OnSceneLoad(Scene scene, LoadSceneMode loadSceneMode)
     {
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
+        {
+            return;
+        }
+
         map = GameObject.FindGameObjectWithTag("Grid").transform.Find("Ground").GetComponent<Tilemap>();
     }
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
+        {
+            return;
+        }
         SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][0]);
         SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][1]);
         SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[GetCurrentTile()][2]);
@@ -157,6 +166,10 @@ public class PlayerCasting : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
+        {
+            return;
+        }
         if (GetCurrentTile() != currentTile)
         {
             SwitchTile();
