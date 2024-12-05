@@ -831,6 +831,8 @@ MonoBehaviour:
   expCost: 40
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 1
 --- !u!1 &263268722605109235
@@ -2853,6 +2855,8 @@ MonoBehaviour:
   expCost: 50
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 2
 --- !u!1 &1192245303431209402
@@ -4135,6 +4139,8 @@ MonoBehaviour:
   expCost: 0
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   t_index: 0
 --- !u!1 &1570919958972248325
@@ -5184,7 +5190,7 @@ MonoBehaviour:
   SlotFourImage: {fileID: 7241627963617542078}
   currentObject: {fileID: 0}
   objectsInRangeList: []
-  unlockAllTransmutations: 0
+  unlockAllTransmutations: 1
 --- !u!114 &2775812986114529591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5863,6 +5869,8 @@ MonoBehaviour:
   expCost: 50
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 2
 --- !u!1 &2523187977397199787
@@ -6748,6 +6756,8 @@ MonoBehaviour:
   expCost: 0
   expText: {fileID: 191979849595036525}
   requiresScroll: 1
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 0
 --- !u!1 &2843927242121592871
@@ -7783,6 +7793,8 @@ MonoBehaviour:
   expCost: 100
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
   t_index: 1
 --- !u!1 &3408817295379707929
@@ -9838,6 +9850,8 @@ MonoBehaviour:
   expCost: 80
   expText: {fileID: 191979849595036525}
   requiresScroll: 1
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
   t_index: 0
 --- !u!1 &4408483314942969573
@@ -13547,6 +13561,8 @@ MonoBehaviour:
   expCost: 950
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
   t_index: 2
 --- !u!1 &5616478392506093227
@@ -13603,6 +13619,8 @@ MonoBehaviour:
   expCost: 0
   expText: {fileID: 191979849595036525}
   requiresScroll: 1
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 0
 --- !u!1 &5652976400096670405
@@ -15522,6 +15540,8 @@ MonoBehaviour:
   expCost: 30
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   t_index: 1
 --- !u!1 &6483439869239217695
@@ -17471,6 +17491,8 @@ MonoBehaviour:
   expCost: 40
   expText: {fileID: 191979849595036525}
   requiresScroll: 1
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 1
 --- !u!1 &7598216552105699439
@@ -19159,6 +19181,8 @@ MonoBehaviour:
   expCost: 50
   expText: {fileID: 191979849595036525}
   requiresScroll: 0
+  objectTransmutation: 0
+  t_objectName: 
   t_tileData: {fileID: 11400000, guid: 396ee76f45a0b334e9cff16f6821d8f7, type: 2}
   t_index: 2
 --- !u!1 &8503717997665947544
