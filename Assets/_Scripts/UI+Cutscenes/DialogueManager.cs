@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     private int selectedChoiceIndex;
     private TextMeshProUGUI[] choicesText;
     private Coroutine displayLineCoroutine;
+    public Vine vine;
 
     public TimelineManager _timelineManager;
 
@@ -137,6 +138,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogue(TextAsset inkJSON, bool dialogueTriggeredByCutscene = false, bool pauseGame = false)
     {
+        _player.GetComponentInChildren<Player>().CancelGrapple();
         if (pauseGame)
         {
             Time.timeScale = 0f;

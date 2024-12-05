@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator _animator;
     private GameObject PlayerParent;
     private Player _player;
+    public bool isGrappling;
+    public Vector2 grappleForce;
     [SerializeField] private GameObject PlayerGFX;
 
 
@@ -41,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_player.isPaused)
         {
             // Movement
-            if (InputManager.Dash && currentDashCooldown <= 0) // Dashing
+            if (InputManager.Dash && currentDashCooldown <= 0 && !isGrappling) // Dashing
             {
                 isDashing = true;
                 currentDashCooldown = _dashCooldown;
@@ -68,6 +70,10 @@ public class PlayerMovement : MonoBehaviour
             if (!isDashing) // Walking
             {
                 movement.Set(InputManager.Movement.x, InputManager.Movement.y);
+                if (isGrappling)
+                {
+                    movement += grappleForce;
+                }
                 _rigidbody.linearVelocity = movement * _moveSpeed;
             }
             
@@ -117,7 +123,9 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator WalkBackwardsCoroutine()
     {
         isDashing = false;
-        Vector2 directionToReturn = lastDirection * -1;
+        _rigidbody.linearVelocity = Vector2.zero;
+        movement = Vector2.zero;
+        Vector2 directionToReturn = lastDirection.normalized * -1;
         movement = directionToReturn * _moveSpeed;
         _rigidbody.linearVelocity = movement;
         yield return new WaitForSeconds(.4f);

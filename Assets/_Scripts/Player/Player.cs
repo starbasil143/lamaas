@@ -197,6 +197,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void CancelGrapple()
+    {
+        if (GameObject.FindWithTag("Grapple") != null)
+        {
+            GameObject.FindWithTag("Grapple").GetComponent<Vine>().CancelGrapple();
+        }
+    }
+
     public IEnumerator SlowTimeCoroutine(float duration, float multiplier)
     {
         Time.timeScale = multiplier;

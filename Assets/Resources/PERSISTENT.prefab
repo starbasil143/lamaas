@@ -5160,7 +5160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   setAutomatically: []
   setAllTrue: 0
-  setAllTrueUpToPoint: kidCutscene
+  setAllTrueUpToPoint: 
 --- !u!114 &2108771031858146728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5209,6 +5209,8 @@ MonoBehaviour:
   _dashSpeed: 14
   _dashLength: 0.3
   _dashCooldown: 0.4
+  isGrappling: 0
+  grappleForce: {x: 0, y: 0}
   PlayerGFX: {fileID: 5822185129890140543}
 --- !u!114 &6639713384438524226
 MonoBehaviour:

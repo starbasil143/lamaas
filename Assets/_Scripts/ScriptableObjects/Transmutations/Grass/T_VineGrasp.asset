@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e561c283acb04c41ac6a70237076a18, type: 3}
   m_Name: T_VineGrasp
   m_EditorClassIdentifier: 
-  cooldown: 0.2
-  thornGraspPrefab: {fileID: 0}
-  ThornGraspSpeed: 18
+  cooldown: 1
+  vineGraspPrefab: {fileID: 4837636442170556296, guid: b66882df84d98794db8f13c751e4c640, type: 3}
+  timeToFullyExtend: 0.5
+  range: 5
+  pullFactor: 3
+  lifetimeFactor: 2
+  distanceToDrop: 0.5

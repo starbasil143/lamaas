@@ -9,8 +9,20 @@ public class VineGrabber : MonoBehaviour
         vine = transform.parent.gameObject;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        transform.localPosition = vine.transform.position + new Vector3(vine.GetComponent<SpriteRenderer>().size.x + .4f, 0, 0);
+        transform.localPosition = new Vector3(vine.GetComponent<SpriteRenderer>().size.x + 0.3f, 0, 0);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!vine.GetComponent<Vine>().isGrappling)
+        {
+            if(collision.gameObject.CompareTag("Enemy") || LayerMask.LayerToName(collision.gameObject.layer) == "Obstacle")
+            {
+                vine.GetComponent<Vine>().Catch(collision.gameObject);
+            }
+        }
+        Debug.Log(collision.gameObject);
     }
 }
