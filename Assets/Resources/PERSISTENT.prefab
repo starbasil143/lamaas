@@ -11796,6 +11796,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7933995430132262453}
   - component: {fileID: 1255990789955427812}
+  - component: {fileID: 5005058029527862555}
+  - component: {fileID: 5969679447432907140}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -11844,6 +11846,34 @@ MonoBehaviour:
   _timelineManager: {fileID: 0}
   textUnselectedColor: {r: 1, g: 1, b: 1, a: 1}
   textSelectedColor: {r: 0.40548232, g: 0.6415094, b: 0.3328586, a: 1}
+--- !u!114 &5005058029527862555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129035582650248254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1de2650aa9c05e45bb1e5842bf0c181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneToLoad: PlayerHouseScene
+  _positionToSpawnAt: {x: 6, y: -1, z: 0}
+  _musicArea: 1
+  _songVersion: 1
+--- !u!114 &5969679447432907140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5129035582650248254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e0be7e386086342b887391386e3e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5138227337761717459
 GameObject:
   m_ObjectHideFlags: 0

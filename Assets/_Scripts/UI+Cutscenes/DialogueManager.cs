@@ -10,6 +10,7 @@ using UnityEngine.Playables;
 using UnityEngine.SearchService;
 using FMODUnity;
 using FMOD.Studio;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     private const string INNER_TAG = "inner";
     private const string GIVEUP_TAG = "giveup";
     private const string TRYAGAIN_TAG = "tryagain";
+    private const string SAVE_TAG = "save";
 
     private void Awake()
     {
@@ -323,13 +325,18 @@ public class DialogueManager : MonoBehaviour
                         break;
                     case GIVEUP_TAG:
                         {
-                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                            SceneManager.LoadScene("MainMenuScene");
                         }
                         break;
 
                     case TRYAGAIN_TAG:
                         {
-                            GameObject.FindWithTag("SceneManager").GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                            GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                        }
+                        break;
+                    case SAVE_TAG:
+                        {
+                            GetComponent<PlayerSaveDataManager>().SaveGame();
                         }
                         break;
                 }

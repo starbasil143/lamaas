@@ -6733,6 +6733,107 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1001 &445961720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 751900071082879694, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_Name
+      value: Hint Trigger (saving)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901733590553232816, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_Size.x
+      value: 5.5776663
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901733590553232816, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5220184
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901733590553232816, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_Offset.x
+      value: 3.4457374
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901733590553232816, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.53277206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465532290501384863, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: message
+      value: You can manually save by visiting Lithas at your home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06528239
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915789947218248029, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 751900071082879694, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445961722}
+  m_SourcePrefab: {fileID: 100100000, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+--- !u!1 &445961721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 751900071082879694, guid: e3b010551621f1641bebe919b43a19ff, type: 3}
+  m_PrefabInstance: {fileID: 445961720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &445961722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445961721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2859160a9ec4ccc4cb01d88447d16396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagsMustBeTrue:
+  - kidCutscene
+  flagsMustBeFalse: []
+  delayDisable: 0
 --- !u!1001 &511354211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -109308,5 +109409,6 @@ SceneRoots:
   - {fileID: 1297542857}
   - {fileID: 5230028947595851773}
   - {fileID: 2012186119}
+  - {fileID: 445961720}
   - {fileID: 1536784646}
   - {fileID: 147409263}

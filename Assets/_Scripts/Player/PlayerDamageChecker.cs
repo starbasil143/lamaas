@@ -12,7 +12,10 @@ public class PlayerDamageChecker : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Harm"))
         {
-            _player.ReceiveHarm(collision.gameObject.GetComponent<HarmfulObjectScript>());
+            if (_player.healthAmount > 0)
+            {
+                _player.ReceiveHarm(collision.gameObject.GetComponent<HarmfulObjectScript>());
+            }
         }
     }
 }
