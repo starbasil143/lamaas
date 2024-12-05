@@ -98,7 +98,13 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void Revive()
+    {
+        healthAmount = 9;
+        Heal(1);
+        isPaused = false;
+        _deathCanvas.SetActive(false);
+    }
 
     public void CreateSaveData_Player()
     {

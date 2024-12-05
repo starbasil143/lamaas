@@ -331,6 +331,8 @@ public class DialogueManager : MonoBehaviour
 
                     case TRYAGAIN_TAG:
                         {
+                            GetComponent<PlayerSaveDataManager>().LoadGame();
+                            _player.GetComponentInChildren<Player>().Revive();
                             GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
                         }
                         break;
