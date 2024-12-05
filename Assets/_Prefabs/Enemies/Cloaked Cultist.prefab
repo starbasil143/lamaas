@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b76a5cbea5d06e4682228ed5f967921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   enemyType: 0
   idleBehavior: 1
   hostileBehavior: 1
@@ -53,9 +54,9 @@ MonoBehaviour:
   _player: {fileID: 0}
   hostileSpeed: 5
   idleSpeed: 2
+  isFrozen: 0
   waypointAccuracy: 1
   idleMoveRange: 5
-  _animator: {fileID: 0}
   RaycastingMask:
     serializedVersion: 2
     m_Bits: 72
@@ -65,6 +66,8 @@ MonoBehaviour:
   EnemyGFX: {fileID: 4074228747910995950}
   EnemyHarmBox: {fileID: 0}
   circleAroundRange: 2
+  xpAmountMin: 2
+  xpAmountMax: 3
   maxHP: 8
   enemyDefense: 1
   attackDistance: 5
@@ -74,6 +77,7 @@ MonoBehaviour:
   lungeForceMultiplier: 20
   chargeTime: 0.5
   dropOnDeath: {fileID: 0}
+  expPrefab: {fileID: 0}
   ExecuteOnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -117,6 +121,7 @@ GameObject:
   - component: {fileID: 3249828052386159367}
   - component: {fileID: 4542597033054074026}
   - component: {fileID: 2374473031357443721}
+  - component: {fileID: 561723218217868088}
   m_Layer: 9
   m_Name: Cloaked Cultist (GFX)
   m_TagString: Untagged
@@ -183,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 1541214691
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c25638322b727674c9e0183519d872bb, type: 3}
+  m_Sprite: {fileID: 2148781895353886705, guid: de50ef9798bcb57478dde08350d14d01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -252,6 +257,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f519746d99bf1b643af97bcdc07b9ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &561723218217868088
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074228747910995950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a448df2430820048b89855e6b4ad3de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5868348423792032364
 GameObject:
   m_ObjectHideFlags: 0

@@ -201,7 +201,7 @@ public class Enemy : MonoBehaviour
         currentState = EnemyState.Idle;
         currentSpeed = idleSpeed;
         timeBetweenPaths = idleTimeBetweenPaths;
-            _animator.Play("Walk");
+        _animator.Play("Walk");
     }
     private void IdleUpdate()
     {
@@ -333,11 +333,11 @@ public class Enemy : MonoBehaviour
     public void BecomeAttacking()
     {
         currentState = EnemyState.Attacking;
-        Debug.Log("KILL !!!");
 
         switch (attackBehavior)
         {
             case AttackBehavior.ShootSingleProjectile:
+                _animator.Play("Charge");
                 repeatCastAttackCoroutine = StartCoroutine(RepeatCastAttack());
             break;
 

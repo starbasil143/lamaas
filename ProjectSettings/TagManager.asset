@@ -17,6 +17,7 @@ TagManager:
   - Water
   - SceneManager
   - Grapple
+  - Wind
   layers:
   - Default
   - TransparentFX
