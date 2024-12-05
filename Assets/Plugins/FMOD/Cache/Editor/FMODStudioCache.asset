@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638688634058877429
+  lastModified: 638689901708957418
   FileSizes:
   - Name: Desktop
     Value: 2530
@@ -251,10 +251,10 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Town.bank
   Name: Town
   StudioPath: bank:/Town
-  lastModified: 638688634059712869
+  lastModified: 638689969196600925
   FileSizes:
   - Name: Desktop
-    Value: 6988800
+    Value: 7672704
   Exists: 1
 --- !u!114 &-3407158187270327791
 MonoBehaviour:
@@ -355,7 +355,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638688634058917808
+  lastModified: 638689901713562876
   FileSizes:
   - Name: Desktop
     Value: 277824
@@ -453,7 +453,7 @@ MonoBehaviour:
   Path: FMOD/open-world/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638688582868944937
+  lastModified: 638689901708917393
   FileSizes:
   - Name: Desktop
     Value: 1632
@@ -591,7 +591,7 @@ MonoBehaviour:
   - {fileID: -601507058279553139}
   StringsBanks:
   - {fileID: -7492806763642632584}
-  cacheTime: 638688634059712869
+  cacheTime: 638689969196600925
   cacheVersion: 131621
 --- !u!114 &1370552994515039722
 MonoBehaviour:
@@ -635,7 +635,7 @@ MonoBehaviour:
   Name: area
   StudioPath: 
   Min: 0
-  Max: 10
+  Max: 12
   Default: 6
   ID:
     data1: 3779163128
@@ -654,6 +654,8 @@ MonoBehaviour:
   - Battle1
   - Battle2
   - Battle3
+  - Title
+  - Win
   Exists: 1
 --- !u!114 &2277380336692350883
 MonoBehaviour:

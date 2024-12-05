@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     public float immunityTime = 1f;
     private float immunityTimer = 0f;
     private GameObject PlayerParent;
+    public List<GameObject> disableOnMainMenu;
     
     public GameObject _exclamationIcon;
 
@@ -40,12 +42,20 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "MainMenuScene")
+        {
+            isPaused = true;
+        }
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
         _animator = PlayerParent.GetComponentInChildren<Animator>();
     }
 
+    public void LoadGameNow()
+    {
+        gameObject.GetComponent<PlayerSaveDataManager>().LoadGame();
+    }
 
     private void Update()
     {
@@ -88,7 +98,13 @@ public class Player : MonoBehaviour
         }
     }
 
-
+    public void Revive()
+    {
+        healthAmount = 9;
+        Heal(1);
+        isPaused = false;
+        _deathCanvas.SetActive(false);
+    }
 
     public void CreateSaveData_Player()
     {
@@ -110,6 +126,21 @@ public class Player : MonoBehaviour
     public void LoadSaveData_Player()
     {
         exp = PlayerPrefs.GetInt("exp");
+    }
+    public void FullDisablePlayer()
+    {
+        foreach (GameObject obj in disableOnMainMenu)
+        {
+            obj.SetActive(false);
+        }
+    }
+
+    public void FullEnablePlayer()
+    {
+        foreach (GameObject obj in disableOnMainMenu)
+        {
+            obj.SetActive(true);
+        }
     }
 
 
