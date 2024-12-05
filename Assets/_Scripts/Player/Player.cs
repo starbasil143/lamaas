@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
 
     public void LoadGameNow()
     {
+        Revive();
         gameObject.GetComponent<PlayerSaveDataManager>().LoadGame();
     }
 
