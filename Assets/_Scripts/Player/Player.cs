@@ -33,14 +33,13 @@ public class Player : MonoBehaviour
 
     private Coroutine slowTimeCoroutine;
 
-    public float exp = 0;
+    private int exp = 0;
 
 
 
 
     private void Awake()
     {
-        Debug.Log($"Player has {exp} Experience Points");
         _camera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         PlayerParent = transform.parent.gameObject;
         _rigidbody = PlayerParent.GetComponent<Rigidbody2D>();
@@ -73,7 +72,14 @@ public class Player : MonoBehaviour
 
         if (InputManager.ToggleMenu && (!isPaused ||  _pauseManager.GetComponent<PauseMenuController>().isPaused))
         {
-            _pauseManager.GetComponent<PauseMenuController>().TogglePauseMenu();
+            if (!isPaused)
+            {
+                _pauseManager.GetComponent<PauseMenuController>().TogglePauseMenu();
+            }
+            else if (_pauseManager.GetComponent<PauseMenuController>().isPaused)
+            {
+                _pauseManager.GetComponent<PauseMenuController>().BackOut();
+            }
         }
 
         if (immunityTimer < immunityTime)
@@ -86,13 +92,26 @@ public class Player : MonoBehaviour
 
     public void CreateSaveData_Player()
     {
-        PlayerPrefs.SetInt("exp", (int)Math.Floor(exp));
+        PlayerPrefs.SetInt("exp", exp);
+    }
+
+    public void AddExp(int amount)
+    {
+        if (exp + amount <= 9999 && exp + amount >= 0)
+        {
+            exp += amount;
+        }
+    }
+    public int GetExpAmount()
+    {
+        return exp;
     }
 
     public void LoadSaveData_Player()
     {
         exp = PlayerPrefs.GetInt("exp");
     }
+
 
     private void OnEnable()
     {

@@ -40,7 +40,7 @@ public class ExpHandler : MonoBehaviour
 
             if (_player != null)
             {
-                _player.exp += expValue;
+                _player.AddExp(expValue);
             }
             exp.SetTriggerParticles(ParticleSystemTriggerEventType.Enter, particles);
         }

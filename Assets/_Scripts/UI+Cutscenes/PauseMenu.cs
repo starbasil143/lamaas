@@ -5,24 +5,21 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Tilemaps;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenuPanel;
-    public GameObject settingsPanel;
 
     public List<GameObject> subMenuPanels;
+    public TextMeshProUGUI expText;
 
     public bool isPaused;
-    private GameObject player;
+    private GameObject _player;
 
     void Start()
     {
-        if (pauseMenuPanel != null || settingsPanel != null)
-        {
-            CloseAllMenus();
-        }
+        CloseAllMenus();
+        _player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
@@ -32,16 +29,32 @@ public class PauseMenuController : MonoBehaviour
 
         if (isPaused)
         {
+            _player.GetComponentInChildren<Player>().isPaused = true;
+            expText.text = _player.GetComponentInChildren<Player>().GetExpAmount().ToString();
             pauseMenuPanel.SetActive(true);
             Time.timeScale = 0f;
         }
         else
         {
+            _player.GetComponentInChildren<Player>().isPaused = false;
             CloseAllMenus();
             Time.timeScale = 1f;
         }
 
         
+    }
+
+    public void BackOut()
+    {
+        foreach (GameObject subMenuPanel in subMenuPanels)
+        {
+            if (subMenuPanel.activeSelf)
+            {
+                subMenuPanel.SetActive(false);
+                return;
+            }
+        }
+        TogglePauseMenu();
     }
 
     public void ReturnToMainMenu()
@@ -58,7 +71,6 @@ public class PauseMenuController : MonoBehaviour
         {
             subMenuPanel.SetActive(false);
         }
-        settingsPanel.SetActive(false);
         pauseMenuPanel.SetActive(false);
 
     }
