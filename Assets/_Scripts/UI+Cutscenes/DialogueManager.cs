@@ -326,6 +326,7 @@ public class DialogueManager : MonoBehaviour
                     case GIVEUP_TAG:
                         {
                             SceneManager.LoadScene("MainMenuScene");
+                            ContinueStory();
                         }
                         break;
 
@@ -334,6 +335,7 @@ public class DialogueManager : MonoBehaviour
                             GetComponent<PlayerSaveDataManager>().LoadGame();
                             _player.GetComponentInChildren<Player>().Revive();
                             GetComponent<NonEntrySceneChange>().GoToSceneAtPosition();
+                            ContinueStory();
                         }
                         break;
                     case SAVE_TAG:
