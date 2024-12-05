@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using static System.Net.Mime.MediaTypeNames;
-using System;
 
 public class MenuButtonInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {

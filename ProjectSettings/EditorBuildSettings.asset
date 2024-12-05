@@ -21,8 +21,11 @@ EditorBuildSettings:
     path: Assets/_Scenes/MalloryHouseScene.unity
     guid: dd1a534d5b25f9a45935a02b112525a4
   - enabled: 1
-    path: Assets/_Scenes/AreaTwoScene.unity
+    path: Assets/_Scenes/Area2Scene.unity
     guid: 0e12154080dce6e4989addca567f3bd9
+  - enabled: 1
+    path: Assets/_Scenes/TentScene.unity
+    guid: 0d3778fede73c2a4b97d8c8b26051d0e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

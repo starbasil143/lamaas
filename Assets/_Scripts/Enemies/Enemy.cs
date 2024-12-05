@@ -337,6 +337,7 @@ public class Enemy : MonoBehaviour
         switch (attackBehavior)
         {
             case AttackBehavior.ShootSingleProjectile:
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.voice_cultist, transform.position);
                 _animator.Play("Charge");
                 repeatCastAttackCoroutine = StartCoroutine(RepeatCastAttack());
             break;

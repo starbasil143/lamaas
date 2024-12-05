@@ -1,4 +1,4 @@
-using Unity.VisualScripting;
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "T_PlantHealth", menuName = "Scriptable Objects/Transmutations/T_PlantHealth")]

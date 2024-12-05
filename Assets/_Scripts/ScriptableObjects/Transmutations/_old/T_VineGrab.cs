@@ -1,5 +1,4 @@
 using UnityEngine;
-using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "T_VineGrab", menuName = "Scriptable Objects/Transmutations/T_VineGrab")]
 public class T_VineGrab : TransmutationSOBase

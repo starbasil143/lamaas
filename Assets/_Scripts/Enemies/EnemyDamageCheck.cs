@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Scripting;
 
 public class EnemyDamageCheck : MonoBehaviour
 {

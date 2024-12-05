@@ -1,15 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using Ink.Runtime;
 using TMPro;
-using UnityEditor.PackageManager;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Playables;
-using UnityEngine.SearchService;
 using FMODUnity;
-using FMOD.Studio;
 using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
