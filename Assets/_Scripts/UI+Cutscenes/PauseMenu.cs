@@ -62,7 +62,7 @@ public class PauseMenuController : MonoBehaviour
         CloseAllMenus();
         Time.timeScale = 1f;
 
-        //SceneManager.LoadScene("MainMenu"); // Replace with main menu scene name
+        SceneManager.LoadScene("MainMenuScene"); // Replace with main menu scene name
     }
 
     public void CloseAllMenus()
