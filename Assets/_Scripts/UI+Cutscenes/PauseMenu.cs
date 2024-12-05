@@ -14,7 +14,7 @@ public class PauseMenuController : MonoBehaviour
 
     public List<GameObject> subMenuPanels;
 
-    private bool isPaused;
+    public bool isPaused;
     private GameObject player;
 
     void Start()
@@ -25,13 +25,6 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (InputManager.ToggleMenu)
-        {
-            TogglePauseMenu();
-        }
-    }
 
     public void TogglePauseMenu()
     {

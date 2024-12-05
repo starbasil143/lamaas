@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     public GameObject _deathCanvas;
     public TextAsset deathMessage;
 
+    public GameObject _pauseManager;
+
     private Coroutine slowTimeCoroutine;
 
     public float _exp = 0;
@@ -68,9 +70,9 @@ public class Player : MonoBehaviour
             currentSlot = 0;
         }
 
-        if (InputManager.ToggleMenu)
+        if (InputManager.ToggleMenu && (!isPaused ||  _pauseManager.GetComponent<PauseMenuController>().isPaused))
         {
-            
+            _pauseManager.GetComponent<PauseMenuController>().TogglePauseMenu();
         }
 
         if (immunityTimer < immunityTime)
