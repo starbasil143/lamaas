@@ -78,7 +78,7 @@ MonoBehaviour:
   slot2Exists: 0
   slot3Exists: 1
   slot4Exists: 0
-  transmutation1: {fileID: 11400000, guid: f88d8c36f79b1f44399e2d46a0362c88, type: 2}
-  transmutation2: {fileID: 0}
-  transmutation3: {fileID: 11400000, guid: aab9fc0326fe83c42a9edfdce2ef1ecf, type: 2}
+  transmutation1: {fileID: 11400000, guid: aab9fc0326fe83c42a9edfdce2ef1ecf, type: 2}
+  transmutation2: {fileID: 11400000, guid: f88d8c36f79b1f44399e2d46a0362c88, type: 2}
+  transmutation3: {fileID: 11400000, guid: 594f5c9bf88121748a54b624c11bdf62, type: 2}
   transmutation4: {fileID: 0}

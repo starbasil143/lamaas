@@ -5,12 +5,15 @@ using UnityEngine.UI;
 public class TransButton : MonoBehaviour
 {
     public int expCost;
-    [SerializeField] private GameObject button;
-    [SerializeField] private GameObject image;
-    [SerializeField] private GameObject lockedGFX;
+    private GameObject button;
+    private GameObject image;
+    private GameObject lockedGFX;
     private TextMeshProUGUI priceText;
     [SerializeField] private TextMeshProUGUI expText;
     [SerializeField] private bool requiresScroll;
+
+    [SerializeField] private bool objectTransmutation;
+    public string t_objectName;
     public TileData t_tileData;
     public int t_index;
 
@@ -27,13 +30,16 @@ public class TransButton : MonoBehaviour
         _player = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Player>();
         _playerCasting = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerCasting>();
         
-        priceText = transform.Find("Button").Find("LockedGFX").Find("Price").gameObject.GetComponent<TextMeshProUGUI>();
+        button = transform.Find("Button").gameObject;
+        lockedGFX = button.transform.Find("LockedGFX").gameObject;
+        priceText = lockedGFX.transform.Find("Price").gameObject.GetComponent<TextMeshProUGUI>();
+        image = button.transform.Find("Image").gameObject;
         originalButtonColor = button.GetComponent<Image>().color;
         originalImageColor = image.GetComponent<Image>().color;
 
         if (!requiresScroll)
         {
-            priceText.text = expCost.ToString();
+            priceText.text = expCost.ToString() + " EXP";
         }
         else
         {
@@ -43,7 +49,16 @@ public class TransButton : MonoBehaviour
 
     private void OnEnable()
     {
-        unlocked = _playerCasting.KnowsSpell(t_tileData, t_index);
+        
+        if (objectTransmutation)
+        {
+            unlocked = _playerCasting.KnowsObjectSpell(t_objectName);
+        }
+        else
+        {
+            unlocked = _playerCasting.KnowsSpell(t_tileData, t_index);
+        }
+        
 
         if (!unlocked)
         {
@@ -80,7 +95,16 @@ public class TransButton : MonoBehaviour
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.sfx_startgame, transform.position);
                 _player.AddExp(-expCost);
                 expText.text = _player.GetExpAmount().ToString();
-                _playerCasting.LearnSpell(t_tileData, t_index);
+                
+                if (objectTransmutation)
+                {
+                    _playerCasting.LearnObjectSpell(t_objectName);
+                }
+                else
+                {
+                    _playerCasting.LearnSpell(t_tileData, t_index);
+                }
+
                 DisplayUnlocked();
                 unlocked = true;
             }
