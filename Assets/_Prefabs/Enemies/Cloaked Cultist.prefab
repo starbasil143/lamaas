@@ -66,7 +66,7 @@ MonoBehaviour:
   EnemyGFX: {fileID: 4074228747910995950}
   EnemyHarmBox: {fileID: 0}
   circleAroundRange: 2
-  xpAmountMin: 9
+  xpAmountMin: 8
   xpAmountMax: 11
   maxHP: 6
   enemyDefense: 1
@@ -77,7 +77,7 @@ MonoBehaviour:
   lungeForceMultiplier: 20
   chargeTime: 0.5
   dropOnDeath: {fileID: 0}
-  expPrefab: {fileID: 0}
+  expPrefab: {fileID: 7171114386796468974, guid: e6344f5f0bba7c349a1b2e89bbb0764d, type: 3}
   ExecuteOnDeath:
     m_PersistentCalls:
       m_Calls: []

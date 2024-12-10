@@ -9545,11 +9545,11 @@ GameObject:
   - component: {fileID: 3386717216927757011}
   m_Layer: 2
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3968516573944228287
 Transform:
   m_ObjectHideFlags: 0
@@ -14826,7 +14826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expCost: 80
   expText: {fileID: 191979849595036525}
-  requiresScroll: 1
+  requiresScroll: 0
   objectTransmutation: 0
   t_objectName: 
   t_tileData: {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
@@ -27333,7 +27333,7 @@ MonoBehaviour:
   expCost: 40
   expText: {fileID: 191979849595036525}
   requiresScroll: 1
-  objectTransmutation: 0
+  objectTransmutation: 1
   t_objectName: Water
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 1

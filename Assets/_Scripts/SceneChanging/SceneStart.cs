@@ -13,7 +13,15 @@ public class SceneStart : MonoBehaviour
         _theFog.GetComponent<SpriteRenderer>().enabled = sceneHasFog;
 
         _theWind = GameObject.FindGameObjectWithTag("Wind");
-        _theWind.SetActive(sceneHasWind);
+
+        if (!sceneHasWind)
+        {
+            _theWind.GetComponent<ParticleSystem>().Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
+        else
+        {
+            _theWind.GetComponent<ParticleSystem>().Play();
+        }
     }  
     
 }

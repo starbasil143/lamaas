@@ -616,12 +616,12 @@ public class Enemy : MonoBehaviour
     {
         if (velocity.x < -0.1f && isFacingRight)
         {
-            _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 180f, _transform.position.z));
+            _transform.rotation = Quaternion.Euler(new Vector3(_transform.rotation.x, 180f, _transform.rotation.z));
             isFacingRight = false;
         }
         if (velocity.x > 0.1f && !isFacingRight)
         {
-            _transform.rotation = Quaternion.Euler(new Vector3(_transform.position.x, 0f, _transform.position.z));
+            _transform.rotation = Quaternion.Euler(new Vector3(_transform.rotation.x, 0f, _transform.rotation.z));
             isFacingRight = true;
         }
     }
