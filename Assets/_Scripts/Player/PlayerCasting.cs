@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -321,8 +322,17 @@ public class PlayerCasting : MonoBehaviour
     }
     #endregion
 
-    
+    public void T_Fortify(float immunityTime)
+    {
+        StartCoroutine(FortifyCoroutine(immunityTime));
+    }
 
-    
+    private IEnumerator FortifyCoroutine(float immunityTime)
+    {
+        _player.EnableImmune();
+        yield return new WaitForSeconds(immunityTime);
+        _player.DisableImmune();
+    }
+
 
 }

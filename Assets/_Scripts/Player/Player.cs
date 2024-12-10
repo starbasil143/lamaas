@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     private float immunityTimer = 0f;
     private GameObject PlayerParent;
     public List<GameObject> disableOnMainMenu;
+    private float resistance = 1;
     
     public GameObject _exclamationIcon;
 
@@ -161,7 +162,7 @@ public class Player : MonoBehaviour
     public void Damage(float damage, bool silent = false)
     {
         Debug.Log(healthAmount);
-        healthAmount -= damage;
+        healthAmount -= damage * resistance;
         HealthBarFillImage.GetComponent<Image>().fillAmount = .97f - .1f*(10-healthAmount)*0.953f; // Visually update health bar
         if (!silent)
         {
@@ -244,5 +245,14 @@ public class Player : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void EnableImmune()
+    {
+        resistance = 0;
+    }
+
+    public void DisableImmune()
+    {
+        resistance = 1;
+    }
     
 }

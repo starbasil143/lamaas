@@ -20,5 +20,5 @@ MonoBehaviour:
   slot4Exists: 0
   transmutation1: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
   transmutation2: {fileID: 11400000, guid: be24773dc6ec86d4ebfc9413ec678327, type: 2}
-  transmutation3: {fileID: 11400000, guid: bc5a2a8f068c36d4dbad6811cd17b889, type: 2}
+  transmutation3: {fileID: 11400000, guid: 3b640f700cff80946ac46cd749a5a1a6, type: 2}
   transmutation4: {fileID: 0}
