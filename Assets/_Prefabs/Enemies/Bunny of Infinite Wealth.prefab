@@ -442,8 +442,8 @@ MonoBehaviour:
   EnemyGFX: {fileID: 8254784715141361784}
   EnemyHarmBox: {fileID: 1870556747127380065}
   circleAroundRange: 2
-  xpAmountMin: 9999
-  xpAmountMax: 9999
+  xpAmountMin: 50
+  xpAmountMax: 80
   maxHP: 1
   enemyDefense: 1
   attackDistance: 5
