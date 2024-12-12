@@ -832,7 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expCost: 40
   expText: {fileID: 191979849595036525}
-  requiresScroll: 0
+  requiresScroll: 1
   objectTransmutation: 0
   t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
@@ -2992,7 +2992,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expCost: 50
   expText: {fileID: 191979849595036525}
-  requiresScroll: 0
+  requiresScroll: 1
   objectTransmutation: 0
   t_objectName: 
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
@@ -6012,8 +6012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expCost: 50
   expText: {fileID: 191979849595036525}
-  requiresScroll: 0
-  objectTransmutation: 0
+  requiresScroll: 1
+  objectTransmutation: 1
   t_objectName: Thorns
   t_tileData: {fileID: 11400000, guid: afe7ff392fcb44447a4cc37c9bd7644e, type: 2}
   t_index: 2
@@ -7936,7 +7936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   expCost: 100
   expText: {fileID: 191979849595036525}
-  requiresScroll: 0
+  requiresScroll: 1
   objectTransmutation: 0
   t_objectName: 
   t_tileData: {fileID: 11400000, guid: 8fa58b92504e0c845b8b4949508762d1, type: 2}
@@ -8347,7 +8347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3991983117838988624}
+      - m_Target: {fileID: 6194271829709921259}
         m_TargetAssemblyTypeName: TransButton, Assembly-CSharp
         m_MethodName: HandleClick
         m_Mode: 1
@@ -26072,7 +26072,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 237015186466231200}
+      - m_Target: {fileID: 73440926105290068}
         m_TargetAssemblyTypeName: TransButton, Assembly-CSharp
         m_MethodName: HandleClick
         m_Mode: 1

@@ -20,6 +20,8 @@ public class PlayerProgress : MonoBehaviour
       {"forestVisit1", false},
       {"deerDefeated", false},
       {"kidCutscene", false},
+      {"freezeScroll", false},
+      {"cultistRiverCross", false},
    };
 
 

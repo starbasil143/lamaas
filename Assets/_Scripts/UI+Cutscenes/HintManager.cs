@@ -30,7 +30,7 @@ public class HintManager : MonoBehaviour
 
     public void DisplayHint(string message)
     {
-        if (!hintsGiven.Contains(hintText.text))
+        if (!hintsGiven.Contains(message))
         {
             hintText.text = message;
             hintsGiven.Add(message);

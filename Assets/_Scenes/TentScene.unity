@@ -321,7 +321,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &110007932
@@ -3621,7 +3621,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &594562988
@@ -5958,7 +5958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2164202644358553990, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.09
+      value: -0.09000003
       objectReference: {fileID: 0}
     - target: {fileID: 2164202644358553990, guid: a93f2cdd0d733374fbafd73ff08c2a79, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10468,6 +10468,22 @@ CompositeCollider2D:
         Y: -30000000
       - X: -130000000
         Y: -20000000
+      - X: -160000000
+        Y: -20000000
+      - X: -160000000
+        Y: -30000000
+      - X: -180000000
+        Y: -30000000
+      - X: -180000000
+        Y: -20000000
+      - X: -210000000
+        Y: -20000000
+      - X: -210000000
+        Y: 40000000
+      - X: -130000000
+        Y: 40000000
+      - X: -130000000
+        Y: -20000000
       - X: -120000000
         Y: -20000000
       - X: -120000000
@@ -10482,38 +10498,6 @@ CompositeCollider2D:
         Y: -40000000
       - X: -150000000
         Y: -40000000
-    - - X: -180000000
-        Y: -30000000
-      - X: -180000000
-        Y: -20000000
-      - X: -200000000
-        Y: -20000000
-      - X: -200000000
-        Y: -10000000
-      - X: -210000000
-        Y: -10000000
-      - X: -210000000
-        Y: 30000000
-      - X: -200000000
-        Y: 30000000
-      - X: -200000000
-        Y: 40000000
-      - X: -140000000
-        Y: 40000000
-      - X: -140000000
-        Y: 30000000
-      - X: -130000000
-        Y: 30000000
-      - X: -130000000
-        Y: -10000000
-      - X: -140000000
-        Y: -10000000
-      - X: -140000000
-        Y: -20000000
-      - X: -160000000
-        Y: -20000000
-      - X: -160000000
-        Y: -30000000
     - - X: 120000000
         Y: -60000000
       - X: 180000000
@@ -10551,6 +10535,14 @@ CompositeCollider2D:
     - - {x: -15.000029, y: -4}
       - {x: -14.999971, y: -3}
       - {x: -13, y: -2.999971}
+      - {x: -13.00003, y: -2}
+      - {x: -16, y: -2.0000293}
+      - {x: -16.000029, y: -3}
+      - {x: -18, y: -2.9999707}
+      - {x: -18.000029, y: -2}
+      - {x: -21, y: -1.9999707}
+      - {x: -20.999971, y: 4}
+      - {x: -13, y: 3.9999704}
       - {x: -12.99997, y: -2}
       - {x: -12, y: -1.9999708}
       - {x: -12.00003, y: 5}
@@ -10558,22 +10550,6 @@ CompositeCollider2D:
       - {x: -21.999971, y: -3}
       - {x: -19, y: -3.0000293}
       - {x: -18.999971, y: -4}
-    - - {x: -16, y: -2.9999707}
-      - {x: -18, y: -2.9999707}
-      - {x: -18.000029, y: -2}
-      - {x: -20, y: -1.9999707}
-      - {x: -20.000029, y: -1}
-      - {x: -21, y: -0.9999706}
-      - {x: -20.999971, y: 3}
-      - {x: -20, y: 3.0000293}
-      - {x: -19.999971, y: 4}
-      - {x: -14, y: 3.9999704}
-      - {x: -13.999971, y: 3}
-      - {x: -13, y: 2.9999707}
-      - {x: -13.00003, y: -1}
-      - {x: -14, y: -1.0000293}
-      - {x: -14.000029, y: -2}
-      - {x: -16, y: -2.0000293}
     - - {x: 11.99997, y: -7}
       - {x: 12.00003, y: -6}
       - {x: 18, y: -5.999971}
@@ -11042,26 +11018,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -21, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 7
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -14, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 7
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: -13, y: -2, z: 0}
     second:
       serializedVersion: 2
@@ -11253,26 +11209,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: -22, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 7
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -21, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 7
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -14, y: 3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 7
@@ -11568,7 +11504,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 37
+  - m_RefCount: 33
     m_Data: {fileID: 11400000, guid: 33f719ff70f86f147a5818f181978b7a, type: 2}
   - m_RefCount: 50
     m_Data: {fileID: 11400000, guid: 0f9a51c8ca7bc6e45b746aaa0c66f35b, type: 2}
@@ -11589,12 +11525,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 37
+  - m_RefCount: 33
     m_Data: {fileID: 2114496470, guid: 978a60bcbec270744b9f49b1cf6e3be2, type: 3}
   - m_RefCount: 50
     m_Data: {fileID: 792279430942723198, guid: a411482c2014c084fb32deb559f9457f, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 87
+  - m_RefCount: 83
     m_Data:
       e00: 1
       e01: 0
@@ -11627,7 +11563,7 @@ Tilemap:
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   - m_RefCount: 0
     m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
-  - m_RefCount: 87
+  - m_RefCount: 83
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1

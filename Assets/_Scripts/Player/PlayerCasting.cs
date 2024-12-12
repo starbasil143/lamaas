@@ -240,6 +240,15 @@ public class PlayerCasting : MonoBehaviour
                 if (tileData.Value[i] > 0)
                 {
                     tileData.Value[i] -= Time.deltaTime;
+                    SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",false);
+                    SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",false);
+                    SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",false);
+                }
+                else
+                {
+                    SlotOneImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][0] && currentTile.slot1Exists);
+                    SlotTwoImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][1] && currentTile.slot2Exists);
+                    SlotThreeImage.GetComponent<Animator>().SetBool("SlotIsEnabled",unlocksPerMaterial[currentTile][2] && currentTile.slot3Exists);
                 }
             }
         }

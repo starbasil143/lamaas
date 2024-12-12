@@ -88,7 +88,7 @@ public class TransButton : MonoBehaviour
 
     public void HandleClick()
     {
-        if (!unlocked)
+        if (!unlocked && !requiresScroll)
         {
             if (_player.GetExpAmount() >= expCost)
             {
