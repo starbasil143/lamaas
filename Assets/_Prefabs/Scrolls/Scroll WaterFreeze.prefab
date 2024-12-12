@@ -111,6 +111,7 @@ MonoBehaviour:
   objectTransmutation: 1
   objectName: Water
   dialogueAsset: {fileID: 4900000, guid: a70f2e86d273cfa4e8b91c6b49c1eceb, type: 3}
+  cutscene: {fileID: 0}
 --- !u!114 &-5917671151384820742
 MonoBehaviour:
   m_ObjectHideFlags: 0
